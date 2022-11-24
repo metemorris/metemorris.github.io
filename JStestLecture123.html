@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+      <script src="Scripts/alert.js"></script>
+      <script src="Scripts/jquery-3.1.1.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.mandatory').css("border","2px solid red");
+          $('input').focus(function(){
+              $(this).css("background-color","purple");
+          });
+          $('input').blur(function(){
+              $(this).css("background-color","transparent");
+          });
+          $('#txtAddress').focus(function(){
+              $(this).css("background-color","purple");
+          });
+          $('#txtAddress').blur(function(){
+              $(this).css("background-color","transparent");
+          });
+
+        });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $('#test').click(function(){
+            Welcome();
+          })
+        })
+        function Welcome()
+        {
+            document.title="Merhaba Dunya";
+            alert("Aleykum Selam");
+        }
+        function Welcome2()
+        {
+            $('h2').append("Bonjour Javascript")
+        }
+      </script>
+      <meta charset="=utf-8">
+      <title>learning jquery-3</title>
+    </head>
+    <body>
+      Name:<br><input type="text"></br>
+      <br/>
+      Surname:<br><input type="text" class="mandatory"></br>
+      <br/>
+      Address:<br><textarea rows="10" cols="30" id="txtAddress" class="mandatory"></textarea></br>
+      <br/>
+      <input type="button" onclick="Welcome()" value="Selamin Aleykum">
+      <br/>
+      <h1 onmouseover="Welcome()">Hover over me<h1>
+      <br/>
+      <input type="button" onclick="Welcome2()" value="Click me">
+      <br/>
+      <h2></h2>
+      <h2></h2>
+      <br/>
+      <input type="button" id="test" value="Click me too">
+    </body>
+
+</html>
