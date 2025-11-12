@@ -1,0 +1,56 @@
+# =====================================
+#  JEKYLL / GITHUB PAGES GITIGNORE
+# =====================================
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Ruby / Bundler
+*.gem
+*.rbc
+.bundle/
+vendor/
+Gemfile.lock
+
+# Jekyll build & cache directories
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+.cache/
+
+# Temporary or editor files
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.log
+
+# IDE / Editor project files
+.vscode/
+.idea/
+*.iml
+
+# Environment / local configs
+.env
+.env.*
+node_modules/
+
+# System binary or generated files (avoid "binary files not supported" errors)
+*.tar
+*.zip
+*.gz
+*.7z
+*.exe
+*.dll
+*.bin
+*.iso
+*.dmg
+*.lock
+*.cache
+
+# Optional images/assets if you store them elsewhere
+assets/raw/
+uploads/
