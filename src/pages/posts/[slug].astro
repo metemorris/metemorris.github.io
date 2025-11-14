@@ -1,0 +1,23 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+type Entry = CollectionEntry<"posts">;
+
+export async function getStaticPaths() {
+  const items = await getCollection("posts");
+  return items.map((p: Entry) => ({
+    params: { slug: p.slug },   // IMPORTANT: a string
+    props: p,
+  }));
+}
+
+const post = Astro.props as Entry;
+---
+<Base title={post.data.title} description={post.data.description}>
+  <article class="prose prose-zinc dark:prose-invert max-w-none">
+    <h1>{post.data.title}</h1>
+    <p class="text-sm text-zinc-500">{post.data.date.toDateString()}</p>
+    <slot />
+  </article>
+</Base>

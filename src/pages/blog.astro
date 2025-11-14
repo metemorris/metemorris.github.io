@@ -1,0 +1,21 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+type PostEntry = CollectionEntry<"posts">;
+const posts = (await getCollection("posts")) as PostEntry[];
+---
+<Base title="Blog — Mete">
+  <h1 class="text-3xl font-bold mb-6">Blog</h1>
+  <ul class="space-y-6">
+    {posts.map((entry: PostEntry) => (
+      <li>
+        <a class="text-xl font-semibold underline" href={`/posts/${entry.slug}/`}>
+          {entry.data.title}
+        </a>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400">{entry.data.description}</p>
+        <p class="text-xs text-zinc-500">{new Date(entry.data.date).toDateString()}</p>
+      </li>
+    ))}
+  </ul>
+</Base>

@@ -1,16 +1,16 @@
 ---
-
+import Base from "../layouts/Base.astro";
 ---
+<Base title="Mete — Home" description="Notes, projects, and writing.">
+  <section class="space-y-3">
+    <h1 class="text-3xl font-bold">Hey, I’m Mete.</h1>
+    <p class="text-zinc-600 dark:text-zinc-300">
+      Computer engineer. This site hosts my notes and blog.
+    </p>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="mt-10">
+    <h2 class="text-xl font-semibold mb-4">Latest posts</h2>
+    <a class="underline" href="/blog">Go to Blog →</a>
+  </section>
+</Base>
