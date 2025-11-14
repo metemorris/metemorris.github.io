@@ -1,11 +1,41 @@
-_site/
-.jekyll-cache/
-.sass-cache/
-.bundle/
-vendor/
+# ----------------------------
+# OS / Editor
+# ----------------------------
 .DS_Store
 Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ----------------------------
+# Node / Astro
+# ----------------------------
+node_modules/
+dist/
+.astro/
+
+# ----------------------------
+# Logs / Temp / Cache
+# ----------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 *.log
 *.tmp
-*.zip
-node_modules/
+
+# ----------------------------
+# Environment / Secrets
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# Build Artifacts / Deploy
+# ----------------------------
+# Astro build output (use dist/ for deploys)
+.output/
+.vercel/
+.netlify/
+.cache/
