@@ -16,15 +16,17 @@ const post = Astro.props as Entry;
 const { Content } = await post.render();
 ---
 <Base title={post.data.title} description={post.data.description}>
-  <article class="space-y-4">
-    <div class="space-y-2">
-      <p class="eyebrow">{post.data.tags?.join(" · ") ?? "Writing"}</p>
-      <h1 class="text-3xl font-semibold">{post.data.title}</h1>
+  <article class="space-y-6 fade-in max-w-3xl mx-auto">
+    <div class="space-y-3 border-b border-[var(--page-border)] pb-4">
+      <p class="eyebrow text-left text-[var(--page-muted)] opacity-70">
+        {post.data.tags?.join(" · ") ?? "Writing"}
+      </p>
+      <h1 class="text-3xl font-semibold leading-snug">{post.data.title}</h1>
       <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
         {post.data.date.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" })}
       </p>
     </div>
-    <div class="prose prose-neutral dark:prose-invert max-w-none">
+    <div class="prose prose-neutral dark:prose-invert max-w-none leading-relaxed border-b border-[var(--page-border)] pb-4 fade-in">
       <Content />
     </div>
   </article>

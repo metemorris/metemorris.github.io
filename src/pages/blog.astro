@@ -9,19 +9,19 @@ const publishedPosts = posts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base title="Blog — Mete" description="Writing on reliability, careers, and systems thinking.">
-  <div class="space-y-12">
-    <section class="space-y-6 fade-in">
+  <div class="space-y-10 mx-auto max-w-3xl">
+    <section class="space-y-5 fade-in mt-6">
       <p class="eyebrow">Latest entries</p>
-      <div class="space-y-6">
+      <div class="space-y-5">
         {publishedPosts.length === 0 && (
           <p class="muted text-sm border-t border-[var(--page-border)] pt-4">No posts yet — stay tuned.</p>
         )}
 
         {publishedPosts.map((entry) => (
-          <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 transition-transform duration-200 hover:-translate-y-1">
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <div class="space-y-2">
-                <div class="flex flex-wrap items-center gap-2">
+          <article class="flex flex-col gap-2 border-t border-[var(--page-border)] pt-4 transition-transform duration-200 hover:-translate-y-1">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-1.5">
                   <a class="text-xl font-semibold hover:underline" href={`/posts/${entry.slug}/`}>
                     {entry.data.title}
                   </a>
@@ -35,7 +35,7 @@ const publishedPosts = posts
                     </div>
                   ) : null}
                 </div>
-                <p class="muted text-sm">{entry.data.description}</p>
+                <p class="muted text-sm leading-relaxed">{entry.data.description}</p>
               </div>
               <time
                 class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"

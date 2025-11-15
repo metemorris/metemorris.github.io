@@ -4,8 +4,8 @@ import { getCollection } from "astro:content";
 
 const experience = [
   {
-    role: "Software Engineer · Site Reliability",
-    company: "Google · Platforms & Devices · Machine Learning SRE",
+    role: "Software Engineer · Machine Learning SRE",
+    company: "Google · Platforms & Devices",
     period: "Jul 2025 — Present",
     summary: "Building robust and scalable AI/ML infrastructure to support cutting-edge applications and features.",
   },
@@ -17,8 +17,8 @@ const experience = [
       "Ensured the stability and performance of large-scale mapping services through reliability engineering, AI-powered monitoring, and critical infrastructure modernization.",
   },
   {
-    role: "Technical Program Manager",
-    company: "Google · Cloud · Serverless SRE",
+    role: "Technical Program Manager · Serverless SRE",
+    company: "Google · Cloud",
     period: "Sep 2019 — Sep 2021",
     summary: "Drove strategic programs to improve reliability and efficienct of serverless offerings on GCP.",
   },
@@ -46,7 +46,7 @@ const latestPost = posts
 <Base title="Mete — Home" description="Engineering leadership, reliability, and writing.">
   <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
     <div class="flex justify-center md:order-2 md:justify-end">
-      <div class="h-48 w-48 rounded-full border border-[var(--page-border)] overflow-hidden">
+      <div class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden">
         <img
           src="/headshot.jpg"
           alt="Mete Morris headshot"
@@ -67,7 +67,7 @@ const latestPost = posts
     </div>
   </section>
 
-  <section class="mt-12 space-y-4 fade-in">
+  <section class="mt-16 space-y-4 fade-in">
     <p class="eyebrow">Latest post</p>
     {latestPost ? (
       <article class="border-t border-[var(--page-border)] pt-4">
@@ -99,7 +99,9 @@ const latestPost = posts
           <div>
             <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
             <h2 class="text-lg font-semibold">{item.role}</h2>
-            <p class="muted text-sm">{item.company}</p>
+            <p class="muted text-sm">
+              {item.company}
+            </p>
           </div>
           <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
         </article>
