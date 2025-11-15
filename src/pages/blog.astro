@@ -1,9 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
-type PostEntry = CollectionEntry<"posts">;
-const posts = (await getCollection("posts")) as PostEntry[];
+const posts = await getCollection("posts");
 const publishedPosts = posts
   .filter((entry) => !entry.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());

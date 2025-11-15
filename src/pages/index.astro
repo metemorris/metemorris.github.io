@@ -2,23 +2,30 @@
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
-const experience = [
+type Experience = {
+  titleLine: string;
+  orgLine: string;
+  period: string;
+  summary: string;
+};
+
+const experience: Experience[] = [
   {
-    role: "Software Engineer · Machine Learning SRE",
-    company: "Google · Platforms & Devices",
+    titleLine: "Software Engineer · Machine Learning SRE",
+    orgLine: "Google · Platforms & Devices",
     period: "Jul 2025 — Present",
     summary: "Building robust and scalable AI/ML infrastructure to support cutting-edge applications and features.",
   },
   {
-    role: "Software Engineer · Site Reliability",
-    company: "Google · Maps",
+    titleLine: "Software Engineer · Site Reliability",
+    orgLine: "Google · Maps",
     period: "Sep 2021 — Jul 2025",
     summary:
       "Ensured the stability and performance of large-scale mapping services through reliability engineering, AI-powered monitoring, and critical infrastructure modernization.",
   },
   {
-    role: "Technical Program Manager · Serverless SRE",
-    company: "Google · Cloud",
+    titleLine: "Technical Program Manager · Serverless SRE",
+    orgLine: "Google · Cloud",
     period: "Sep 2019 — Sep 2021",
     summary: "Drove strategic programs to improve reliability and efficienct of serverless offerings on GCP.",
   },
@@ -41,17 +48,17 @@ const posts = await getCollection("posts");
 const latestPost = posts
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 1)[0];
+  .at(0);
 ---
 <Base title="Mete — Home" description="Engineering leadership, reliability, and writing.">
   <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
     <div class="flex justify-center md:order-2 md:justify-end">
-      <div class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden">
+      <div class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden transition-[border-color,filter] duration-300">
         <img
           src="/headshot.jpg"
           alt="Mete Morris headshot"
-          class="h-full w-full object-cover"
-          style="object-position: 80% 55%; transform: scale(1.5); transform-origin: 60% 60%;"
+          class="h-full w-full object-cover transition-[filter] duration-300"
+          style="object-position: 80% 55%; transform: scale(1.5); transform-origin: 60% 60%; filter: var(--avatar-filter);"
         />
       </div>
     </div>
@@ -98,10 +105,8 @@ const latestPost = posts
         <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
-            <h2 class="text-lg font-semibold">{item.role}</h2>
-            <p class="muted text-sm">
-              {item.company}
-            </p>
+            <h2 class="text-lg font-semibold">{item.titleLine}</h2>
+            <p class="muted text-sm">{item.orgLine}</p>
           </div>
           <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
         </article>

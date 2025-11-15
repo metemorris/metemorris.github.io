@@ -6,20 +6,6 @@ const navItems = [
   { label: "Blog", href: "/blog" },
 ];
 const currentPath = Astro.url.pathname;
-const themeInitializer = `
-(function() {
-  try {
-    const root = document.documentElement;
-    const stored = window.localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const theme = stored ?? (prefersDark ? "dark" : "light");
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
-  } catch (error) {
-    console.error("Theme init failed", error);
-  }
-})();
-`;
 ---
 <html lang="en">
   <head>
@@ -28,7 +14,20 @@ const themeInitializer = `
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <script is:inline>{themeInitializer}</script>
+    <script is:inline>
+      (function() {
+        try {
+          const root = document.documentElement;
+          const stored = window.localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = stored ?? (prefersDark ? "dark" : "light");
+          root.classList.remove("light", "dark");
+          root.classList.add(theme);
+        } catch (error) {
+          console.error("Theme init failed", error);
+        }
+      })();
+    </script>
   </head>
   <body class="min-h-screen antialiased">
     <div class="mx-auto flex min-h-screen max-w-4xl flex-col gap-16 px-6 py-10">

@@ -11,6 +11,7 @@
   --page-muted: #5c5c5c;
   --page-border: rgba(14, 14, 14, 0.08);
   --page-link: #0d0d0d;
+  --avatar-filter: saturate(1) brightness(1);
 }
 
 .dark {
@@ -19,6 +20,7 @@
   --page-muted: #a0a0a0;
   --page-border: rgba(255, 255, 255, 0.12);
   --page-link: #f5f5f0;
+  --avatar-filter: saturate(0.95) brightness(1.05);
 }
 
 .light {
@@ -172,4 +174,9 @@ h4,
 .theme-toggle[data-theme="light"] .theme-toggle__icon--sun,
 .theme-toggle[data-theme="dark"] .theme-toggle__icon--moon {
   opacity: 1;
+}
+
+.prose,
+.prose :where(p, li, strong, em, blockquote, h1, h2, h3, h4, h5, h6) {
+  color: inherit;
 }

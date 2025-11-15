@@ -1,10 +1,4 @@
-# Astro Starter Kit: Minimal
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Mete Morris — Personal Site
 
 ## 🚀 Project Structure
 
@@ -37,6 +31,13 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## ✅ Next steps / TODO
+
+- Finalize and publish the first real blog post (replace the placeholder intro).
+- Add a Turkish language toggle or localized version of the site.
+- Expand the blog index with more posts and categories.
+- Hook up analytics or logging once ready for production.
 
 ## 👀 Want to learn more?
 

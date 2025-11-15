@@ -2,24 +2,26 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-type Entry = CollectionEntry<"posts">;
-
 export async function getStaticPaths() {
   const items = await getCollection("posts");
-  return items.map((p: Entry) => ({
-    params: { slug: p.slug },   // IMPORTANT: a string
+  return items.map((p) => ({
+    params: { slug: p.slug },
     props: p,
   }));
 }
 
-const post = Astro.props as Entry;
+const post = Astro.props as CollectionEntry<"posts">;
 const { Content } = await post.render();
 ---
 <Base title={post.data.title} description={post.data.description}>
   <article class="space-y-6 fade-in max-w-3xl mx-auto">
     <div class="space-y-3 border-b border-[var(--page-border)] pb-4">
-      <p class="eyebrow text-left text-[var(--page-muted)] opacity-70">
-        {post.data.tags?.join(" · ") ?? "Writing"}
+      <p class="eyebrow text-left flex flex-wrap gap-1.5 text-[var(--page-muted)]">
+        {(post.data.tags?.length ? post.data.tags : ["Writing"]).map((tag) => (
+          <span class="rounded-full border border-[var(--page-border)] px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.3em] text-[var(--page-muted)]">
+            {tag}
+          </span>
+        ))}
       </p>
       <h1 class="text-3xl font-semibold leading-snug">{post.data.title}</h1>
       <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
