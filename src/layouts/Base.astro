@@ -1,32 +1,112 @@
 ---
 import "../styles/global.css";
 const { title = "Mete", description = "Engineer • notes & projects" } = Astro.props;
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
+];
+const currentPath = Astro.url.pathname;
+const themeInitializer = `
+(function() {
+  try {
+    const root = document.documentElement;
+    const stored = window.localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = stored ?? (prefersDark ? "dark" : "light");
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+  } catch (error) {
+    console.error("Theme init failed", error);
+  }
+})();
+`;
 ---
-<html lang="en" class="bg-white text-gray-900 dark:bg-zinc-900 dark:text-zinc-100">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script is:inline>{themeInitializer}</script>
   </head>
   <body class="min-h-screen antialiased">
-    <header class="border-b border-zinc-200/60 dark:border-zinc-800/60">
-      <div class="mx-auto max-w-3xl px-5 py-4 flex items-center justify-between">
-        <a href="/" class="font-semibold">Mete</a>
-        <nav class="flex gap-4 text-sm">
-          <a class="hover:underline" href="/">Home</a>
-          <a class="hover:underline" href="/blog">Blog</a>
+    <div class="mx-auto flex min-h-screen max-w-4xl flex-col gap-16 px-6 py-10">
+      <header class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--page-border)] pb-8">
+        <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
+          {
+            navItems.map((item) => (
+              <a
+                href={item.href}
+                class={`px-2 py-1 transition-opacity ${currentPath === item.href ? "opacity-100" : "opacity-50 hover:opacity-80"}`}
+              >
+                {item.label}
+              </a>
+            ))
+          }
         </nav>
-      </div>
-    </header>
-    <main class="mx-auto max-w-3xl px-5 py-8">
-      <slot />
-    </main>
-    <footer class="mx-auto max-w-3xl px-5 py-10 text-sm text-zinc-500">
-      © {new Date().getFullYear()} Mete
-    </footer>
-    <script>
-      // simple dark mode toggle (optional): document.documentElement.classList.toggle('dark')
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle color mode">
+          <span class="sr-only">Toggle color mode</span>
+          <span aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--sun">☀︎</span>
+          <span aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+          <span aria-hidden="true" class="theme-toggle__thumb"></span>
+        </button>
+      </header>
+
+      <main class="flex-1">
+        <slot />
+      </main>
+
+    </div>
+    <script is:inline>
+      const storageKey = "theme";
+      const root = document.documentElement;
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+      const applyTheme = (theme) => {
+        if (theme !== "dark" && theme !== "light") return;
+        root.classList.remove("light", "dark");
+        root.classList.add(theme);
+        const button = document.getElementById("theme-toggle");
+        if (button) {
+          button.dataset.theme = theme;
+          button.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        }
+      };
+
+      const stored = localStorage.getItem(storageKey);
+      const initial = stored ?? (mediaQuery.matches ? "dark" : "light");
+      applyTheme(initial);
+
+      mediaQuery.addEventListener("change", (event) => {
+        const hasStored = localStorage.getItem(storageKey);
+        if (!hasStored) {
+          applyTheme(event.matches ? "dark" : "light");
+        }
+      });
+
+      const toggle = () => {
+        const current = root.classList.contains("dark") ? "dark" : "light";
+        const next = current === "dark" ? "light" : "dark";
+        localStorage.setItem(storageKey, next);
+        applyTheme(next);
+      };
+
+      const initToggle = () => {
+        const button = document.getElementById("theme-toggle");
+        if (button) {
+          const isDark = root.classList.contains("dark");
+          button.dataset.theme = isDark ? "dark" : "light";
+          button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+          button.addEventListener("click", toggle);
+        }
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initToggle);
+      } else {
+        initToggle();
+      }
     </script>
   </body>
 </html>

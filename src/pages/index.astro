@@ -1,16 +1,124 @@
 ---
 import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const experience = [
+  {
+    role: "Software Engineer · Site Reliability",
+    company: "Google · Platforms & Devices · Machine Learning SRE",
+    period: "Jul 2025 — Present",
+    summary: "Keeping ML infrastructure resilient so devices and AI features ship with confidence.",
+  },
+  {
+    role: "Software Engineer · Site Reliability",
+    company: "Google · Maps",
+    period: "Sep 2021 — Jul 2025",
+    summary:
+      "Shaped monitoring playbooks and incident response so Maps stayed fast for everyone using it daily.",
+  },
+  {
+    role: "Technical Program Manager",
+    company: "Google · Cloud · Serverless SRE",
+    period: "Sep 2019 — Sep 2021",
+    summary: "Led cross-functional initiatives that elevated the Serverless SRE experience for enterprise teams.",
+  },
+];
+
+const education = [
+  {
+    school: "Johns Hopkins University",
+    details: "MSE · Bioengineering Innovation & Design",
+    period: "2018 — 2019",
+  },
+  {
+    school: "Illinois Institute of Technology",
+    details: "BSc Computer Engineering · Political Science minor",
+    period: "2014 — 2018",
+  },
+];
+
+const posts = await getCollection("posts");
+const latestPost = posts
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 1)[0];
 ---
-<Base title="Mete — Home" description="Notes, projects, and writing.">
-  <section class="space-y-3">
-    <h1 class="text-3xl font-bold">Hey, I’m Mete.</h1>
-    <p class="text-zinc-600 dark:text-zinc-300">
-      Computer engineer. This site hosts my notes and blog.
-    </p>
+<Base title="Mete — Home" description="Engineering leadership, reliability, and writing.">
+  <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
+    <div class="flex justify-center md:order-2 md:justify-end">
+      <div class="h-48 w-48 rounded-full border border-[var(--page-border)] overflow-hidden">
+        <img
+          src="/headshot.jpg"
+          alt="Mete Morris headshot"
+          class="h-full w-full object-cover"
+          style="object-position: 80% 55%; transform: scale(1.5); transform-origin: 60% 60%;"
+        />
+      </div>
+    </div>
+
+    <div class="space-y-4 max-w-xl md:order-1">
+      <div class="space-y-1">
+        <h1 class="text-4xl font-semibold leading-tight">Mete Morris</h1>
+      </div>
+      <p class="muted text-sm">
+        I build and debug AI and ML systems at Google, chase meta-ideas in my writing, and recharge by playing guitar,
+        reading, and keeping my body moving.
+      </p>
+    </div>
   </section>
 
-  <section class="mt-10">
-    <h2 class="text-xl font-semibold mb-4">Latest posts</h2>
-    <a class="underline" href="/blog">Go to Blog →</a>
+  <section class="mt-12 space-y-4 fade-in">
+    <p class="eyebrow">Latest post</p>
+    {latestPost ? (
+      <article class="border-t border-[var(--page-border)] pt-4">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <a class="text-lg font-semibold hover:underline" href={`/posts/${latestPost.slug}/`}>
+              {latestPost.data.title}
+            </a>
+            <p class="muted text-sm">{latestPost.data.description}</p>
+          </div>
+          <time
+            class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"
+            datetime={latestPost.data.date.toISOString()}
+          >
+            {latestPost.data.date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
+          </time>
+        </div>
+      </article>
+    ) : (
+      <p class="muted text-sm border-t border-[var(--page-border)] pt-4">No posts yet.</p>
+    )}
+  </section>
+
+  <section class="mt-14 space-y-6 fade-in">
+    <p class="eyebrow">Experience</p>
+    <div class="space-y-6">
+      {experience.map((item) => (
+        <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
+            <h2 class="text-lg font-semibold">{item.role}</h2>
+            <p class="muted text-sm">{item.company}</p>
+          </div>
+          <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-14 space-y-6 fade-in">
+    <p class="eyebrow">Education</p>
+    <div class="space-y-5">
+      {education.map((item) => (
+        <article class="flex flex-col gap-2 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 class="text-lg font-semibold">{item.school}</h3>
+            <p class="muted text-sm">{item.details}</p>
+          </div>
+          <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
+        </article>
+      ))}
+    </div>
   </section>
 </Base>

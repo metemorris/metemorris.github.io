@@ -4,18 +4,42 @@ import { getCollection, type CollectionEntry } from "astro:content";
 
 type PostEntry = CollectionEntry<"posts">;
 const posts = (await getCollection("posts")) as PostEntry[];
+const publishedPosts = posts
+  .filter((entry) => !entry.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<Base title="Blog — Mete">
-  <h1 class="text-3xl font-bold mb-6">Blog</h1>
-  <ul class="space-y-6">
-    {posts.map((entry: PostEntry) => (
-      <li>
-        <a class="text-xl font-semibold underline" href={`/posts/${entry.slug}/`}>
-          {entry.data.title}
-        </a>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400">{entry.data.description}</p>
-        <p class="text-xs text-zinc-500">{new Date(entry.data.date).toDateString()}</p>
-      </li>
-    ))}
-  </ul>
+<Base title="Blog — Mete" description="Writing on reliability, careers, and systems thinking.">
+  <div class="space-y-12">
+    <section class="space-y-4 max-w-2xl fade-in">
+      <p class="eyebrow">Blog</p>
+      <h1 class="text-4xl font-semibold leading-tight heading-font">Field notes on reliability.</h1>
+      <p class="muted text-sm">
+        Dispatches from Maps SRE work—calm operations, technical templates, and the habits that keep senior ICs useful.
+      </p>
+    </section>
+
+    <section class="space-y-6 fade-in">
+      {publishedPosts.length === 0 && (
+        <p class="muted text-sm border-t border-[var(--page-border)] pt-4">No posts yet — stay tuned.</p>
+      )}
+      {publishedPosts.map((entry) => (
+        <article class="border-t border-[var(--page-border)] pt-5">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <a class="text-xl font-semibold hover:underline" href={`/posts/${entry.slug}/`}>
+                {entry.data.title}
+              </a>
+              <p class="muted text-sm">{entry.data.description}</p>
+            </div>
+            <time
+              class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"
+              datetime={entry.data.date.toISOString()}
+            >
+              {entry.data.date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
+            </time>
+          </div>
+        </article>
+      ))}
+    </section>
+  </div>
 </Base>
