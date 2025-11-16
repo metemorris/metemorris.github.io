@@ -34,13 +34,14 @@ All commands are run from the root of the project, from a terminal:
 
 ## ✅ Next steps / TODO
 
-[x] Finalize and publish the first real blog post (replace the placeholder intro).
-[x] Deploy the website
-[x] Add an RSS Feed
-[x] Add contact
-[] SEO Optimization
-[] Add a Turkish language toggle or localized version of the site.
-[] Add searching/filtering by tags in the blog.
+- [x] Finalize and publish the first real blog post (replace the placeholder intro).
+- [x] Deploy the website
+- [x] Add an RSS Feed
+- [x] Add contact
+- [ ] Have chatgpt agent crawl through my website click every link and 
+- [ ] SEO Optimization
+- [ ] Add a Turkish language toggle or localized version of the site.
+- [ ] Add searching/filtering by tags in the blog.
 
 ## 👀 Want to learn more?
 
