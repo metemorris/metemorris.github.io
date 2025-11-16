@@ -60,13 +60,13 @@ All commands are run from the root of the project, from a terminal:
 - [ ] Localize UI strings + metadata
 
 ### SEO Enhancements
-- [ ] Add **JSON-LD structured data** (Article schema for blog posts)
-- [ ] Add **og:image** and **twitter:image** meta tags
-- [ ] Improve canonical URL handling
-- [ ] Add or update `robots.txt`
-- [ ] Ensure the sitemap is linked and correct
-- [ ] Add descriptive **alt text** to all images
-- [ ] Perform an accessibility pass (colors, contrast, heading order)
+- [x] Add **JSON-LD structured data** (Article schema for blog posts)
+- [x] Add **og:image** and **twitter:image** meta tags
+- [x] Improve canonical URL handling
+- [x] Add or update `robots.txt`
+- [x] Ensure the sitemap is linked and correct
+- [x] Add descriptive **alt text** to all images
+- [x] Perform an accessibility pass (colors, contrast, heading order)
 
 ### Developer Tooling & Code Quality
 - [ ] Have ChatGPT crawl the entire site and report missing meta tags, broken links, missing alt text
@@ -92,4 +92,3 @@ All commands are run from the root of the project, from a terminal:
 - [ ] Add keyboard navigation shortcuts (J/K to move between posts)
 - [ ] Add an **AI-assisted search** or “Ask Mete’s AI” widget
 - [ ] Generate weekly automated digest (“This week on the blog…”)
-

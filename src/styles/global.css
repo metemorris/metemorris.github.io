@@ -119,6 +119,12 @@ h4,
   color: var(--page-muted);
 }
 
+.section-heading {
+  font-size: 0.82rem;
+  letter-spacing: 0.26em;
+  font-weight: 500;
+}
+
 .muted {
   color: var(--page-muted);
 }
@@ -192,6 +198,7 @@ h4,
 .prose :where(p, li) {
   line-height: 1.7;
 }
+
 
 .contact-link {
   font-family: inherit;
