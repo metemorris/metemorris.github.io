@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const { title = "Mete", description = "Engineer • notes & projects" } = Astro.props;
+const { title = "Mete", description = "Engineer • notes & projects", canonical: canonicalProp } = Astro.props;
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
@@ -11,6 +11,8 @@ const contactLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/metemorris", external: true, icon: "/linkedin.svg" },
   { label: "RSS", href: "/rss.xml", aria: "RSS Feed", icon: "/rss.svg" },
 ];
+const siteUrl = Astro.site ?? new URL("https://www.metemorris.com");
+const canonical = canonicalProp ?? new URL(Astro.url?.pathname ?? "/", siteUrl).href;
 ---
 <html lang="en">
   <head>
@@ -18,6 +20,7 @@ const contactLinks = [
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script is:inline>
       (function() {
