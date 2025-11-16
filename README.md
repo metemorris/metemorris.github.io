@@ -2,22 +2,22 @@
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
-/
-├── public/
+/ (project root)
+├── public/               # Static assets (favicon, headshot, icons)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── content/          # Astro content collections (MDX posts)
+│   ├── layouts/          # Base layout used across pages
+│   ├── pages/            # Astro routes (/, /blog, /posts/[slug])
+│   └── styles/           # Tailwind + global.css
+├── astro.config.mjs
+├── tailwind.config.cjs
+├── tsconfig.json
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Astro maps files in `src/pages/` to routes automatically. Content lives in `src/content/` (managed by Astro collections),
+while static assets go in `public/`.
 
 ## 🧞 Commands
 
@@ -34,17 +34,62 @@ All commands are run from the root of the project, from a terminal:
 
 ## ✅ Next steps / TODO
 
-- [x] Finalize and publish the first real blog post (replace the placeholder intro).
-- [x] Deploy the website
-- [x] Add an RSS Feed
-- [x] Add contact
-- [ ] In mobile distinguish blogposts from resume better
-- [ ] Add a way to like or comment anonymously on blog posts. 
-- [ ] Have chatgpt agent crawl through my website click every link and 
-- [ ] SEO Optimization
-- [ ] Add a Turkish language toggle or localized version of the site.
-- [ ] Add searching/filtering by tags in the blog.
+### UI & UX Improvements
+- [ ] Improve mobile layout to better distinguish **résumé** vs **blog** sections
+- [ ] Add clearer section headers on mobile
+- [ ] Add spacing & visual separators between major sections
+- [ ] Refine navbar spacing/contrast for smaller screens
 
-## 👀 Want to learn more?
+### Blog Features
+- [ ] Add **reading time** + better **published date** formatting for blog posts
+- [ ] Add **tag filtering** on the blog index page
+- [ ] Add **search functionality** (Pagefind or custom client-side JS)
+- [ ] Create dynamic `/tags/[tag]` pages
+- [ ] Add **OG image generation** for each post (social preview cards)
+- [ ] Add **JSON Feed** (`feed.json`) alongside RSS
+- [ ] Add **related posts** section below each article (optional)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Interaction & Engagement
+- [ ] Add anonymous **like / heart** button to blog posts
+- [ ] Add **comment system** (Giscus, Utterances, or Staticman)
+- [ ] Add “Share on X / Reddit / LinkedIn” buttons on posts
+
+### Localization
+- [ ] Add a **Turkish language toggle** (EN / TR switch)
+- [ ] Create localized `/tr` versions of key pages
+- [ ] Localize UI strings + metadata
+
+### SEO Enhancements
+- [ ] Add **JSON-LD structured data** (Article schema for blog posts)
+- [ ] Add **og:image** and **twitter:image** meta tags
+- [ ] Improve canonical URL handling
+- [ ] Add or update `robots.txt`
+- [ ] Ensure the sitemap is linked and correct
+- [ ] Add descriptive **alt text** to all images
+- [ ] Perform an accessibility pass (colors, contrast, heading order)
+
+### Developer Tooling & Code Quality
+- [ ] Have ChatGPT crawl the entire site and report missing meta tags, broken links, missing alt text
+- [ ] Refactor layout/components for clarity and consistency
+- [ ] Add type-safe frontmatter schemas for more content types
+- [ ] Add **Prettier** + **ESLint** setup
+- [ ] Add **Lighthouse CI** checks (optional)
+
+### Subdomains
+- [ ] Configure `blog.metemorris.com`
+- [ ] Add DNS CNAME: `blog → metemorris.github.io`
+- [ ] Add redirect page: `src/pages/blog/index.astro` → redirects to `/blog`
+
+### Analytics & Monitoring
+- [ ] Add privacy-friendly analytics (Plausible / Umami / Cloudflare Analytics)
+- [ ] Add outbound link click tracking (optional)
+
+### Extra Pages (Optional)
+- [ ] `/reading` — books and articles
+
+### Future Nice-to-Haves
+- [ ] Add dark/light mode **preference memory** (localStorage)
+- [ ] Add keyboard navigation shortcuts (J/K to move between posts)
+- [ ] Add an **AI-assisted search** or “Ask Mete’s AI” widget
+- [ ] Generate weekly automated digest (“This week on the blog…”)
+
