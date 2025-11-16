@@ -7,7 +7,10 @@ const publishedPosts = posts
   .filter((entry) => !entry.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<Base title="Blog — Mete" description="Writing on reliability, careers, and systems thinking.">
+<Base
+  title="Mete Morris Blog | Reliability, Careers & Systems Writing"
+  description="Browse Mete Morris' reliability engineering essays, AI/ML infrastructure notes, systems thinking frameworks, and career lessons for modern engineering leaders."
+>
   <div class="space-y-10 mx-auto max-w-3xl">
     <section class="space-y-5 fade-in mt-6">
       <p class="eyebrow">Latest entries</p>

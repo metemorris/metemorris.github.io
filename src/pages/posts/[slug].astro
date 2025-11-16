@@ -14,7 +14,7 @@ const post = Astro.props as CollectionEntry<"posts">;
 const { Content } = await post.render();
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.seoTitle} description={post.data.seoDescription}>
   <article class="max-w-3xl mx-auto space-y-8 fade-in">
     <div class="space-y-3 border-b border-[var(--page-border)] pb-4">
       <p class="eyebrow text-left flex flex-wrap gap-1.5 text-[var(--page-muted)]">
