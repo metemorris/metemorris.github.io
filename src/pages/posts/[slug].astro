@@ -35,7 +35,7 @@ const blogPostingStructuredData = {
 ---
 
 <Base title={post.data.seoTitle} description={post.data.seoDescription} canonical={canonicalUrl} structuredData={[blogPostingStructuredData]}>
-  <article class="max-w-3xl mx-auto space-y-8 fade-in">
+  <article class="mx-auto w-full max-w-[65ch] space-y-8 fade-in">
     <div class="space-y-3 border-b border-[var(--page-border)] pb-4">
       <p class="eyebrow text-left flex flex-wrap gap-1.5 text-[var(--page-muted)]">
         {(post.data.tags?.length ? post.data.tags : ["Writing"]).map((tag) => (
@@ -56,7 +56,7 @@ const blogPostingStructuredData = {
       </p>
     </div>
 
-    <div class="prose prose-lg prose-neutral dark:prose-invert max-w-none leading-relaxed">
+    <div class="prose prose-lg prose-neutral dark:prose-invert w-full">
       <Content />
     </div>
   </article>
