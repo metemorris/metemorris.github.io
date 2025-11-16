@@ -6,9 +6,10 @@
 @tailwind utilities;
 
 :root {
-  --page-bg: #f7f6f3;
-  --page-foreground: #0c0c0c;
-  --page-muted: #5c5c5c;
+  /* Colors tuned to keep muted text >=4.5:1 against the backgrounds */
+  --page-bg: #f6f4ef;
+  --page-foreground: #0b0b0b;
+  --page-muted: #4a4a4a;
   --page-border: rgba(14, 14, 14, 0.08);
   --page-link: #0d0d0d;
   --avatar-filter: saturate(1) brightness(1);
@@ -16,19 +17,19 @@
 }
 
 .dark {
-  --page-bg: #0c0d0f;
-  --page-foreground: #f5f5f0;
-  --page-muted: #a0a0a0;
-  --page-border: rgba(255, 255, 255, 0.12);
+  --page-bg: #08090b;
+  --page-foreground: #f7f7f2;
+  --page-muted: #c5c5c5;
+  --page-border: rgba(255, 255, 255, 0.15);
   --page-link: #f5f5f0;
   --avatar-filter: saturate(0.95) brightness(1.05);
   --icon-filter: invert(1);
 }
 
 .light {
-  --page-bg: #f7f6f3;
-  --page-foreground: #0c0c0c;
-  --page-muted: #5c5c5c;
+  --page-bg: #f6f4ef;
+  --page-foreground: #0b0b0b;
+  --page-muted: #4a4a4a;
   --page-border: rgba(14, 14, 14, 0.08);
   --page-link: #0d0d0d;
 }
