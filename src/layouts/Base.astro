@@ -6,6 +6,11 @@ const navItems = [
   { label: "Blog", href: "/blog" },
 ];
 const currentPath = Astro.url.pathname;
+const contactLinks = [
+  { label: "X", href: "https://twitter.com/metemorris", external: true, aria: "X (Twitter)", icon: "/x.svg" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/metemorris", external: true, icon: "/linkedin.svg" },
+  { label: "RSS", href: "/rss.xml", aria: "RSS Feed", icon: "/rss.svg" },
+];
 ---
 <html lang="en">
   <head>
@@ -55,7 +60,24 @@ const currentPath = Astro.url.pathname;
       <main class="flex-1">
         <slot />
       </main>
-
+      <footer class="flex flex-wrap items-center gap-3 border-t border-[var(--page-border)] pt-6 text-sm text-[var(--page-muted)]">
+        {
+          contactLinks.map((link) => (
+            <a
+              class="contact-link"
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              aria-label={link.aria ?? link.label}
+            >
+              <span class="contact-link-icon" aria-hidden="true">
+                <img src={link.icon} alt="" />
+              </span>
+              <span>{link.label}</span>
+            </a>
+          ))
+        }
+      </footer>
     </div>
     <script is:inline>
       const storageKey = "theme";

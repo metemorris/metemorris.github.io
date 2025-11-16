@@ -36,7 +36,8 @@ All commands are run from the root of the project, from a terminal:
 
 [x] Finalize and publish the first real blog post (replace the placeholder intro).
 [x] Deploy the website
-[] Add an RSS Feed
+[x] Add an RSS Feed
+[x] Add contact
 [] SEO Optimization
 [] Add a Turkish language toggle or localized version of the site.
 [] Add searching/filtering by tags in the blog.
