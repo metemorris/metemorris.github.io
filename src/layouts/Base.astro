@@ -5,6 +5,7 @@ const {
   description = "Engineer • notes & projects",
   canonical: canonicalProp,
   ogImage,
+  structuredData = [],
 } = Astro.props;
 const navItems = [
   { label: "Home", href: "/" },
@@ -37,6 +38,11 @@ const ogImageUrl = ogImage ?? defaultOgImage;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:url" content={canonical} />
     <meta name="twitter:image" content={ogImageUrl} />
+    {structuredData.map((entry) => (
+      <script type="application/ld+json" is:inline>
+        {JSON.stringify(entry)}
+      </script>
+    ))}
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script is:inline>
       (function() {

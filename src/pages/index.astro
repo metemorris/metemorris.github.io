@@ -49,10 +49,29 @@ const latestPost = posts
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .at(0);
+
+const personStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mete Morris",
+  url: "https://www.metemorris.com/",
+  jobTitle: "AI Reliability Leader & SRE",
+  worksFor: {
+    "@type": "Organization",
+    name: "Google",
+  },
+  sameAs: [
+    "https://twitter.com/metemorris",
+    "https://www.linkedin.com/in/metemorris",
+  ],
+  description:
+    "Mete Morris is a Google AI/ML reliability engineer sharing systems thinking essays, career notes, and engineering projects.",
+};
 ---
 <Base
   title="Mete Morris | AI Reliability Leader, Writer & SRE Insights"
   description="Mete Morris' official site covering AI/ML reliability leadership, Google SRE lessons, systems thinking essays, and personal projects in engineering."
+  structuredData={[personStructuredData]}
 >
   <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
     <div class="flex justify-center md:order-2 md:justify-end">

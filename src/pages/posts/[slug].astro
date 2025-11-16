@@ -12,9 +12,29 @@ export async function getStaticPaths() {
 
 const post = Astro.props as CollectionEntry<"posts">;
 const { Content } = await post.render();
+
+const siteOrigin = Astro.site ?? "https://www.metemorris.com";
+const canonicalUrl = new URL(`/posts/${post.slug}/`, siteOrigin).href;
+const blogPostingStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.seoTitle,
+  description: post.data.seoDescription,
+  datePublished: post.data.date.toISOString(),
+  dateModified: post.data.date.toISOString(),
+  author: {
+    "@type": "Person",
+    name: "Mete Morris",
+    url: "https://www.metemorris.com/",
+  },
+  mainEntityOfPage: canonicalUrl,
+  url: canonicalUrl,
+  image: "https://www.metemorris.com/headshot.jpg",
+  keywords: post.data.tags.join(", "),
+};
 ---
 
-<Base title={post.data.seoTitle} description={post.data.seoDescription}>
+<Base title={post.data.seoTitle} description={post.data.seoDescription} canonical={canonicalUrl} structuredData={[blogPostingStructuredData]}>
   <article class="max-w-3xl mx-auto space-y-8 fade-in">
     <div class="space-y-3 border-b border-[var(--page-border)] pb-4">
       <p class="eyebrow text-left flex flex-wrap gap-1.5 text-[var(--page-muted)]">
@@ -25,7 +45,7 @@ const { Content } = await post.render();
         ))}
       </p>
 
-      <h1 class="text-3xl font-semibold leading-snug">{post.data.title}</h1>
+      <h1 class="text-4xl font-semibold leading-snug">{post.data.title}</h1>
 
       <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
         {post.data.date.toLocaleDateString(undefined, {
