@@ -34,11 +34,13 @@ All commands are run from the root of the project, from a terminal:
 
 ## ✅ Next steps / TODO
 
-- Finalize and publish the first real blog post (replace the placeholder intro).
-- Add a Turkish language toggle or localized version of the site.
-- Expand the blog index with more posts and categories.
-- Hook up analytics or logging once ready for production.
-- Add searching/filtering by tags in the blog.
+[x] Finalize and publish the first real blog post (replace the placeholder intro).
+[x] Deploy the website
+[] Add an RSS Feed
+[] SEO Optimization
+[] Add a Turkish language toggle or localized version of the site.
+[] Hook up analytics or logging once ready for production.
+[] Add searching/filtering by tags in the blog.
 
 ## 👀 Want to learn more?
 
