@@ -38,6 +38,8 @@ All commands are run from the root of the project, from a terminal:
 - [x] Deploy the website
 - [x] Add an RSS Feed
 - [x] Add contact
+- [ ] In mobile distinguish blogposts from resume better
+- [ ] Add a way to like or comment anonymously on blog posts. 
 - [ ] Have chatgpt agent crawl through my website click every link and 
 - [ ] SEO Optimization
 - [ ] Add a Turkish language toggle or localized version of the site.
