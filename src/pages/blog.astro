@@ -15,11 +15,11 @@ const publishedPosts = posts
   description="Browse Mete Morris' Site Reliability and AI/ML engineering essays, systems thinking frameworks, and practical career lessons for modern builders."
 >
   <div class="space-y-10 mx-auto max-w-[65ch]">
+    <Search />
     <section class="space-y-5 fade-in mt-6">
       <div class="flex items-center justify-between">
         <p class="eyebrow">Latest entries</p>
       </div>
-      <Search />
       <div class="space-y-5">
         {
           publishedPosts.length === 0 && (
