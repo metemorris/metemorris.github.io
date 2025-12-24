@@ -1,0 +1,55 @@
+<div id="search" class="mt-8"></div>
+
+<script is:inline>
+    window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            resetFilters: true,
+            translations: {
+                placeholder: "Search posts...",
+            },
+        });
+    });
+</script>
+
+<style is:global>
+    :root {
+        --pagefind-ui-primary: var(--page-text);
+        --pagefind-ui-text: var(--page-text);
+        --pagefind-ui-background: transparent;
+        --pagefind-ui-border: var(--page-border);
+        --pagefind-ui-tag: var(--page-muted);
+    }
+
+    .pagefind-ui {
+        width: 100%;
+    }
+
+    .pagefind-ui__search-input {
+        background-color: transparent !important;
+        border: 1px solid var(--page-border) !important;
+        border-radius: 4px !important;
+        color: var(--page-text) !important;
+    }
+
+    .pagefind-ui__search-clear {
+        color: var(--page-text) !important;
+    }
+
+    .pagefind-ui__drawer {
+        background-color: var(--page-bg) !important;
+        border: 1px solid var(--page-border) !important;
+        border-top: none !important;
+        border-radius: 0 0 4px 4px !important;
+    }
+
+    .pagefind-ui__result-link {
+        color: var(--page-text) !important;
+        font-weight: 600 !important;
+    }
+
+    .pagefind-ui__result-excerpt {
+        color: var(--page-muted) !important;
+    }
+</style>

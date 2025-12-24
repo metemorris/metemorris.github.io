@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.metemorris.com/sitemap.xml
+Sitemap: https://www.metemorris.com/sitemap-index.xml

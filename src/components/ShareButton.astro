@@ -1,0 +1,72 @@
+---
+interface Props {
+    url: string;
+    title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<button
+    id="share-button"
+    class="flex items-center gap-2 rounded-lg border border-[var(--page-border)] px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-[var(--page-muted)] transition-all hover:border-[var(--page-text)] hover:text-[var(--page-text)] active:scale-95"
+    data-url={url}
+    data-title={title}
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+        <polyline points="16 6 12 2 8 6"></polyline>
+        <line x1="12" y1="2" x2="12" y2="15"></line>
+    </svg>
+    <span>Share</span>
+</button>
+
+<script>
+    const shareButton = document.getElementById("share-button");
+
+    if (shareButton) {
+        shareButton.addEventListener("click", async () => {
+            const url =
+                shareButton.getAttribute("data-url") || window.location.href;
+            const title =
+                shareButton.getAttribute("data-title") || document.title;
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title,
+                        url,
+                    });
+                } catch (err) {
+                    if ((err as Error).name !== "AbortError") {
+                        console.error("Share failed:", err);
+                    }
+                }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    const originalText =
+                        shareButton.querySelector("span")?.textContent ||
+                        "Share";
+                    const span = shareButton.querySelector("span");
+                    if (span) span.textContent = "Copied!";
+                    setTimeout(() => {
+                        if (span) span.textContent = originalText;
+                    }, 2000);
+                } catch (err) {
+                    console.error("Clipboard copy failed:", err);
+                }
+            }
+        });
+    }
+</script>

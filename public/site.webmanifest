@@ -1,0 +1,16 @@
+{
+    "name": "Mete Morris",
+    "short_name": "Mete",
+    "description": "Personal site of Mete Morris - Site Reliability & AI/ML Engineer",
+    "start_url": "/",
+    "display": "minimal-ui",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

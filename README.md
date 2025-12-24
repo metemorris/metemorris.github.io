@@ -42,15 +42,15 @@ All commands are run from the root of the project, from a terminal:
 - [x] **Standardize UI**: Create reusable `<Section>` and `<SectionHeader>` components to ensure consistent spacing and typography.
 
 ### 2. 🔍 SEO & Automation
-- [ ] **Sitemap**: Switch from manual `src/pages/sitemap.xml.js` to `@astrojs/sitemap` integration for automated generation.
-- [ ] **Robots.txt**: Create `public/robots.txt` and ensure it points to the sitemap.
-- [ ] **Manifest**: Add `webmanifest` for better mobile installability.
+- [x] **Sitemap**: Switch from manual `src/pages/sitemap.xml.js` to `@astrojs/sitemap` integration for automated generation.
+- [x] **Robots.txt**: Create `public/robots.txt` and ensure it points to the sitemap.
+- [x] **Manifest**: Add `webmanifest` for better mobile installability.
 
 ### 3. 📝 Blog Features (Engagement)
-- [ ] **Search**: Implement **Pagefind** for static search.
-- [ ] **Tags**: Add tag filtering and dynamic `/tags/[tag]` pages.
-- [ ] **Reading Time**: Add estimated reading time to post metadata.
-- [ ] **Open Graph**: Automate OG image generation for every post.
+- [x] **Search**: Implement **Pagefind** for static search.
+- [x] **Tags**: Add tag filtering and dynamic `/tags/[tag]` pages.
+- [x] **Reading Time**: Add estimated reading time to post metadata.
+- [x] **Open Graph**: Automate OG image generation for every post.
 
 ### 4. 🌍 Localization (Expansion)
 - [ ] **TR Support**: Create `/tr` route branch.

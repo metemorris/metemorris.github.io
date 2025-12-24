@@ -1,0 +1,97 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { calculateReadingTime } from "../../utils/readingTime";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("posts");
+    const uniqueTags = [
+        ...new Set(allPosts.flatMap((post) => post.data.tags || [])),
+    ];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts
+            .filter((post) => post.data.tags?.includes(tag) && !post.data.draft)
+            .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Base
+    title={`Posts tagged with "${tag}" | Mete Morris Blog`}
+    description={`Browse articles tagged with ${tag} on Mete Morris' personal blog.`}
+>
+    <div class="space-y-10 mx-auto max-w-[65ch]">
+        <section class="space-y-5 fade-in mt-6">
+            <div
+                class="flex items-center justify-between border-b border-[var(--page-border)] pb-4"
+            >
+                <p class="eyebrow">Tagged with: {tag}</p>
+                <a
+                    href="/blog"
+                    class="text-xs uppercase tracking-[0.2em] text-[var(--page-muted)] hover:text-white transition-colors"
+                >
+                    View all posts
+                </a>
+            </div>
+
+            <div class="space-y-5">
+                {
+                    posts.length === 0 && (
+                        <p class="muted text-sm pt-4">
+                            No posts found with this tag.
+                        </p>
+                    )
+                }
+
+                {
+                    posts.map((entry) => (
+                        <article class="flex flex-col gap-2 border-b border-[var(--page-border)] pb-6 last:border-0 transition-transform duration-200 hover:-translate-y-1">
+                            <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                                <div class="space-y-1.5 flex-1">
+                                    <div class="flex flex-wrap items-center gap-1.5">
+                                        <a
+                                            class="text-xl font-semibold hover:underline"
+                                            href={`/posts/${entry.slug}/`}
+                                        >
+                                            {entry.data.title}
+                                        </a>
+                                    </div>
+                                    <p class="muted text-sm leading-relaxed">
+                                        {entry.data.description}
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col items-end gap-1 shrink-0">
+                                    <time
+                                        class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"
+                                        datetime={entry.data.date.toISOString()}
+                                    >
+                                        {entry.data.date.toLocaleDateString(
+                                            undefined,
+                                            {
+                                                month: "short",
+                                                day: "numeric",
+                                                year: "numeric",
+                                            },
+                                        )}
+                                    </time>
+                                    <span class="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--page-muted)] opacity-70">
+                                        {calculateReadingTime(entry.body || "")}
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </section>
+    </div>
+</Base>
