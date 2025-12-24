@@ -1,6 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
+import ShareButton from "../../components/ShareButton.astro";
+import Tag from "../../components/Tag.astro";
+import { calculateReadingTime } from "../../utils/readingTime";
+import { formatLongDate } from "../../utils/formatDate";
 
 export async function getStaticPaths() {
   const items = await getCollection("posts");
@@ -13,13 +17,11 @@ export async function getStaticPaths() {
 const post = Astro.props as CollectionEntry<"posts">;
 const { Content } = await post.render();
 
-import ShareButton from "../../components/ShareButton.astro";
-import { calculateReadingTime } from "../../utils/readingTime";
 const readingTime = calculateReadingTime(post.body || "");
-
 const siteOrigin = Astro.site ?? "https://www.metemorris.com";
 const canonicalUrl = new URL(`/posts/${post.slug}/`, siteOrigin).href;
 const postOgImage = new URL(`/og/${post.slug}.png`, siteOrigin).href;
+
 const blogPostingStructuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -37,6 +39,8 @@ const blogPostingStructuredData = {
   image: "https://www.metemorris.com/headshot.jpg",
   keywords: post.data.tags.join(", "),
 };
+
+const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
 ---
 
 <Base
@@ -51,16 +55,7 @@ const blogPostingStructuredData = {
       <p
         class="eyebrow text-left flex flex-wrap gap-1.5 text-[var(--page-muted)]"
       >
-        {
-          (post.data.tags?.length ? post.data.tags : ["Writing"]).map((tag) => (
-            <a
-              href={`/tags/${tag}`}
-              class="rounded-full border border-[var(--page-border)] px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.3em] text-[var(--page-muted)] hover:bg-[var(--page-border)] hover:text-white transition-colors"
-            >
-              {tag}
-            </a>
-          ))
-        }
+        {tags.map((tag) => <Tag name={tag} />)}
       </p>
 
       <h1 class="text-4xl font-semibold leading-snug">{post.data.title}</h1>
@@ -68,18 +63,8 @@ const blogPostingStructuredData = {
       <div
         class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
       >
-        <p
-          class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)] flex items-center gap-4"
-        >
-          <span>
-            {
-              post.data.date.toLocaleDateString(undefined, {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })
-            }
-          </span>
+        <p class="date-label flex items-center gap-4">
+          <span>{formatLongDate(post.data.date)}</span>
           <span class="opacity-50">•</span>
           <span>{readingTime}</span>
         </p>

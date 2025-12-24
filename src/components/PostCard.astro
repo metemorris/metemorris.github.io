@@ -1,0 +1,69 @@
+---
+import Tag from "./Tag.astro";
+import { formatShortDate } from "../utils/formatDate";
+import { calculateReadingTime } from "../utils/readingTime";
+
+interface Props {
+    slug: string;
+    title: string;
+    description: string;
+    date: Date;
+    tags?: string[];
+    body?: string;
+    showTags?: boolean;
+    showReadingTime?: boolean;
+}
+
+const {
+    slug,
+    title,
+    description,
+    date,
+    tags = [],
+    body = "",
+    showTags = true,
+    showReadingTime = false,
+} = Astro.props;
+---
+
+<article
+    class="flex flex-col gap-2 border-t border-[var(--page-border)] pt-4 transition-transform duration-200 hover:-translate-y-1"
+>
+    <div
+        class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+    >
+        <div class="space-y-1.5 flex-1">
+            <div class="flex flex-wrap items-center gap-1.5">
+                <a
+                    class="text-xl font-semibold hover:underline"
+                    href={`/posts/${slug}/`}
+                >
+                    {title}
+                </a>
+                {
+                    showTags && tags.length > 0 && (
+                        <div class="flex flex-wrap gap-1">
+                            {tags.map((tag) => (
+                                <Tag name={tag} />
+                            ))}
+                        </div>
+                    )
+                }
+            </div>
+            <p class="muted text-sm leading-relaxed">{description}</p>
+        </div>
+
+        <div class="flex flex-col items-end gap-1 shrink-0">
+            <time class="date-label" datetime={date.toISOString()}>
+                {formatShortDate(date)}
+            </time>
+            {
+                showReadingTime && body && (
+                    <span class="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--page-muted)] opacity-70">
+                        {calculateReadingTime(body)}
+                    </span>
+                )
+            }
+        </div>
+    </div>
+</article>

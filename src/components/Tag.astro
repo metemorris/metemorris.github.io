@@ -1,0 +1,11 @@
+---
+interface Props {
+    name: string;
+    href?: string;
+}
+
+const { name, href } = Astro.props;
+const linkHref = href ?? `/tags/${name}`;
+---
+
+<a href={linkHref} class="tag">{name}</a>

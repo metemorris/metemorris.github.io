@@ -1,10 +1,6 @@
 /* src/styles/global.css */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Clash+Display:wght@500;600&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   /* Colors tuned to keep muted text >=4.5:1 against the backgrounds */
   --page-bg: #f6f4ef;
@@ -26,12 +22,30 @@
   --icon-filter: invert(1);
 }
 
-.light {
-  --page-bg: #f6f4ef;
-  --page-foreground: #0b0b0b;
-  --page-muted: #4a4a4a;
-  --page-border: rgba(14, 14, 14, 0.08);
-  --page-link: #0d0d0d;
+/* Tag pill styling */
+.tag {
+  display: inline-block;
+  border-radius: 9999px;
+  border: 1px solid var(--page-border);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--page-muted);
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.tag:hover {
+  background: var(--page-border);
+  color: #fff;
+}
+
+/* Date label styling */
+.date-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--page-muted);
 }
 
 html {
@@ -67,6 +81,7 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -222,6 +237,7 @@ h4,
   height: 1rem;
   display: inline-flex;
 }
+
 .contact-link-icon img {
   width: 100%;
   height: 100%;

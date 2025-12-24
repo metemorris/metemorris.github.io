@@ -118,38 +118,21 @@ const ogImageUrl = ogImage ?? defaultOgImage;
     <script is:inline>
       const storageKey = "theme";
       const root = document.documentElement;
-      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-      const applyTheme = (theme) => {
-        if (theme !== "dark" && theme !== "light") return;
-        root.classList.remove("light", "dark");
-        root.classList.add(theme);
-        const button = document.getElementById("theme-toggle");
-        if (button) {
-          button.dataset.theme = theme;
-          button.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-        }
-      };
-
-      const stored = localStorage.getItem(storageKey);
-      const initial = stored ?? (mediaQuery.matches ? "dark" : "light");
-      applyTheme(initial);
-
-      mediaQuery.addEventListener("change", (event) => {
-        const hasStored = localStorage.getItem(storageKey);
-        if (!hasStored) {
-          applyTheme(event.matches ? "dark" : "light");
-        }
-      });
 
       const toggle = () => {
         const current = root.classList.contains("dark") ? "dark" : "light";
         const next = current === "dark" ? "light" : "dark";
         localStorage.setItem(storageKey, next);
-        applyTheme(next);
+        root.classList.remove("light", "dark");
+        root.classList.add(next);
+        const button = document.getElementById("theme-toggle");
+        if (button) {
+          button.dataset.theme = next;
+          button.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        }
       };
 
-      const initToggle = () => {
+      const initButton = () => {
         const button = document.getElementById("theme-toggle");
         if (button) {
           const isDark = root.classList.contains("dark");
@@ -159,10 +142,20 @@ const ogImageUrl = ogImage ?? defaultOgImage;
         }
       };
 
+      // Handle system preference changes
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        if (!localStorage.getItem(storageKey)) {
+          const theme = e.matches ? "dark" : "light";
+          root.classList.remove("light", "dark");
+          root.classList.add(theme);
+          initButton();
+        }
+      });
+
       if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initToggle);
+        document.addEventListener("DOMContentLoaded", initButton);
       } else {
-        initToggle();
+        initButton();
       }
     </script>
   </body>
