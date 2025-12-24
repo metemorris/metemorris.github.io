@@ -1,48 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
-
-type Experience = {
-  titleLine: string;
-  orgLine: string;
-  period: string;
-  summary: string;
-};
-
-const experience: Experience[] = [
-  {
-    titleLine: "Software Engineer · Machine Learning SRE",
-    orgLine: "Google · Platforms & Devices",
-    period: "Jul 2025 — Present",
-    summary: "Building resilient and scalable AI/ML infrastructure to support cutting-edge applications and features.",
-  },
-  {
-    titleLine: "Software Engineer · Site Reliability",
-    orgLine: "Google · Maps",
-    period: "Sep 2021 — Jul 2025",
-    summary:
-      "Ensured the stability and performance of large-scale mapping services through reliability engineering, AI-powered monitoring, and critical infrastructure modernization.",
-  },
-  {
-    titleLine: "Technical Program Manager · Serverless SRE",
-    orgLine: "Google · Cloud",
-    period: "Sep 2019 — Sep 2021",
-    summary: "Drove strategic programs to improve reliability and efficienct of serverless offerings on GCP.",
-  },
-];
-
-const education = [
-  {
-    school: "Johns Hopkins University",
-    details: "MSE · Bioengineering Innovation & Design",
-    period: "2018 — 2019",
-  },
-  {
-    school: "Illinois Institute of Technology",
-    details: "BSc Computer Engineering · Political Science minor",
-    period: "2014 — 2018",
-  },
-];
+import { experience, education } from "../data/resume";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 
 const posts = await getCollection("posts");
 const latestPost = posts
@@ -68,6 +29,7 @@ const personStructuredData = {
     "Mete Morris is a Google SRE and AI/ML engineer sharing systems thinking essays, career notes, and engineering projects.",
 };
 ---
+
 <Base
   title="Mete Morris | Site Reliability & AI/ML Engineer"
   description="Mete Morris' official site covering Site Reliability, AI/ML engineering lessons, systems thinking essays, and personal projects in software and political science."
@@ -75,7 +37,9 @@ const personStructuredData = {
 >
   <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
     <div class="flex justify-center md:order-2 md:justify-end">
-      <div class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden transition-[border-color,filter] duration-300">
+      <div
+        class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden transition-[border-color,filter] duration-300"
+      >
         <img
           src="/headshot.jpg"
           alt="Mete Morris headshot"
@@ -90,64 +54,83 @@ const personStructuredData = {
         <h1 class="text-4xl font-semibold leading-tight">Mete Morris</h1>
       </div>
       <p class="muted text-sm">
-        I build and debug AI and ML systems at Google, chase meta-ideas in my writing, and recharge by playing guitar,
-        reading, and keeping my body moving.
+        I build and debug AI and ML systems at Google and recharge by playing
+        guitar, reading, and keeping my body moving.
       </p>
     </div>
   </section>
 
-  <section class="mt-16 space-y-4 fade-in">
-    <p class="eyebrow section-heading">Latest post</p>
-    {latestPost ? (
-      <article class="border-t border-[var(--page-border)] pt-4">
-        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <a class="text-lg font-semibold hover:underline" href={`/posts/${latestPost.slug}/`}>
-              {latestPost.data.title}
-            </a>
-            <p class="muted text-sm">{latestPost.data.description}</p>
+  <Section>
+    <SectionHeader title="Latest post" />
+    {
+      latestPost ? (
+        <article class="border-t border-[var(--page-border)] pt-4">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <a
+                class="text-lg font-semibold hover:underline"
+                href={`/posts/${latestPost.slug}/`}
+              >
+                {latestPost.data.title}
+              </a>
+              <p class="muted text-sm">{latestPost.data.description}</p>
+            </div>
+            <time
+              class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"
+              datetime={latestPost.data.date.toISOString()}
+            >
+              {latestPost.data.date.toLocaleDateString(undefined, {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </time>
           </div>
-          <time
-            class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]"
-            datetime={latestPost.data.date.toISOString()}
-          >
-            {latestPost.data.date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
-          </time>
-        </div>
-      </article>
-    ) : (
-      <p class="muted text-sm border-t border-[var(--page-border)] pt-4">No posts yet.</p>
-    )}
-  </section>
+        </article>
+      ) : (
+        <p class="muted text-sm border-t border-[var(--page-border)] pt-4">
+          No posts yet.
+        </p>
+      )
+    }
+  </Section>
 
-  <section class="mt-14 space-y-6 fade-in">
-    <p class="eyebrow section-heading">Experience</p>
+  <Section>
+    <SectionHeader title="Experience" />
     <div class="space-y-6">
-      {experience.map((item) => (
-        <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
-            <h2 class="text-lg font-semibold">{item.titleLine}</h2>
-            <p class="muted text-sm">{item.orgLine}</p>
-          </div>
-          <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
-        </article>
-      ))}
+      {
+        experience.map((item) => (
+          <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
+                {item.period}
+              </p>
+              <h2 class="text-lg font-semibold">{item.titleLine}</h2>
+              <p class="muted text-sm">{item.orgLine}</p>
+            </div>
+            <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
+          </article>
+        ))
+      }
     </div>
-  </section>
+  </Section>
 
-  <section class="mt-14 space-y-6 fade-in">
-    <p class="eyebrow section-heading">Education</p>
+  <Section withDivider>
+    <SectionHeader title="Education" />
     <div class="space-y-5">
-      {education.map((item) => (
-        <article class="flex flex-col gap-2 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h3 class="text-lg font-semibold">{item.school}</h3>
-            <p class="muted text-sm">{item.details}</p>
-          </div>
-          <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">{item.period}</p>
-        </article>
-      ))}
+      {
+        education.map((item) => (
+          <article class="flex flex-col gap-2 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="text-lg font-semibold">{item.school}</h3>
+              <p class="muted text-sm">{item.details}</p>
+            </div>
+            <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
+              {item.period}
+            </p>
+          </article>
+        ))
+      }
     </div>
-  </section>
+  </Section>
 </Base>

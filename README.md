@@ -1,12 +1,14 @@
 # Mete Morris — Personal Site
 
-## 🚀 Project Structure
+## Project Structure
 
 ```text
 / (project root)
 ├── public/               # Static assets (favicon, headshot, icons)
 ├── src/
+│   ├── components/       # Reusable components
 │   ├── content/          # Astro content collections (MDX posts)
+│   ├── data/             # Data files (resume, etc)
 │   ├── layouts/          # Base layout used across pages
 │   ├── pages/            # Astro routes (/, /blog, /posts/[slug])
 │   └── styles/           # Tailwind + global.css
@@ -19,7 +21,7 @@
 Astro maps files in `src/pages/` to routes automatically. Content lives in `src/content/` (managed by Astro collections),
 while static assets go in `public/`.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -34,61 +36,31 @@ All commands are run from the root of the project, from a terminal:
 
 ## ✅ Next steps / TODO
 
-### UI & UX Improvements
-- [ ] Improve mobile layout to better distinguish **résumé** vs **blog** sections
-- [ ] Add clearer section headers on mobile
-- [ ] Add spacing & visual separators between major sections
-- [ ] Refine navbar spacing/contrast for smaller screens
+### 1. 🚨 Core Fixes & Architecture (High Priority)
+- [x] **Mobile Layout**: Enhance distinction between résumé and blog sections; fix header spacing.
+- [x] **Refactor Data**: Move hardcoded "Experience" and "Education" data from `index.astro` to `src/data/` or a Content Collection only for better maintainability.
+- [x] **Standardize UI**: Create reusable `<Section>` and `<SectionHeader>` components to ensure consistent spacing and typography.
 
-### Blog Features
-- [ ] Add **reading time** + better **published date** formatting for blog posts
-- [ ] Add **tag filtering** on the blog index page
-- [ ] Add **search functionality** (Pagefind or custom client-side JS)
-- [ ] Create dynamic `/tags/[tag]` pages
-- [ ] Add **OG image generation** for each post (social preview cards)
-- [ ] Add **JSON Feed** (`feed.json`) alongside RSS
-- [ ] Add **related posts** section below each article (optional)
+### 2. 🔍 SEO & Automation
+- [ ] **Sitemap**: Switch from manual `src/pages/sitemap.xml.js` to `@astrojs/sitemap` integration for automated generation.
+- [ ] **Robots.txt**: Create `public/robots.txt` and ensure it points to the sitemap.
+- [ ] **Manifest**: Add `webmanifest` for better mobile installability.
 
-### Interaction & Engagement
-- [ ] Add anonymous **like / heart** button to blog posts
-- [ ] Add **comment system** (Giscus, Utterances, or Staticman)
-- [ ] Add “Share on X / Reddit / LinkedIn” buttons on posts
+### 3. 📝 Blog Features (Engagement)
+- [ ] **Search**: Implement **Pagefind** for static search.
+- [ ] **Tags**: Add tag filtering and dynamic `/tags/[tag]` pages.
+- [ ] **Reading Time**: Add estimated reading time to post metadata.
+- [ ] **Open Graph**: Automate OG image generation for every post.
 
-### Localization
-- [ ] Add a **Turkish language toggle** (EN / TR switch)
-- [ ] Create localized `/tr` versions of key pages
-- [ ] Localize UI strings + metadata
+### 4. 🌍 Localization (Expansion)
+- [ ] **TR Support**: Create `/tr` route branch.
+- [ ] **I18n**: Implement basic dictionary for UI strings (e.g., "Latest Post" -> "Son Yazılar").
 
-### SEO Enhancements
-- [x] Add **JSON-LD structured data** (Article schema for blog posts)
-- [x] Add **og:image** and **twitter:image** meta tags
-- [x] Improve canonical URL handling
-- [x] Add or update `robots.txt`
-- [x] Ensure the sitemap is linked and correct
-- [x] Add descriptive **alt text** to all images
-- [x] Perform an accessibility pass (colors, contrast, heading order)
+### 5. 🛠 Maintenance & Polish
+- [ ] **Linting**: detailed Prettier + ESLint setup.
+- [ ] **Analytics**: Add privacy-friendly analytics.
 
-### Developer Tooling & Code Quality
-- [ ] Have ChatGPT crawl the entire site and report missing meta tags, broken links, missing alt text
-- [ ] Refactor layout/components for clarity and consistency
-- [ ] Add type-safe frontmatter schemas for more content types
-- [ ] Add **Prettier** + **ESLint** setup
-- [ ] Add **Lighthouse CI** checks (optional)
-
-### Subdomains
-- [ ] Configure `blog.metemorris.com`
-- [ ] Add DNS CNAME: `blog → metemorris.github.io`
-- [ ] Add redirect page: `src/pages/blog/index.astro` → redirects to `/blog`
-
-### Analytics & Monitoring
-- [ ] Add privacy-friendly analytics (Plausible / Umami / Cloudflare Analytics)
-- [ ] Add outbound link click tracking (optional)
-
-### Extra Pages (Optional)
-- [ ] `/reading` — books and articles
-
-### Future Nice-to-Haves
-- [ ] Add dark/light mode **preference memory** (localStorage)
-- [ ] Add keyboard navigation shortcuts (J/K to move between posts)
-- [ ] Add an **AI-assisted search** or “Ask Mete’s AI” widget
-- [ ] Generate weekly automated digest (“This week on the blog…”)
+### 6. ✅ Completed / Verified
+- [x] Dark/light mode preference memory (Implemented in `Base.astro`).
+- [x] Basic Metadata (HTML Title/Description).
+- [x] Add JSON-LD structured data.
