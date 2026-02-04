@@ -8,6 +8,8 @@
   --page-muted: #4a4a4a;
   --page-border: rgba(14, 14, 14, 0.08);
   --page-link: #0d0d0d;
+  --prose-link: #1d4ed8;
+  --prose-link-hover: #1e40af;
   --avatar-filter: saturate(1) brightness(1);
   --icon-filter: invert(0);
 }
@@ -18,6 +20,8 @@
   --page-muted: #c5c5c5;
   --page-border: rgba(255, 255, 255, 0.15);
   --page-link: #f5f5f0;
+  --prose-link: #93c5fd;
+  --prose-link-hover: #dbeafe;
   --avatar-filter: saturate(0.95) brightness(1.05);
   --icon-filter: invert(1);
 }
@@ -208,10 +212,22 @@ h4,
 .prose {
   max-width: 65ch;
   line-height: 1.7;
+  --tw-prose-links: var(--prose-link);
 }
 
 .prose :where(p, li) {
   line-height: 1.7;
+}
+
+.prose :where(a) {
+  color: var(--prose-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.prose :where(a:hover) {
+  color: var(--prose-link-hover);
 }
 
 

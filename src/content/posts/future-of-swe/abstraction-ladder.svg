@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 960 420"
+  role="img"
+  aria-labelledby="abstractionTitle abstractionDesc"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <title id="abstractionTitle">Engineering paths and abstraction ladder</title>
+  <desc id="abstractionDesc">
+    A rising line from Math to Physics to Electrical Engineering to Computer Engineering
+    to Software Engineering to Computer Science, with faint branches from Physics to other
+    engineering disciplines.
+  </desc>
+
+  <defs>
+    <style>
+      .axisLabel { fill: rgba(255,255,255,0.74); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .dotLabel { fill: rgba(255,255,255,0.92); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .muted { fill: rgba(255,255,255,0.55); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="420" rx="14" fill="#0b0b0c" stroke="rgba(255,255,255,0.04)" />
+
+  <g opacity="0.9">
+    <line x1="90" y1="360" x2="880" y2="360" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    <line x1="90" y1="360" x2="90" y2="60" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    <text class="axisLabel" x="98" y="74">More abstraction ↑</text>
+  </g>
+
+  <g opacity="0.7">
+    <path
+      d="M 260 265 C 290 310, 320 340, 350 350"
+      fill="none"
+      stroke="rgba(255,255,255,0.22)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 260 265 C 300 290, 340 300, 390 305"
+      fill="none"
+      stroke="rgba(255,255,255,0.22)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 260 265 C 300 245, 350 235, 420 230"
+      fill="none"
+      stroke="rgba(255,255,255,0.22)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 260 265 C 300 225, 335 190, 390 170"
+      fill="none"
+      stroke="rgba(255,255,255,0.22)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <text class="muted" x="420" y="285">other engineering disciplines</text>
+  </g>
+
+  <path
+    d="M 140 340
+       C 195 330, 220 305, 260 265
+       C 325 210, 375 230, 430 200
+       C 510 165, 535 175, 600 150
+       C 655 130, 680 130, 700 120
+       C 735 108, 760 110, 790 100"
+    fill="none"
+    stroke="rgba(255,255,255,0.78)"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <g>
+    <circle cx="140" cy="340" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="140" cy="340" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="156" y="346">Math</text>
+
+    <circle cx="260" cy="265" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="260" cy="265" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="276" y="271">Physics</text>
+
+    <circle cx="430" cy="200" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="430" cy="200" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="446" y="206">Electrical Engineering</text>
+
+    <circle cx="600" cy="150" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="600" cy="150" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="616" y="156">Computer Engineering</text>
+
+    <circle cx="700" cy="120" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="700" cy="120" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="716" y="126">Software Engineering</text>
+
+    <circle cx="790" cy="100" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="790" cy="100" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="806" y="106">Computer Science</text>
+  </g>
+</svg>

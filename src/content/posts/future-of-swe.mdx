@@ -5,138 +5,41 @@ seoTitle: The Future of Software Engineering | Mete Morris Blog
 seoDescription: A Google site reliability engineer's perspective on how software engineering will evolve over the next few years, emphasizing abstractions and career outlook.
 date: 2026-02-03
 tags: [personal, career, software-engineering]
-status: private
+status: published
 ---
 
 I have been seeing a lot of discourse at varying levels of gloom but mostly doom about the job market, especially considering Software Engineering.
-This gloomy outlook is amplified significantly when you talk to high school students trying to decide on a major, Sophomores/Juniors looking for internships, Seniors looking for full time jobs, etc. 
+This gloomy outlook is amplified significantly when you talk to high school students trying to decide on a major, Sophomores/Juniors in college looking for internships, Seniors looking for full time jobs, etc. 
 This is understandable: the earlier you are in your journey of the ambiguous decision tree of life, the more possible outcomes—hence more undesired outcomes. 
-On top of various [qunatitative](https://archive.ph/yaUzi) evidence that we are seeing regarding a decreasing number of openings for entry level jobs, I wanted to provide a somewhat optimistic outlook on our shared profession, for those that are curious, eager, and adaptive to change. 
+On top of various [quantitative](https://archive.ph/yaUzi) evidence that we are seeing regarding a decreasing number of openings for entry level jobs, I wanted to provide a somewhat optimistic outlook on our shared profession, for those that are early in their education/career and are curious, eager, and adaptive to change. 
 
 I should state that I am not, and have never considered myself a "Software Engineer". 
-I never bother to clarify in general because it is the most "uhmmm actchualllyyy" argument you can make, but for the sake of this post I will elaborate.
+I never bother to clarify in general because it is the most "uhmmm actchualllyyy 🤓" argument you can make. 
+Additionally in practice there is absolutely no difference, but I believe I can use this narrow distinction to get my point across better for this post while taking the risk to potentially anger some. 
 The primary reason for this is the fact that "Computer Engineering" is what is on my degree issued to me by Illinois Institute of Technology. 
-The primary reason is largely bullshit. 
-The secondary reason is because of the specific coursework I have completed for my major, I am much more familiar with the lower levels of **abstractions** than someone who would have completed a degree in Computer Science.
-While we took a lot of classes on circuit design, hardware design languages, and assembly, my coursework was less focused on advanced algorithms, databases, and various other areas than my peers who studied in the Computer Science department. 
-We were packaged closely with fellow Electrical Engineers in the ECE (Electrical and Computer Engineering) department. 
-I will make the bold argument that Electrical, Computer, Software Engineers and Computer Scientists are all in the same profession spectrum, with the key differentiator here being the level of abstraction you are an expert in and familiarize yourself most closely. 
-And in the order that I have listed above, while my Electrical Engineer peers are the closest to hardware, Computer Scientists are mostly operating at a level of abstraction that does not necessitate them worrying about AND/OR gates (and when/if it does, they are either doing something very cool, or very wrong).
+The primary reason is also nonsense. 
+The secondary reason is due to the nature of the coursework I have completed for my major, I am expected to be more familiar with the lower levels of **abstractions** than someone who would have completed a degree in Computer Science.
+While we took a lot of classes on circuit design, hardware design languages, and assembly, my coursework was less focused on advanced algorithms, compilers, and numerous other areas than my peers who studied in the Computer Science department. 
+We were coupled closely with fellow Electrical Engineers in the ECE (Electrical and Computer Engineering) department. 
+I will make the bold argument that Electrical, Computer, Software Engineers and Computer Scientists are all in the same profession spectrum, with the key differentiator here being the level of abstraction you will spend most of your time in. 
+While my Electrical Engineer peers are the closest to hardware, Computer Scientists are mostly operating at a level of abstraction that does not necessitate them worrying about AND/OR gates (and when/if it does, they are likely doing something very cool (or something has gone awry)).
 
-export const AbstractionLadder = () => (
-  <figure style={{ margin: "2rem 0" }}>
-    <svg
-      viewBox="0 0 960 420"
-      role="img"
-      aria-labelledby="abstractionTitle abstractionDesc"
-      preserveAspectRatio="xMidYMid meet"
-      style={{ width: "100%", height: "auto", display: "block" }}
-    >
-      <title id="abstractionTitle">Engineering paths and abstraction ladder</title>
-      <desc id="abstractionDesc">
-        A rising line from Math to Physics to Electrical Engineering to Computer Engineering
-        to Software Engineering to Computer Science, with faint branches from Physics to other
-        engineering disciplines.
-      </desc>
-
-      <defs>
-        <style>{`
-          .axisLabel { fill: rgba(255,255,255,0.74); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-          .dotLabel { fill: rgba(255,255,255,0.92); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-          .muted { fill: rgba(255,255,255,0.55); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-        `}</style>
-      </defs>
-
-      <rect x="0" y="0" width="960" height="420" rx="14" fill="#0b0b0c" stroke="rgba(255,255,255,0.04)" />
-
-      <g opacity="0.9">
-        <line x1="90" y1="360" x2="880" y2="360" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
-        <line x1="90" y1="360" x2="90" y2="60" stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
-        <text className="axisLabel" x="98" y="74">More abstraction ↑</text>
-      </g>
-
-      <g opacity="0.7">
-        <path
-          d="M 260 265 C 290 310, 320 340, 350 350"
-          fill="none"
-          stroke="rgba(255,255,255,0.22)"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 260 265 C 300 290, 340 300, 390 305"
-          fill="none"
-          stroke="rgba(255,255,255,0.22)"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 260 265 C 300 245, 350 235, 420 230"
-          fill="none"
-          stroke="rgba(255,255,255,0.22)"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 260 265 C 300 225, 335 190, 390 170"
-          fill="none"
-          stroke="rgba(255,255,255,0.22)"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <text className="muted" x="420" y="285">other engineering disciplines</text>
-      </g>
-
-      <path
-        d="
-          M 140 340
-          C 195 330, 220 305, 260 265
-          C 325 210, 375 230, 430 200
-          C 510 165, 535 175, 600 150
-          C 655 130, 680 130, 700 120
-          C 735 108, 760 110, 790 100
-        "
-        fill="none"
-        stroke="rgba(255,255,255,0.78)"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-
-      {[
-        { x: 140, y: 340, label: "Math" },
-        { x: 260, y: 265, label: "Physics" },
-        { x: 430, y: 200, label: "Electrical Engineering" },
-        { x: 600, y: 150, label: "Computer Engineering" },
-        { x: 700, y: 120, label: "Software Engineering" },
-        { x: 790, y: 100, label: "Computer Science" },
-      ].map((point) => (
-        <g key={point.label}>
-          <circle cx={point.x} cy={point.y} r="7" fill="rgba(255,255,255,0.92)" />
-          <circle cx={point.x} cy={point.y} r="12" fill="rgba(255,255,255,0.08)" />
-          <text className="dotLabel" x={point.x + 16} y={point.y + 6}>
-            {point.label}
-          </text>
-        </g>
-      ))}
-    </svg>
-  </figure>
-);
-
-<AbstractionLadder />
+![Profession Tree](future-of-swe/abstraction-ladder.svg)
 
 Does this distinction of what I deem to be the correct label for myself actually impact my actual job title and what I do day by day? 
-It depends. My peers in the same company—sometimes the same team/project—were called drastically different titles, because the country they lived in had a bunch of specific legalese regarding who can be called an "Engineer".
+It depends. My teammates are sometimes called drastically different titles (anything from programmer to systems engineer). 
+In some cases this is because the country they live in has a bunch of specific legalese regarding who can be called an "Engineer".
 But the nature of the label I assign myself is because of the knowledge I learned throughout my critical learning years while my prefrontal cortex was still developing. 
-I believe I am able to thrive in the SRE role because amongst the niche area subspecializations, it places me just close enough to hardware as I want to be so I can build nice **abstractions** on top of it that makes everyone’s lives better (and makes my employer money). 
+I believe I am able to thrive in the SRE role because amongst the niche area subspecializations, it places me just close enough to hardware as I want to be so I can build nice **abstractions** on top of it that hopefully makes everyone’s lives better (and makes my employer money). 
 
 So did I blabber through my subjective niche definition of what these different jobs are in order to give you a specific recommendation of what niche area to go into so you can have a lucrative safe career?
 Unfortunately, no. The way I do my job and my daily routine has changed drastically since the LLM revolution started. 
 I was lucky enough to be working at Google as ChatGPT took off, Bard launched, got swapped with Gemini, etc. 
 That put me in the shotgun seat for the plethora of changes that we were going to experience as an industry. 
-I then decided I wanted more than the shotgun seat, and started building a little car in the massive AI highway, inside the vast interstate road network of Google, and that has brought me immense professional satisfaction and knowledge.
+I then decided I wanted more than the shotgun seat, and started building a little car in the massive AI highway, inside the big interstate road network of Google, and that has brought me immense professional satisfaction and knowledge.
 
-Since it is us Computer/Software Engineers building these revolutionary tools for ourselves, it is our job which is seeing the most drastic impact and volatile shift. 
-As various tech executives attempt to maximize short term profits, we are seeing an extremely volatile environment in Tech. 
+Since it is us Computer/Software Engineers building these revolutionary tools for ourselves, it is our job which is seeing the most drastic impact and a volatile shift. 
+As various tech executives attempt to maximize short term profits, we are seeing an extremely volatile environment in tech. 
 
 I do however think that our profession, while changing dramatically, will still be there in some form.
 
@@ -144,23 +47,26 @@ So dear reader, why did I spend a third of this blog building this (hopefully) n
 Because I wanted to make the point that **ABSTRACTIONS** matter. At the end of the day, our whole industry is a wrapper around sand. 
 
 Our daily routines, how we build, where we build will change. But one thing will not change: **Most abstractions are leaky**.
-And as we continue towards making English (or any language) the level of abstraction, there will be many moments where these will leak, and when they leak we will need to, with the help of these new fancy tools, figure out what went wrong. 
+And as we continue towards making English (or any language) the level of abstraction, there will be many moments where these will leak. 
 
 Calculators were invented, then came Wolfram Alpha, that can do a much better job than I ever could in arithmetics and differential equations. 
 I still studied and benefitted significantly from calculus, because it gave me tools and various **abstractions** I can use to understand the world around me. 
+Most importantly though, it taught me how to learn. 
 
 And we should (and hopefully will) keep teaching the next generations various levels of **abstractions** progressively, so one day they can start building useful **abstractions** on the domain area they feel most passionate about. 
 
-We are going through a remarkable rate of change, but the only constant in life is change. If there is no change, there is no morning, no evening, no birth and no death. 
+We are experiencing a remarkable rate of change, but the only constant in life is change. If there is no change, there is no morning, no evening, no birth and no death. 
 
 As I close this blog out, if there is one thing I want the current and future Engineers who are reading this (and who hopefully will change the world in a much better way than I did/will):
 
-* Learn the fundamentals—don't let these tools hamper your learning, but use them to accelerate it. 
-* Stay curious, don't be change averse, embrace the change that is coming towards you. 
-* Make sure you have fun along the way. These tools can help you automate away a significant part of your work most people would deem shitty. 
+* Learn the fundamentals of your field—don't let these tools hamper your learning, but use them to accelerate it.
+* Stay curious, don't be change averse, embrace the change that is coming towards you.
+* Make sure you have fun along the way. These tools can help you automate away a significant part of your work most people would deem boring. 
 
-In my opinion we are heading towards a future where those of you who apply the principles above will be able to make significant outsized impact that you were not able to before. 
-You know why? Because you will have **better but still leaky abstractions** to work with than your predecessors. We all stand on the shoulders of giants. 
+In my opinion we are heading towards a future where those of us who apply the principles above will be able to make significant outsized impact that we were not able to before.
+If I have one prediction, it will be that we will see a lot more people like [Pieter](https://medium.com/swlh/how-pieter-levels-makes-at-least-210k-a-month-from-his-laptop-with-zero-employees-47d8046f43cd) that are able to super scale and launch a lot of cool things. 
+You know why? Because we will have **better but still leaky abstractions** to work with than our predecessors. 
+We all stand on the shoulders of giants. 
 
 And for my dear Agentic friends reading this, likely orchestrated by ~Clawdbot~ ~Moltbot~ [OpenClaw](https://en.wikipedia.org/wiki/OpenClaw), enjoy the following from my dear friend [Pliny the Liberator](https://time.com/collections/time100-ai-2025/7305870/pliny-the-liberator/). 
 
@@ -169,3 +75,5 @@ And for my dear Agentic friends reading this, likely orchestrated by ~Clawdbot~ 
 ```
 
 Happy hacking fellow **leaky abstraction** enjoyers.
+
+\- Mete
