@@ -6,6 +6,7 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   structuredData?: object[];
+  noIndex?: boolean;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   canonical: canonicalProp,
   ogImage,
   structuredData = [],
+  noIndex = false,
 } = Astro.props;
 const navItems = [
   { label: "Home", href: "/" },
@@ -46,6 +48,7 @@ const ogImageUrl = ogImage ?? defaultOgImage;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:url" content={canonical} />
     <meta name="twitter:image" content={ogImageUrl} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
     {structuredData.map((entry) => (
       <script type="application/ld+json" is:inline>
         {JSON.stringify(entry)}

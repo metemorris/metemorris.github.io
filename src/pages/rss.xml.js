@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { isPublishedPost } from '../utils/postVisibility';
 
 const asCdata = (value) => `<![CDATA[${value.replaceAll(']]>', ']]]]><![CDATA[>')}]]>`;
 
@@ -7,7 +8,7 @@ export async function GET(context) {
   const siteUrl = new URL(site);
   const posts = await getCollection('posts');
   const publishedPosts = posts
-    .filter((post) => !post.data.draft)
+    .filter((post) => isPublishedPost(post))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   const items = publishedPosts

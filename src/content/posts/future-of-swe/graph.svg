@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 420"
+  width="1080"
+  height="504"
+  role="img"
+  aria-labelledby="abstractionTitle abstractionDesc"
+>
+  <title id="abstractionTitle">Engineering paths and abstraction ladder</title>
+  <desc id="abstractionDesc">
+    A rising line from Math to Physics to Electrical Engineering to Computer Engineering
+    to Software Engineering to Computer Science, with faint branches from Physics to other
+    engineering disciplines.
+  </desc>
+
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="8"
+      refY="5"
+      markerWidth="8"
+      markerHeight="8"
+      orient="auto-start-reverse"
+    >
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(255,255,255,0.55)" />
+    </marker>
+    <style>
+      .axisLabel { fill: rgba(255,255,255,0.72); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .label { fill: rgba(255,255,255,0.88); font: 15px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .muted { fill: rgba(255,255,255,0.45); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      .dotLabel { fill: rgba(255,255,255,0.88); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="420" rx="16" fill="#0b0b0c" stroke="rgba(255,255,255,0.08)" />
+
+  <g opacity="0.9">
+    <line x1="80" y1="360" x2="860" y2="360" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    <line x1="80" y1="360" x2="80" y2="60" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    <text class="axisLabel" x="88" y="74">More abstraction ↑</text>
+  </g>
+
+  <g opacity="0.55">
+    <path
+      d="M 250 265 C 290 310, 320 335, 360 340"
+      fill="none"
+      stroke="rgba(255,255,255,0.14)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 250 265 C 300 290, 340 270, 390 255"
+      fill="none"
+      stroke="rgba(255,255,255,0.14)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 250 265 C 300 250, 350 225, 420 200"
+      fill="none"
+      stroke="rgba(255,255,255,0.14)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 250 265 C 300 315, 360 330, 450 345"
+      fill="none"
+      stroke="rgba(255,255,255,0.14)"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+    <text class="muted" x="435" y="230">other engineering disciplines</text>
+  </g>
+
+  <path
+    d="M 130 340
+       C 185 330, 210 305, 250 265
+       C 315 200, 360 220, 420 190
+       C 500 150, 520 170, 590 135
+       C 660 105, 700 120, 770 95"
+    fill="none"
+    stroke="rgba(255,255,255,0.75)"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <g>
+    <circle cx="130" cy="340" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="130" cy="340" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="144" y="345">Math</text>
+
+    <circle cx="250" cy="265" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="250" cy="265" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="264" y="270">Physics</text>
+
+    <circle cx="420" cy="190" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="420" cy="190" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="434" y="195">Electrical Engineering</text>
+
+    <circle cx="590" cy="135" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="590" cy="135" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="604" y="140">Computer Engineering</text>
+
+    <circle cx="690" cy="112" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="690" cy="112" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="704" y="117">Software Engineering</text>
+
+    <circle cx="770" cy="95" r="7" fill="rgba(255,255,255,0.92)" />
+    <circle cx="770" cy="95" r="12" fill="rgba(255,255,255,0.08)" />
+    <text class="dotLabel" x="784" y="100">Computer Science</text>
+  </g>
+
+  <g opacity="0.95">
+    <path
+      d="M 610 55 C 650 40, 700 45, 735 65"
+      fill="none"
+      stroke="rgba(255,255,255,0.25)"
+      stroke-width="2"
+      marker-end="url(#arrow)"
+    />
+  </g>
+</svg>

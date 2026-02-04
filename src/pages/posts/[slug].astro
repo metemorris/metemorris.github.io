@@ -5,10 +5,13 @@ import ShareButton from "../../components/ShareButton.astro";
 import Tag from "../../components/Tag.astro";
 import { calculateReadingTime } from "../../utils/readingTime";
 import { formatLongDate } from "../../utils/formatDate";
+import { getPostStatus, isVisiblePost } from "../../utils/postVisibility";
 
 export async function getStaticPaths() {
   const items = await getCollection("posts");
-  return items.map((p) => ({
+  return items
+    .filter((post) => isVisiblePost(post))
+    .map((p) => ({
     params: { slug: p.slug },
     props: p,
   }));
@@ -21,6 +24,8 @@ const readingTime = calculateReadingTime(post.body || "");
 const siteOrigin = Astro.site ?? "https://www.metemorris.com";
 const canonicalUrl = new URL(`/posts/${post.slug}/`, siteOrigin).href;
 const postOgImage = new URL(`/og/${post.slug}.png`, siteOrigin).href;
+const postStatus = getPostStatus(post);
+const isPrivate = postStatus === "private";
 
 const blogPostingStructuredData = {
   "@context": "https://schema.org",
@@ -49,6 +54,7 @@ const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
   canonical={canonicalUrl}
   structuredData={[blogPostingStructuredData]}
   ogImage={postOgImage}
+  noIndex={isPrivate}
 >
   <article class="mx-auto w-full max-w-[65ch] space-y-8 fade-in">
     <div class="space-y-3 border-b border-[var(--page-border)] pb-4">

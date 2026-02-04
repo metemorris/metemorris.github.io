@@ -1,8 +1,16 @@
 import { OGImageRoute } from 'astro-og-canvas';
 import { getCollection } from 'astro:content';
+import { isVisiblePost } from '../../utils/postVisibility';
 
 const posts = await getCollection('posts');
-const pages = Object.fromEntries(posts.map(post => [post.slug, { title: post.data.title, description: post.data.description }]));
+const pages = Object.fromEntries(
+  posts
+    .filter((post) => isVisiblePost(post))
+    .map((post) => [
+      post.slug,
+      { title: post.data.title, description: post.data.description },
+    ])
+);
 
 export const { getStaticPaths, GET } = OGImageRoute({
     param: 'slug',

@@ -9,6 +9,7 @@ const posts = defineCollection({
     seoDescription: z.string().min(120).max(160),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    status: z.enum(["published", "draft", "private"]).optional(),
   }),
 });
 

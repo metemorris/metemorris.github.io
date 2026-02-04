@@ -34,6 +34,22 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## Post visibility (published/draft/private)
+
+Posts support three states via frontmatter:
+
+```yaml
+status: published | draft | private
+```
+
+- `published`: appears everywhere (blog index, tags, RSS, OG).
+- `draft`: not built and not accessible by URL.
+- `private`: built and shareable by direct URL, but excluded from blog index, tags, RSS, and marked `noindex`.
+
+Notes:
+- `draft: true` is still supported for backwards compatibility (treated the same as `status: draft`).
+- If both `status` and `draft` are set, `status` takes precedence.
+
 ## ✅ Next steps / TODO
 
 ### 1. 🚨 Core Fixes & Architecture (High Priority)
