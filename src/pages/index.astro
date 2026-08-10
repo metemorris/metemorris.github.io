@@ -25,6 +25,7 @@ const personStructuredData = {
     name: "Google",
   },
   sameAs: [
+    "https://github.com/metemorris",
     "https://twitter.com/metemorris",
     "https://www.linkedin.com/in/metemorris",
   ],
@@ -45,9 +46,9 @@ const personStructuredData = {
       >
         <img
           src="/headshot.jpg"
-          alt="Mete Morris headshot"
+          alt="Mete Morris working at a home studio desk"
           class="h-full w-full object-cover transition-[filter] duration-300"
-          style="object-position: 80% 55%; transform: scale(1.5); transform-origin: 60% 60%; filter: var(--avatar-filter);"
+          style="object-position: center; filter: var(--avatar-filter);"
         />
       </div>
     </div>
@@ -104,7 +105,7 @@ const personStructuredData = {
     <div class="space-y-6">
       {
         experience.map((item) => (
-          <article class="flex flex-col gap-3 border-t border-[var(--page-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <article class="space-y-3 border-t border-[var(--page-border)] pt-5">
             <div>
               <p class="text-xs uppercase tracking-[0.3em] text-[var(--page-muted)]">
                 {item.period}
@@ -112,7 +113,7 @@ const personStructuredData = {
               <h2 class="text-lg font-semibold">{item.titleLine}</h2>
               <p class="muted text-sm">{item.orgLine}</p>
             </div>
-            <p class="muted text-sm sm:max-w-sm">{item.summary}</p>
+            <p class="muted max-w-[65ch] text-sm leading-relaxed">{item.summary}</p>
           </article>
         ))
       }

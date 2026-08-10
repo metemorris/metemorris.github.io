@@ -23,7 +23,7 @@ export const experience: Experience[] = [
         titleLine: "Technical Program Manager · Serverless SRE",
         orgLine: "Google · Cloud",
         period: "Sep 2019 — Sep 2021",
-        summary: "Drove strategic programs to improve reliability and efficienct of serverless offerings on GCP.",
+        summary: "Drove strategic programs to improve the reliability and efficiency of serverless offerings on GCP.",
     },
 ];
 
