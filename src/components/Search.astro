@@ -1,9 +1,10 @@
-<div id="search" class="mt-8"></div>
+<div id="search" class="search-container mt-8" aria-live="polite"></div>
 
 <script is:inline>
     window.addEventListener("DOMContentLoaded", (event) => {
         new PagefindUI({
             element: "#search",
+            showImages: false,
             showSubResults: true,
             resetFilters: true,
             translations: {
@@ -15,8 +16,8 @@
 
 <style is:global>
     :root {
-        --pagefind-ui-primary: var(--page-text);
-        --pagefind-ui-text: var(--page-text);
+        --pagefind-ui-primary: var(--page-foreground);
+        --pagefind-ui-text: var(--page-foreground);
         --pagefind-ui-background: transparent;
         --pagefind-ui-border: var(--page-border);
         --pagefind-ui-tag: var(--page-muted);
@@ -26,15 +27,32 @@
         width: 100%;
     }
 
+    .search-container,
+    .pagefind-ui__form {
+        position: relative;
+        width: 100%;
+    }
+
     .pagefind-ui__search-input {
+        position: static !important;
+        inset: auto !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
         background-color: transparent !important;
         border: 1px solid var(--page-border) !important;
-        border-radius: 4px !important;
-        color: var(--page-text) !important;
+        border-radius: 0.5rem !important;
+        color: var(--page-foreground) !important;
+        font-weight: 500 !important;
+    }
+
+    .pagefind-ui__search-input::placeholder {
+        color: var(--page-muted) !important;
+        opacity: 1 !important;
     }
 
     .pagefind-ui__search-clear {
-        color: var(--page-text) !important;
+        color: var(--page-foreground) !important;
     }
 
     .pagefind-ui__drawer {
@@ -45,7 +63,7 @@
     }
 
     .pagefind-ui__result-link {
-        color: var(--page-text) !important;
+        color: var(--page-foreground) !important;
         font-weight: 600 !important;
     }
 
