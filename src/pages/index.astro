@@ -14,30 +14,43 @@ const latestPost = posts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .at(0);
 
-const personStructuredData = {
+const avatarUrl = "https://www.metemorris.com/avatar.jpg";
+const pageStructuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Mete Morris",
+  "@type": "WebPage",
+  name: "Mete Morris | Site Reliability & AI/ML Engineer",
   url: "https://www.metemorris.com/",
-  jobTitle: "Site Reliability and AI/ML Engineer",
-  worksFor: {
-    "@type": "Organization",
-    name: "Google",
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: avatarUrl,
+    width: 1200,
+    height: 1200,
   },
-  sameAs: [
-    "https://github.com/metemorris",
-    "https://twitter.com/metemorris",
-    "https://www.linkedin.com/in/metemorris",
-  ],
-  description:
-    "Mete Morris is a Google SRE and AI/ML engineer sharing systems thinking essays, career notes, and engineering projects.",
+  mainEntity: {
+    "@type": "Person",
+    name: "Mete Morris",
+    url: "https://www.metemorris.com/",
+    image: avatarUrl,
+    jobTitle: "Site Reliability and AI/ML Engineer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Google",
+    },
+    sameAs: [
+      "https://github.com/metemorris",
+      "https://twitter.com/metemorris",
+      "https://www.linkedin.com/in/metemorris",
+    ],
+    description:
+      "Mete Morris is a Google SRE and AI/ML engineer sharing systems thinking essays, career notes, and engineering projects.",
+  },
 };
 ---
 
 <Base
   title="Mete Morris | Site Reliability & AI/ML Engineer"
   description="Mete Morris' official site covering Site Reliability, AI/ML engineering lessons, systems thinking essays, and personal projects in software and political science."
-  structuredData={[personStructuredData]}
+  structuredData={[pageStructuredData]}
 >
   <section class="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start fade-in">
     <div class="flex justify-center md:order-2 md:justify-end">
@@ -45,7 +58,7 @@ const personStructuredData = {
         class="h-40 w-40 rounded-full border border-[var(--page-border)] overflow-hidden transition-[border-color,filter] duration-300"
       >
         <img
-          src="/headshot.jpg"
+          src="/avatar.jpg"
           alt="Mete Morris working at a home studio desk"
           class="h-full w-full object-cover transition-[filter] duration-300"
           style="object-position: center; filter: var(--avatar-filter);"
@@ -120,7 +133,7 @@ const personStructuredData = {
     </div>
   </Section>
 
-  <Section withDivider>
+  <Section>
     <SectionHeader title="Education" />
     <div class="space-y-5">
       {
