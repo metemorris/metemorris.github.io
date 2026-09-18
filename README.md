@@ -4,7 +4,7 @@
 
 ```text
 / (project root)
-├── public/               # Static assets (favicon, headshot, icons)
+├── public/               # Static assets (favicon, avatar, icons)
 ├── src/
 │   ├── components/       # Reusable components
 │   ├── content/          # Astro content collections (MDX posts)
@@ -29,7 +29,7 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run build`           | Build your production site to `./dist/` (also builds the Pagefind search index) |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
@@ -74,9 +74,15 @@ Notes:
 
 ### 5. 🛠 Maintenance & Polish
 - [ ] **Linting**: detailed Prettier + ESLint setup.
-- [ ] **Analytics**: Add privacy-friendly analytics.
+- [x] **Analytics**: Add privacy-friendly analytics (GoatCounter, see below).
 
 ### 6. ✅ Completed / Verified
 - [x] Dark/light mode preference memory (Implemented in `Base.astro`).
 - [x] Basic Metadata (HTML Title/Description).
 - [x] Add JSON-LD structured data.
+
+## Notes
+
+- **Search (Pagefind):** the search index is generated during `npm run build` and served from `dist/pagefind/`. Run a build at least once before `npm run dev`, or the search bar will render a disabled fallback.
+- **Analytics (GoatCounter):** the snippet lives in `src/layouts/Base.astro` and only loads in production builds (`import.meta.env.PROD`), so local dev never pollutes stats. Dashboard: `metemorris.goatcounter.com`. No cookies, nothing visible on the site.
+- **Avatar:** the live portrait/OG image is `public/avatar.jpg` (`/avatar.jpg`). The old `public/headshot.jpg` was removed.
