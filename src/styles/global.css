@@ -44,6 +44,20 @@
   color: var(--page-foreground);
 }
 
+/* Stretched link: expands a card title link over the whole card,
+   while nested links (tags) layered above stay clickable. */
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.stretched-link:focus-visible {
+  outline: 2px solid var(--page-muted);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
 /* Date label styling */
 .date-label {
   font-size: 0.75rem;
