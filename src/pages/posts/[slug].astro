@@ -28,6 +28,8 @@ const postOgImage = new URL(`/og/${post.slug}.png`, siteOrigin).href;
 const postStatus = getPostStatus(post);
 const isPrivate = postStatus === "private";
 
+const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
+
 const blogPostingStructuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -43,10 +45,8 @@ const blogPostingStructuredData = {
   mainEntityOfPage: canonicalUrl,
   url: canonicalUrl,
   image: "https://www.metemorris.com/avatar.jpg",
-  keywords: post.data.tags.join(", "),
+  keywords: tags.join(", "),
 };
-
-const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
 ---
 
 <Base
