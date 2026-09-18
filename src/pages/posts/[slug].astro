@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import ShareButton from "../../components/ShareButton.astro";
+import Signature from "../../components/Signature.astro";
 import Tag from "../../components/Tag.astro";
 import { calculateReadingTime } from "../../utils/readingTime";
 import { formatLongDate } from "../../utils/formatDate";
@@ -27,6 +28,8 @@ const postOgImage = new URL(`/og/${post.slug}.png`, siteOrigin).href;
 const postStatus = getPostStatus(post);
 const isPrivate = postStatus === "private";
 
+const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
+
 const blogPostingStructuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -41,11 +44,9 @@ const blogPostingStructuredData = {
   },
   mainEntityOfPage: canonicalUrl,
   url: canonicalUrl,
-  image: "https://www.metemorris.com/headshot.jpg",
-  keywords: post.data.tags.join(", "),
+  image: "https://www.metemorris.com/avatar.jpg",
+  keywords: tags.join(", "),
 };
-
-const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
 ---
 
 <Base
@@ -82,5 +83,7 @@ const tags = post.data.tags?.length ? post.data.tags : ["Writing"];
     <div class="prose prose-lg prose-neutral dark:prose-invert w-full">
       <Content />
     </div>
+
+    <Signature />
   </article>
 </Base>

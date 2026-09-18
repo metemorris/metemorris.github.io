@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import CypriotMark from "../components/CypriotMark.astro";
+import CypriotMarkStacked from "../components/CypriotMarkStacked.astro";
 interface Props {
   title?: string;
   description?: string;
@@ -21,7 +23,15 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Blog", href: "/blog" },
 ];
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
+const isActive = (href: string) => {
+  const target = href.replace(/\/+$/, "") || "/";
+  if (target === "/") return currentPath === "/";
+  if (target === "/blog") {
+    return currentPath === "/blog" || currentPath.startsWith("/posts/") || currentPath.startsWith("/tags/");
+  }
+  return currentPath === target || currentPath.startsWith(`${target}/`);
+};
 const contactLinks = [
   { label: "GitHub", href: "https://github.com/metemorris", external: true },
   { label: "X", href: "https://twitter.com/metemorris", external: true, aria: "X (Twitter)", icon: "/x.svg" },
@@ -30,8 +40,9 @@ const contactLinks = [
 ];
 const siteUrl = Astro.site ?? new URL("https://www.metemorris.com");
 const canonical = canonicalProp ?? new URL(Astro.url?.pathname ?? "/", siteUrl).href;
-const defaultOgImage = new URL("/headshot.jpg", siteUrl).href;
+const defaultOgImage = new URL("/avatar.jpg", siteUrl).href;
 const ogImageUrl = ogImage ?? defaultOgImage;
+const isDefaultOgImage = !ogImage;
 ---
 <html lang="en">
   <head>
@@ -40,22 +51,33 @@ const ogImageUrl = ogImage ?? defaultOgImage;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageUrl} />
+    {isDefaultOgImage && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:image:alt" content="Mete Morris" />
+      </>
+    )}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:url" content={canonical} />
     <meta name="twitter:image" content={ogImageUrl} />
-    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    {noIndex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="max-image-preview:large" />
+    )}
     {structuredData.map((entry) => (
-      <script type="application/ld+json" is:inline>
-        {JSON.stringify(entry)}
-      </script>
+      <script type="application/ld+json" set:html={JSON.stringify(entry)} />
     ))}
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
     <link rel="manifest" href="/site.webmanifest" />
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <script src="/pagefind/pagefind-ui.js" is:inline></script>
@@ -77,18 +99,23 @@ const ogImageUrl = ogImage ?? defaultOgImage;
   <body class="min-h-screen antialiased">
     <div class="site-shell mx-auto flex min-h-screen w-full max-w-[720px] flex-col gap-14 px-6 py-10">
       <header class="flex items-center justify-between gap-4 border-b border-[var(--page-border)] pb-8 md:pb-10">
-        <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
+        <div class="flex items-center gap-4">
+          <a href="/" aria-label="Mete Morris home" class="text-[var(--page-foreground)] opacity-80 hover:opacity-100 transition-opacity">
+            <CypriotMarkStacked width={8} hidden />
+          </a>
+          <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
           {
             navItems.map((item) => (
               <a
                 href={item.href}
-                class={`px-2 py-1 transition-opacity ${currentPath === item.href ? "opacity-100" : "opacity-50 hover:opacity-80"}`}
+                class={`px-2 py-1 transition-opacity ${isActive(item.href) ? "opacity-100" : "opacity-50 hover:opacity-80"}`}
               >
                 {item.label}
               </a>
             ))
           }
-        </nav>
+          </nav>
+        </div>
         <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle color mode">
           <span class="sr-only">Toggle color mode</span>
           <svg class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" viewBox="0 0 24 24">
@@ -119,6 +146,15 @@ const ogImageUrl = ogImage ?? defaultOgImage;
             ))
           }
         </nav>
+        <a
+          href="https://en.wikipedia.org/wiki/Cypriot_syllabary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="About the Cypriot syllabary (Wikipedia)"
+          class="ml-auto opacity-70 hover:opacity-100 transition-opacity"
+        >
+          <CypriotMark size={18} hidden />
+        </a>
       </footer>
     </div>
     <script is:inline>

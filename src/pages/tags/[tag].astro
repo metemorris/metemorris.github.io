@@ -31,14 +31,14 @@ const { posts } = Astro.props;
     description={`Browse articles tagged with ${tag} on Mete Morris' personal blog.`}
 >
     <div class="space-y-10 mx-auto max-w-[65ch]">
-        <section class="space-y-5 fade-in mt-6">
+        <section class="space-y-5 fade-in">
             <div
                 class="flex items-center justify-between border-b border-[var(--page-border)] pb-4"
             >
                 <p class="eyebrow">Tagged with: {tag}</p>
                 <a
                     href="/blog"
-                    class="text-xs uppercase tracking-[0.2em] text-[var(--page-muted)] hover:text-white transition-colors"
+                    class="text-xs uppercase tracking-[0.2em] text-[var(--page-muted)] hover:text-[var(--page-foreground)] transition-colors"
                 >
                     View all posts
                 </a>

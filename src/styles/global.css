@@ -1,5 +1,5 @@
 /* src/styles/global.css */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Clash+Display:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 :root {
   /* Colors tuned to keep muted text >=4.5:1 against the backgrounds */
@@ -41,7 +41,21 @@
 
 .tag:hover {
   background: var(--page-border);
-  color: #fff;
+  color: var(--page-foreground);
+}
+
+/* Stretched link: expands a card title link over the whole card,
+   while nested links (tags) layered above stay clickable. */
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.stretched-link:focus-visible {
+  outline: 2px solid var(--page-muted);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
 }
 
 /* Date label styling */
@@ -97,8 +111,7 @@ h2,
 h3,
 h4,
 .heading-font {
-  font-family: "Clash Display", "Satoshi", "Inter", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Inter", "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.02em;
 }
 
