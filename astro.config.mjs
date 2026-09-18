@@ -89,6 +89,37 @@ const hiddenPostUrls = new Set(
   getHiddenPostSlugs().map((slug) => normalizeUrl(`${site}/posts/${slug}`))
 );
 
+const pagefindDev = () => ({
+  name: 'pagefind-dev',
+  hooks: {
+    'astro:server:setup': ({ server }) => {
+      const pagefindDir = path.resolve(projectRoot, 'dist', 'pagefind');
+      server.middlewares.use((req, res, next) => {
+        if (!req.url?.startsWith('/pagefind/')) {
+          next();
+          return;
+        }
+
+        const relative = decodeURIComponent(req.url.replace(/\?.*$/, ''));
+        const filePath = path.resolve(projectRoot, 'dist', `.${relative}`);
+        if (!filePath.startsWith(pagefindDir) || !fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+          next();
+          return;
+        }
+
+        const types = {
+          '.js': 'text/javascript',
+          '.css': 'text/css',
+          '.json': 'application/json',
+          '.wasm': 'application/wasm',
+        };
+        res.setHeader('Content-Type', types[path.extname(filePath)] || 'application/octet-stream');
+        fs.createReadStream(filePath).pipe(res);
+      });
+    },
+  },
+});
+
 export default defineConfig({
   site,
   integrations: [
@@ -97,5 +128,6 @@ export default defineConfig({
     sitemap({
       filter: (page) => !hiddenPostUrls.has(normalizeUrl(page)),
     }),
+    pagefindDev(),
   ],
 });
