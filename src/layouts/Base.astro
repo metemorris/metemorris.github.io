@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import CypriotMark from "../components/CypriotMark.astro";
 interface Props {
   title?: string;
   description?: string;
@@ -97,7 +98,11 @@ const isDefaultOgImage = !ogImage;
   <body class="min-h-screen antialiased">
     <div class="site-shell mx-auto flex min-h-screen w-full max-w-[720px] flex-col gap-14 px-6 py-10">
       <header class="flex items-center justify-between gap-4 border-b border-[var(--page-border)] pb-8 md:pb-10">
-        <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
+        <div class="flex items-center gap-4">
+          <a href="/" aria-label="Mete Morris home" class="text-[var(--page-foreground)] opacity-80 hover:opacity-100 transition-opacity">
+            <CypriotMark size={22} />
+          </a>
+          <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
           {
             navItems.map((item) => (
               <a
@@ -108,7 +113,8 @@ const isDefaultOgImage = !ogImage;
               </a>
             ))
           }
-        </nav>
+          </nav>
+        </div>
         <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle color mode">
           <span class="sr-only">Toggle color mode</span>
           <svg class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" viewBox="0 0 24 24">
@@ -139,6 +145,9 @@ const isDefaultOgImage = !ogImage;
             ))
           }
         </nav>
+        <span class="ml-auto opacity-70" aria-hidden="true">
+          <CypriotMark size={18} title="" />
+        </span>
       </footer>
     </div>
     <script is:inline>
