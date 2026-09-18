@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import CypriotMark from "../components/CypriotMark.astro";
+import CypriotMarkStacked from "../components/CypriotMarkStacked.astro";
 interface Props {
   title?: string;
   description?: string;
@@ -100,7 +101,7 @@ const isDefaultOgImage = !ogImage;
       <header class="flex items-center justify-between gap-4 border-b border-[var(--page-border)] pb-8 md:pb-10">
         <div class="flex items-center gap-4">
           <a href="/" aria-label="Mete Morris home" class="text-[var(--page-foreground)] opacity-80 hover:opacity-100 transition-opacity">
-            <CypriotMark size={22} />
+            <CypriotMarkStacked width={19} />
           </a>
           <nav class="flex flex-wrap gap-5 text-sm uppercase tracking-[0.3em]">
           {
@@ -145,9 +146,15 @@ const isDefaultOgImage = !ogImage;
             ))
           }
         </nav>
-        <span class="ml-auto opacity-70" aria-hidden="true">
-          <CypriotMark size={18} title="" />
-        </span>
+        <a
+          href="https://en.wikipedia.org/wiki/Cypriot_syllabary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="About the Cypriot syllabary (Wikipedia)"
+          class="ml-auto opacity-70 hover:opacity-100 transition-opacity"
+        >
+          <CypriotMark size={18} />
+        </a>
       </footer>
     </div>
     <script is:inline>
