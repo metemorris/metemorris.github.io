@@ -81,6 +81,13 @@ const isDefaultOgImage = !ogImage;
     <link rel="manifest" href="/site.webmanifest" />
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    {import.meta.env.PROD && (
+      <script
+        data-goatcounter="https://metemorris.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      />
+    )}
     <script is:inline>
       (function() {
         try {
