@@ -17,8 +17,10 @@ import {
   observations,
   currentQuotes,
   metricFits,
+  runningMax,
   overviewFits,
   initialState,
+  LAUNCH_WINDOW_DAYS,
 } from './chart-core.js';
 import {
   names,
@@ -32,14 +34,12 @@ import { tooltipContent } from './tooltip-content.js';
 import { loadChartData } from './chart-data.js';
 
 const overviewSeries = {
-  release_gap: { label: 'Days between releases', color: 'var(--llm-overview-amber)', dash: '7 3 2 3' },
-  input: { label: 'Input cap', color: 'var(--llm-overview-violet)', dash: '6 4' },
-  shared: { label: 'Shared window', color: 'var(--llm-overview-violet)', dash: '2 3' },
+  release_gap: { label: 'Days between releases', short: 'Release gap', color: 'var(--llm-overview-amber)', dash: '7 3 2 3' },
+  input: { label: 'Prompt capacity', color: 'var(--llm-overview-teal)' },
   output: { label: 'Output cap', color: 'var(--llm-overview-blue)' },
-  context: { label: names.context, color: 'var(--llm-overview-teal)' },
   input_price: { label: 'Input price', color: 'var(--llm-overview-rose)', dash: '7 4' },
   output_price: { label: 'Output price', color: 'var(--llm-overview-rose)' },
-  price_ratio: { label: 'Output / input price ratio', color: 'var(--page-foreground)', dash: '2 3' },
+  price_ratio: { label: 'Output / input price ratio', short: 'Out / in ratio', color: 'var(--page-foreground)', dash: '2 3' },
 };
 
 /* Editorial figures. Raw observations stay separate from descriptive fitted estimates. */
@@ -191,9 +191,11 @@ const overviewSeries = {
             cx = b.left + point.cx * scale,
             cy = b.top + point.cy * scale;
           mark.setAttribute('aria-valuenow', Math.round(day(probeDate) / DAY));
-          const readout = p.baseline
-            ? `${fmt(value, 'price_ratio')} starting value; fitted value ${fmt(value * p.baseline, p.metric)} ${units[p.metric]}`
-            : `${p.typical ? 'typical recent interval' : 'estimated ' + names[p.metric].toLowerCase()} ${fmt(value, p.metric)} ${units[p.metric]}`;
+          const readout = p.yearly
+            ? `${p.yearAt(probeDate).year} median ${fmt(value * p.baseline, p.metric)} ${units[p.metric]}; ${fmt(value, 'price_ratio')} its ${p.baseYear} median`
+            : p.baseline
+              ? `${fmt(value, 'price_ratio')} starting value; fitted value ${fmt(value * p.baseline, p.metric)} ${units[p.metric]}`
+              : `${p.typical ? 'typical recent interval' : p.step ? 'highest ' + names[p.metric].toLowerCase() + ' so far' : 'estimated ' + names[p.metric].toLowerCase()} ${fmt(value, p.metric)} ${units[p.metric]}`;
           mark.setAttribute('aria-valuetext', `${probeDate}; ${readout}`);
           show(mark, { ...p, date: probeDate, value }, [], {
             left: cx,
@@ -256,8 +258,10 @@ const overviewSeries = {
       const color = p.overall
           ? 'var(--page-foreground)'
           : data.colors[p.company],
-        fill = p.weightAccess === 'open' ? 'var(--page-bg)' : color,
-        attrs = `data-point="${esc(p.id)}" data-role="${esc(p.productClass)}" data-company="${esc(p.company)}" data-date="${esc(p.date)}" data-evidence="${estimated ? 'estimated' : 'disclosed'}" tabindex="0" role="button" aria-label="${esc(p.ongoing ? 'Ongoing wait ' + p.model : p.aggregate ? 'Quarterly median, ' + p.quarterLabel + ', ' + p.n + ' observations' : p.model)}; ${esc(p.company)}; ${p.metric === 'release_gap' ? esc(cap(p.productClass)) + '; ' : ''}${esc(p.date)}; ${estimated ? 'reported estimate, ' : ''}${fmt(p.value, p.metric)} ${units[p.metric]}"`;
+        later = p.mode === 'generation' && p.documentedLater,
+        fill =
+          p.weightAccess === 'open' || later ? 'var(--page-bg)' : color,
+        attrs = `data-point="${esc(p.id)}" data-role="${esc(p.productClass)}" data-company="${esc(p.company)}" data-date="${esc(p.date)}" data-evidence="${estimated ? 'estimated' : 'disclosed'}"${p.mode === 'generation' ? ` data-documented="${later ? 'later' : 'launch'}"` : ''} tabindex="0" role="button" aria-label="${esc(p.ongoing ? 'Ongoing wait ' + p.model : p.aggregate ? 'Quarterly median, ' + p.quarterLabel + ', ' + p.n + ' observations' : p.model)}; ${esc(p.company)}; ${p.metric === 'release_gap' ? esc(cap(p.productClass)) + '; ' : ''}${esc(p.date)}; ${estimated ? 'reported estimate, ' : ''}${fmt(p.value, p.metric)} ${units[p.metric]}"`;
       if (
         p.metric === 'release_gap' &&
         p.multiRole &&
@@ -272,7 +276,7 @@ const overviewSeries = {
         return `<path ${attrs} d="${d}" fill="${fill}" stroke="${color}" stroke-width="1.3" opacity=".7"><title>${esc(p.model)}</title></path>`;
       }
       if (p.sharedBudget)
-        return `<path ${attrs} data-shared-budget="true" d="M${p.cx},${p.cy - 5}l5,5l-5,5l-5,-5Z" fill="var(--page-bg)" stroke="${color}" stroke-width="1.8"/>`;
+        return `<path ${attrs} data-shared-budget="true" d="M${p.cx},${p.cy - 5}l5,5l-5,5l-5,-5Z" fill="${fill}" stroke="${color}" stroke-width="1.5" opacity=".8"><title>${esc(p.model)}</title></path>`;
       if (p.ongoing)
         return `<path ${attrs} data-ongoing="true" d="M${p.cx},${p.cy - 5}l5,9h-10Z" fill="var(--page-bg)" stroke="${color}" stroke-width="1.8"/>`;
       if (estimated)
@@ -282,7 +286,10 @@ const overviewSeries = {
         : `<circle ${attrs} cx="${p.cx}" cy="${p.cy}" r="3.6" fill="${fill}" stroke="${color}" stroke-width="1.3" opacity=".7"><title>${esc(p.model)}</title></circle>`;
     }
     function plot(host, pp, metric, state, range) {
-      const fits = metricFits(pp, state.cadenceMode);
+      const capacity = ['input', 'output', 'context'].includes(metric);
+      const fits = capacity
+        ? runningMax(pp, state.cadenceMode)
+        : metricFits(pp, state.cadenceMode);
       const result = renderTimeline(host, {
         points: pp,
         fits,
@@ -337,8 +344,8 @@ const overviewSeries = {
     function roleControls(state, key) {
       return `<fieldset class="llm-role-tabs"><legend>Product role</legend>${roleOptions.map((c) => `<label><input type="radio" name="${key}-role" value="${c}" ${state.role === c ? 'checked' : ''}>${roleLabel(c)}</label>`).join('')}</fieldset>`;
     }
-    function figureControls(state, key) {
-      return `<div class="llm-cadence-primary">${roleControls(state, key)}<fieldset class="llm-summary-mode"><legend>${key === 'cadence' ? 'Completed-gap trend' : 'Descriptive trend'}</legend>${[
+    function modeControls(state, key) {
+      return `<fieldset class="llm-summary-mode"><legend>${key === 'cadence' ? 'Completed-gap trend' : ['input', 'output', 'context'].includes(key) ? 'Highest so far' : 'Descriptive trend'}</legend>${[
         ['overall', 'Overall'],
         ['company', 'By company'],
       ]
@@ -346,7 +353,17 @@ const overviewSeries = {
           ([value, text]) =>
             `<label><input type="radio" name="${key}-summary" value="${value}" ${state.cadenceMode === value ? 'checked' : ''}>${text}</label>`,
         )
-        .join('')}</fieldset></div>`;
+        .join('')}</fieldset>`;
+    }
+    // Narrow screens keep the role tabs visible and fold companies and trend
+    // mode into one disclosure, so the chart is on the first screen.
+    const moreOpen = new Set();
+    function figureControls(state, key) {
+      if (!window.matchMedia('(max-width: 640px)').matches)
+        return `${companyControls(state)}<div class="llm-cadence-primary">${roleControls(state, key)}${modeControls(state, key)}</div>`;
+      const chosenText =
+        state.companies.map((c) => esc(label(c))).join(', ') || 'No companies';
+      return `<div class="llm-cadence-primary">${roleControls(state, key)}</div><details class="llm-more-controls" data-more ${moreOpen.has(key) ? 'open' : ''}><summary><span>Companies and trend</span><small>${chosenText} · ${state.cadenceMode === 'company' ? 'By company' : 'Overall'}</small></summary>${companyControls(state)}<div class="llm-cadence-primary">${modeControls(state, key)}</div></details>`;
     }
     function inspector(fig) {
       const p = document.createElement('p');
@@ -395,15 +412,12 @@ const overviewSeries = {
         pp = capacityObservations(data, state, key);
         const groups =
           key === 'input'
-            ? [
-                ['input', 'Published input caps · ●'],
-                ['shared', 'Shared token-window ceilings · ◇'],
-              ]
+            ? [[null, 'Input caps and shared windows']]
             : key === 'context'
               ? [['served', 'API / provider-supported context']]
               : [['standard', 'Published output caps']];
         groups.forEach(([kind, title]) => {
-          const points = pp.filter((p) => p.kind === kind);
+          const points = kind ? pp.filter((p) => p.kind === kind) : pp;
           if (points.length || kind === groups[0][0])
             panels.push({ title, metric: key, points });
         });
@@ -437,13 +451,20 @@ const overviewSeries = {
               )
               .join('')}</div>`
           : '';
+      // Fill shows whether a limit was documented near launch or taken from
+      // later documentation, where the launch-day value may have differed.
+      const capacity = ['input', 'output', 'context'].includes(key),
+        later = pp.filter((p) => p.documentedLater).length,
+        basisLegend = capacity
+          ? `<div class="llm-legend llm-basis-legend">${key === 'input' ? '<span>● Published input cap</span><span>◆ Shared input + output window</span>' : ''}<span>Filled: documented within ${LAUNCH_WINDOW_DAYS} days of release (${pp.length - later} of ${pp.length})</span><span>Hollow: documented later, may differ from launch day (${later})</span></div>`
+          : '';
       const title = {
         input: 'Prompt capacity',
         output: 'Output capacity',
         context: names.context,
         pricing: 'Launch prices',
       }[key];
-      fig.innerHTML = `${title ? `<h3>${title}</h3>` : ''}${companyControls(state)}${figureControls(state, key)}${key === 'size' ? `<div class="llm-size-evidence"><label><input type="checkbox" data-estimates ${state.estimates ? 'checked' : ''}>Include reported estimates</label><span>○ Disclosed · ◇ Estimated (excluded from fits)</span></div>` : ''}<div class="llm-legend">${legend}${key === 'cadence' ? '<span class="llm-line-key"><i class="llm-fit-key"></i>Fitted trend</span><span class="llm-line-key"><i class="llm-extension-key"></i>Extrapolation</span>' : ''}</div>${roleLegend}${key === 'cost' ? `<label class="llm-scenario">Token budget <select data-scenario>${data.scenarios.map((s) => `<option value="${s.id}" ${state.scenario === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}</select></label>` : ''}<div class="llm-panels">${panels.map((p, i) => `<section class="llm-panel" data-panel="${i}" data-metric="${p.metric}" data-class-panel="${p.className || ''}" data-title="${esc(p.title)}">${p.title ? `<h4>${p.title}</h4>` : ''}</section>`).join('')}</div>`;
+      fig.innerHTML = `${title ? `<h3>${title}</h3>` : ''}${figureControls(state, key)}${key === 'size' ? `<div class="llm-size-evidence"><label><input type="checkbox" data-estimates ${state.estimates ? 'checked' : ''}>Include reported estimates</label><span>○ Disclosed · ◇ Estimated (excluded from fits)</span></div>` : ''}<div class="llm-legend">${legend}${key === 'cadence' ? '<span class="llm-line-key"><i class="llm-fit-key"></i>Fitted trend</span><span class="llm-line-key"><i class="llm-extension-key"></i>Extrapolation</span>' : ''}${capacity ? '<span class="llm-line-key"><i class="llm-fit-key"></i>Highest so far</span>' : ''}</div>${roleLegend}${basisLegend}${key === 'cost' ? `<label class="llm-scenario">Token budget <select data-scenario>${data.scenarios.map((s) => `<option value="${s.id}" ${state.scenario === s.id ? 'selected' : ''}>${s.label}</option>`).join('')}</select></label>` : ''}<div class="llm-panels">${panels.map((p, i) => `<section class="llm-panel" data-panel="${i}" data-metric="${p.metric}" data-class-panel="${p.className || ''}" data-title="${esc(p.title)}">${p.title ? `<h4>${p.title}</h4>` : ''}</section>`).join('')}</div>`;
       const summaries = [],
         counts = [];
       panels.forEach((p, i) => {
@@ -568,6 +589,10 @@ const overviewSeries = {
             change(fig);
           }),
       );
+      fig.querySelector('[data-more]')?.addEventListener('toggle', (e) => {
+        if (e.target.open) moreOpen.add(key);
+        else moreOpen.delete(key);
+      });
       fig.querySelector('[data-reset]').onclick = () => {
         Object.assign(state, initialState(key, data));
         change(fig);
@@ -617,7 +642,7 @@ const overviewSeries = {
     function renderOverview(fig, state) {
       const fits = overviewFits(data, state).map((fit) => ({
         ...fit,
-        ...overviewSeries[fit.kind === 'shared' ? 'shared' : fit.metric],
+        ...overviewSeries[fit.metric],
       }));
       const legend = fits
         .map(({ label, color, dash }) =>
@@ -625,9 +650,12 @@ const overviewSeries = {
         )
         .join('');
       fig.classList.add('llm-timeline', 'llm-overview');
-      fig.innerHTML = `<h3>Trends at a glance</h3><p>Each line starts at 1× and shows how far that metric moved across the labs.</p><div class="llm-cadence-primary">${roleControls(state, 'overview')}</div><div class="llm-legend">${legend}</div><div class="llm-panel"></div>`;
+      fig.innerHTML = `<h3>Trends at a glance</h3><p>Each line is the yearly median for that metric across the labs, relative to its first year.</p><div class="llm-cadence-primary">${roleControls(state, 'overview')}</div><div class="llm-legend">${legend}</div><div class="llm-panel"></div>`;
       const host = fig.querySelector('.llm-panel');
-      const range = { start: data.windowStart, end: data.cutoff };
+      const range = {
+        start: fits.map((f) => f.start).sort()[0] || data.windowStart,
+        end: data.cutoff,
+      };
       renderTimeline(host, {
         points: [],
         fits,
@@ -636,7 +664,7 @@ const overviewSeries = {
         role: roleLabel(state.role),
         metric: 'overview',
         metricName: 'indexed trends',
-        unit: 'Change from starting value · log scale',
+        unit: 'Yearly median ÷ first-year median · log scale',
         format: (value) => fmt(value, 'price_ratio'),
         indexed: true,
       });

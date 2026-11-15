@@ -755,3 +755,39 @@
   height: 8px;
   flex-shrink: 0;
 }
+
+/* Closing chart: lines are labelled at their right end on wide screens. */
+.llm-end-label {
+  font-size: 11px;
+  font-weight: 600;
+  stroke: none;
+}
+.llm-clipped-label {
+  fill: var(--page-foreground);
+}
+.llm-basis-legend {
+  margin-top: 4px;
+  color: var(--page-muted);
+}
+/* Narrow screens: companies and trend mode fold into one disclosure. */
+.llm-more-controls {
+  margin: 0 0 10px;
+  border: 1px solid var(--page-border);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.llm-more-controls summary {
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.llm-more-controls summary small {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+  color: var(--page-muted);
+}
+.llm-more-controls[open] summary {
+  border-bottom: 1px solid var(--page-border);
+}
