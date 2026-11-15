@@ -1,0 +1,50 @@
+[
+  {
+    "model_id": "hf_meta_llama_meta_llama_3_70b_instruct",
+    "launch_price_verified": false,
+    "reason": "This record is an open-weight release. Recovered provider tariffs are later hosted-service observations (with endpoint/quantization qualifications), not a universal Meta price or verified tariff at the exact weight release.",
+    "source_ids": [
+      "hf_meta_llama_meta_llama_3_70b_instruct_page",
+      "amx_aws_llama3_published_tariff",
+      "meta_history_groq_llama3_apr20"
+    ]
+  },
+  {
+    "model_id": "hf_meta_llama_llama_3_1_405b_instruct",
+    "launch_price_verified": false,
+    "reason": "This record is an open-weight release. Recovered provider tariffs are later hosted-service observations (with endpoint/quantization qualifications), not a universal Meta price or verified tariff at the exact weight release.",
+    "source_ids": [
+      "hf_meta_llama_llama_3_1_405b_instruct_page",
+      "audit_other_aws_bedrock_rates",
+      "meta_history_together_pricing_apr08"
+    ]
+  },
+  {
+    "model_id": "hf_meta_llama_llama_3_3_70b_instruct",
+    "launch_price_verified": false,
+    "reason": "This record is an open-weight release. Recovered provider tariffs are later hosted-service observations (with endpoint/quantization qualifications), not a universal Meta price or verified tariff at the exact weight release.",
+    "source_ids": [
+      "hf_meta_llama_llama_3_3_70b_instruct_page",
+      "or_meta_llama_llama_3_3_70b_instruct",
+      "meta_history_together_pricing_apr08"
+    ]
+  },
+  {
+    "model_id": "hf_meta_llama_llama_4_maverick_17b_128e_original",
+    "launch_price_verified": false,
+    "reason": "This record is an open-weight release. Recovered provider tariffs are later hosted-service observations (with endpoint/quantization qualifications), not a universal Meta price or verified tariff at the exact weight release.",
+    "source_ids": [
+      "hf_meta_llama_llama_4_maverick_17b_128e_original_page",
+      "amx_meta_together_maverick_quote",
+      "meta_history_together_pricing_apr08"
+    ]
+  },
+  {
+    "model_id": "audit_meta_muse_wonder",
+    "launch_price_verified": true,
+    "reason": "The dated October12 Meta developer launch article explicitly quotes $4 input/$20 output per million for Muse Wonder API availability that day.",
+    "source_ids": [
+      "amx_meta_wonder_launch_price"
+    ]
+  }
+]

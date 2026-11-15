@@ -1,0 +1,1141 @@
+[
+  {
+    "model_id": "hf_meta_llama_llama_4_maverick_17b_128e_original",
+    "metric": "context_tokens",
+    "status": "checkpoint_only_no_hosted_limit",
+    "value": 1000000,
+    "source_ids": [
+      "hf_meta_llama_llama_4_maverick_17b_128e_original_page"
+    ],
+    "provider": null,
+    "endpoint": null,
+    "effective_date": "2026-11-10",
+    "observation_date": "2026-11-10",
+    "reason": "Publisher checkpoint advertises this context; no named Meta hosted endpoint supports it. Retained as checkpoint evidence and excluded from API/provider capacity and Publisher API fits. Hosted Instruct-FP8 derivative quotes retain their own provider/lineage and are not this original checkpoint.",
+    "historical_evidence": [
+      {
+        "value": 1000000,
+        "effective_date": "2026-11-10",
+        "observation_date": "2026-11-10",
+        "source_ids": [
+          "hf_meta_llama_llama_4_maverick_17b_128e_original_page"
+        ],
+        "provider": null,
+        "endpoint": null,
+        "limit_access": "standard",
+        "record_id": "hf_meta_llama_llama_4_maverick_17b_128e_original_observed",
+        "reason": ""
+      }
+    ],
+    "serving_eligible": false,
+    "context_kind": "checkpoint"
+  },
+  {
+    "model_id": "audit_meta_muse_spark",
+    "metric": "max_input_tokens",
+    "status": "private_preview_no_public_tariff",
+    "value": null,
+    "reason": "Original Muse Spark launched in MetaAI products, with private API preview for selected partners. Public standard API limits and paid per-token tariff for this exact original identity are not disclosed in the reviewed launch source. Later Spark1.1\u20131.3 API numbers are not transferred.",
+    "source_ids": [
+      "backfill_meta_spark"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_spark",
+    "metric": "max_output_tokens",
+    "status": "private_preview_no_public_tariff",
+    "value": null,
+    "reason": "Original Muse Spark launched in MetaAI products, with private API preview for selected partners. Public standard API limits and paid per-token tariff for this exact original identity are not disclosed in the reviewed launch source. Later Spark1.1\u20131.3 API numbers are not transferred.",
+    "source_ids": [
+      "backfill_meta_spark"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_spark",
+    "metric": "context_tokens",
+    "status": "private_preview_no_public_tariff",
+    "value": null,
+    "reason": "Original Muse Spark launched in MetaAI products, with private API preview for selected partners. Public standard API limits and paid per-token tariff for this exact original identity are not disclosed in the reviewed launch source. Later Spark1.1\u20131.3 API numbers are not transferred.",
+    "source_ids": [
+      "backfill_meta_spark"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_spark",
+    "metric": "input_usd_per_million",
+    "status": "private_preview_no_public_tariff",
+    "value": null,
+    "reason": "Original Muse Spark launched in MetaAI products, with private API preview for selected partners. Public standard API limits and paid per-token tariff for this exact original identity are not disclosed in the reviewed launch source. Later Spark1.1\u20131.3 API numbers are not transferred.",
+    "source_ids": [
+      "backfill_meta_spark"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_spark",
+    "metric": "output_usd_per_million",
+    "status": "private_preview_no_public_tariff",
+    "value": null,
+    "reason": "Original Muse Spark launched in MetaAI products, with private API preview for selected partners. Public standard API limits and paid per-token tariff for this exact original identity are not disclosed in the reviewed launch source. Later Spark1.1\u20131.3 API numbers are not transferred.",
+    "source_ids": [
+      "backfill_meta_spark"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_wonder_full",
+    "metric": "max_input_tokens",
+    "status": "product_only_no_api",
+    "value": null,
+    "reason": "Muse Wonder Full is a distinct higher-capability subscription-only MuseCode variant. It is not available through the MetaModelAPI; standard Wonder limits/prices do not apply.",
+    "source_ids": [
+      "classification_meta_wonder_docs"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_wonder_full",
+    "metric": "max_output_tokens",
+    "status": "product_only_no_api",
+    "value": null,
+    "reason": "Muse Wonder Full is a distinct higher-capability subscription-only MuseCode variant. It is not available through the MetaModelAPI; standard Wonder limits/prices do not apply.",
+    "source_ids": [
+      "classification_meta_wonder_docs"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_wonder_full",
+    "metric": "context_tokens",
+    "status": "product_only_no_api",
+    "value": null,
+    "reason": "Muse Wonder Full is a distinct higher-capability subscription-only MuseCode variant. It is not available through the MetaModelAPI; standard Wonder limits/prices do not apply.",
+    "source_ids": [
+      "classification_meta_wonder_docs"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_wonder_full",
+    "metric": "input_usd_per_million",
+    "status": "product_only_no_api",
+    "value": null,
+    "reason": "Muse Wonder Full is a distinct higher-capability subscription-only MuseCode variant. It is not available through the MetaModelAPI; standard Wonder limits/prices do not apply.",
+    "source_ids": [
+      "classification_meta_wonder_docs"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_meta_muse_wonder_full",
+    "metric": "output_usd_per_million",
+    "status": "product_only_no_api",
+    "value": null,
+    "reason": "Muse Wonder Full is a distinct higher-capability subscription-only MuseCode variant. It is not available through the MetaModelAPI; standard Wonder limits/prices do not apply.",
+    "source_ids": [
+      "classification_meta_wonder_docs"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_6_rosalind",
+    "metric": "max_input_tokens",
+    "status": "documentation_unavailable",
+    "value": null,
+    "reason": "Restricted life-sciences endpoint is named in the official changelog and pricing, but exact-model capacity page returned404 duringNov12 audit. No related Rosalind research identity or sibling cap is substituted.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_6_rosalind",
+    "metric": "max_output_tokens",
+    "status": "documentation_unavailable",
+    "value": null,
+    "reason": "Restricted life-sciences endpoint is named in the official changelog and pricing, but exact-model capacity page returned404 duringNov12 audit. No related Rosalind research identity or sibling cap is substituted.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_6_rosalind",
+    "metric": "context_tokens",
+    "status": "documentation_unavailable",
+    "value": null,
+    "reason": "Restricted life-sciences endpoint is named in the official changelog and pricing, but exact-model capacity page returned404 duringNov12 audit. No related Rosalind research identity or sibling cap is substituted.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving input cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving output cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving combined context window was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving input cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving output cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving combined context window was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@001",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving input cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving output cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving combined context window was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving input cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving output cap was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official Vertex release notes establish the Bison identity/version, but no exact-version serving combined context window was recovered in this review. The surviving computation-based evaluation documentation describes dataset limits, not a guaranteed serving limit, and is not used as model-capacity evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "chat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "code-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric input cap. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "code-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric output cap. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "code-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric combined context window. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "code-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "code-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "codechat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric input cap. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "codechat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric output cap. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "codechat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "The official December6,2023 release entry names the exact @002 endpoint but provides no numeric combined context window. June29 Codey release notes describe earlier model-family limits, not the December @002 endpoint; these are not carried forward without exact-version evidence.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "codechat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "codechat-bison@002",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-unicorn (initial GA)",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official November30,2023 release notes establish initial text-unicorn GA, but the reviewed entry does not specify a numeric input cap. No exact archived serving specification recovered; sibling Bison limits and later endpoint documentation are not substituted.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-unicorn (initial GA)",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official November30,2023 release notes establish initial text-unicorn GA, but the reviewed entry does not specify a numeric output cap. No exact archived serving specification recovered; sibling Bison limits and later endpoint documentation are not substituted.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-unicorn (initial GA)",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official November30,2023 release notes establish initial text-unicorn GA, but the reviewed entry does not specify a numeric combined context window. No exact archived serving specification recovered; sibling Bison limits and later endpoint documentation are not substituted.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-unicorn (initial GA)",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "provider": "Google Vertex AI",
+    "endpoint": "text-unicorn (initial GA)",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Dated Vertex release notes establish this legacy endpoint/version, but no exact-version launch tariff per token was recovered. The reviewed legacy text-bison pricing statement is per1,000 characters, not tokens; a character-to-token conversion or another Bison/version tariff would be unsupported. Retired documentation availability remains the gap; no zero-price offer created.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-1219",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric input cap for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-1219",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric output cap for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-1219",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric combined context window for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-1219",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Exact experimental endpoint appears in the dated API changelog and official February6 experimental-model archive. No paid input/output tariff for this endpoint was verified in the reviewed official pricing evidence. Do not copy stable Gemini2.0 Flash prices, treat unbilled experimentation as a zero paid tariff, or infer a paid API launch from its preview date.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-1219",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Exact experimental endpoint appears in the dated API changelog and official February6 experimental-model archive. No paid input/output tariff for this endpoint was verified in the reviewed official pricing evidence. Do not copy stable Gemini2.0 Flash prices, treat unbilled experimentation as a zero paid tariff, or infer a paid API launch from its preview date.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "metric": "max_input_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-01-21",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric input cap for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "metric": "max_output_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-01-21",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric output cap for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "metric": "context_tokens",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-01-21",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Official release notes and February6 experimental-model archive establish the exact Thinking experiment identity but do not give a verified numeric combined context window for this endpoint. The December19 and January21 experiments are distinct; stable2.0 Flash limits and later Thinking versions are not substitutes.",
+    "historical_evidence": [],
+    "service_tier": null,
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "metric": "input_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-01-21",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Exact experimental endpoint appears in the dated API changelog and official February6 experimental-model archive. No paid input/output tariff for this endpoint was verified in the reviewed official pricing evidence. Do not copy stable Gemini2.0 Flash prices, treat unbilled experimentation as a zero paid tariff, or infer a paid API launch from its preview date.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "metric": "output_usd_per_million",
+    "status": "historical_evidence_unavailable",
+    "value": null,
+    "source_ids": [
+      "google_changelog",
+      "five_google_archive_20250206172856"
+    ],
+    "provider": "Google Gemini API",
+    "endpoint": "gemini-2.0-flash-thinking-exp-01-21",
+    "effective_date": null,
+    "observation_date": "2026-11-12",
+    "reason": "Exact experimental endpoint appears in the dated API changelog and official February6 experimental-model archive. No paid input/output tariff for this endpoint was verified in the reviewed official pricing evidence. Do not copy stable Gemini2.0 Flash prices, treat unbilled experimentation as a zero paid tariff, or infer a paid API launch from its preview date.",
+    "historical_evidence": [],
+    "service_tier": "standard",
+    "source_scope": "Sources establish exact endpoint identity and the reviewed limitation; they do not supply an omitted numeric value.",
+    "searched_urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://web.archive.org/web/20250206172856id_/https://ai.google.dev/gemini-api/docs/models/experimental-models",
+      "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  }
+]

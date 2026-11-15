@@ -1,0 +1,1580 @@
+[
+  {
+    "model_id": "hf_openai_gpt_oss_20b",
+    "launch_price_reason": "Publisher emphasizes edge deployment with16GB memory, low cost, and local rapid iteration. Economy is supported by deployment positioning, not parameter count alone.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_openai_gpt_oss_120b",
+    "launch_price_reason": "Publisher positions strong reasoning at low cost on one80GB GPU; compares to economical o4-mini. Balanced is an editorial inference; alternatively Economy for both efficiency-focused open models. Does not present120b as its overall flagship.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_3_5_turbo_0125",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_oai_0125",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_0613",
+    "launch_price_reason": "Current model quote exists, but no exact-snapshot dated launch price evidence was recovered. June 13 launch identifies the model without giving its price; other GPT-4 snapshots are not substitutes.",
+    "source_ids": [
+      "five_oai_gpt_4",
+      "foundation_oai_0613"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_1_2025_04_14",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_1_mini_2025_04_14",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_1_nano_2025_04_14",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_5_preview_2025_02_27",
+    "launch_price_reason": "Publisher API launch announcement explicitly gives this input/output tariff; API changelog maps the initial alias to this exact dated snapshot. Staff post created2025-02-28T00:01:16Z (Feb27Pacific) explicitly announces initial API release; this is explicit launch evidence, not a backdated later observed quote.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_turbo_2024_04_09",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_archive_pricing_may2024",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4o_2024_08_06",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_structured_outputs_in_the_api",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4o_mini_2024_07_18",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_mini",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_2025_08_07",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_1_2025_11_13",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_gpt_5_1_for_developers",
+      "ph_oai_introducing_gpt_5_for_developers",
+      "instant_gpt51_launch",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_2_2025_12_11",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_4_2026_03_05",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_4_mini_2026_03_17",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4_mini_and_nano",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_4_nano_2026_03_17",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4_mini_and_nano",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_5_2026_04_23",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_5",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_6_sol",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_6_luna",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_6_terra",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_mini_2025_08_07",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_5_nano_2025_08_07",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_6_1_sol",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_6_1_terra",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_6_1_terra",
+      "ph_oai_release_index",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_6_astra",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_gpt_6_astra",
+      "ph_oai_release_index",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_6_luna",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_6_sol",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o1_2024_12_17",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202503",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o1_mini_2024_09_12",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o1_preview_2024_09_12",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o3_2025_04_16",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202506",
+      "ph_oai_pricing_202504",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o3_mini_2025_01_31",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202503",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o3_pro_2025_06_10",
+    "launch_price_reason": "Publisher API launch announcement explicitly gives this input/output tariff; API changelog maps the initial alias to this exact dated snapshot.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_o4_mini_2025_04_16",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202506",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_4_1106_preview",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_devday"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "openai_gpt_3.5_turbo_1106",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "openai_devday"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_4o_2024_05_13",
+    "launch_price_reason": "Publisher API launch announcement explicitly gives this input/output tariff; API changelog maps the initial alias to this exact dated snapshot.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_3_codex",
+    "launch_price_reason": "Official exact-model page captured on the actual API launch day. Accepted as launch-day observed under the new policy; no claim that the page explicitly names a launch tariff. API changelog identifies gpt-5.3-codex API release on Feb24, distinct from earlier Codex product rollout.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_3_chat_latest_initial_snapshot",
+    "launch_price_reason": "Initial GPT-5.3 Instant API alias is mapped by its March 3 launch post, but no launch tariff or launch-day archive was recovered. Current mutable-alias prices cannot establish the initial snapshot price.",
+    "source_ids": [
+      "ph_oai_instant53_blog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_5_pro",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_5",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_4o_2024_11_20",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_codex",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_upgrades_to_codex",
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex_mini",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex_max",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_2_codex",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_codex52_launch",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_chatgpt_original_research_preview",
+    "launch_price_reason": "Original2022 product research preview predates analysis window; no separately identified API checkpoint or paid token tariff. Retain provenance inventory, exclude2023\u20132026 plot.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_0301",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_oai_api"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_0314",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_gpt4"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_32k_0314",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_gpt4"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_0613",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_oai_0613"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_16k_0613",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "foundation_oai_0613"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_32k_0613",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_deprecations",
+      "foundation_oai_0613"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_0125_preview",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "five_oai_archive_pricing_may2024",
+      "foundation_oai_0125"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_5_pro",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_5_4_pro",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_o1_pro",
+    "launch_price_reason": "No exact-model paid API launch tariff or resolved official launch-day capture was established in the reviewed evidence. Later quotes remain separately dated; an explicit launch statement is not required when an authenticated exact-model launch-day capture exists.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_openai_gpt_6_rosalind",
+    "launch_price_reason": "Specialized biological research under trusted access. Current high tariff alone does not establish Premium; no explicit general-model frontier/efficiency positioning recovered. Keep unclassified pending editorial scope decision.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "roles_openai_codex_1",
+    "launch_price_reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "roles_codex_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "roles_openai_codex_mini_latest_initial",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "roles_codex_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "roles_openai_gpt_5_2_pro",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "instant_gpt5_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_1",
+    "launch_price_reason": "November13 official developer announcement explicitly states GPT-5.1 and gpt-5.1-chat-latest are available on paid API tiers with GPT-5 pricing (1.25/10). Product release remains November12; API tariff is not moved backwards. Legacy release-date-specific bool remains false.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_2",
+    "launch_price_reason": "Already verified before this audit; no repricing or re-research of launch tariff.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_5",
+    "launch_price_reason": "Official exact-model page captured on the actual API launch day. Accepted as launch-day observed under the new policy; no claim that the page explicitly names a launch tariff. The launch post maps chat-latest to the initial GPT-5.5 Instant snapshot; later rolling-alias observations are excluded.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_mini",
+    "launch_price_reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_gpt5_card"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_3_mini",
+    "launch_price_reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_chat_notes"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_5_mini",
+    "launch_price_reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_chat_notes"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_2b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma_launch",
+      "hf_google_gemma_2b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_7b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma_launch",
+      "hf_google_gemma_7b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_2_9b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma2",
+      "hf_google_gemma_2_9b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_2_27b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma2",
+      "hf_google_gemma_2_27b_it_page",
+      "or_google_gemma_2_27b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_2_2b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "backfill_gemma2",
+      "hf_google_gemma_2_2b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3_1b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "google_gemma3",
+      "hf_google_gemma_3_1b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3_4b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "google_gemma3",
+      "hf_google_gemma_3_4b_it_page",
+      "or_google_gemma_3_4b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3_12b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "google_gemma3",
+      "hf_google_gemma_3_12b_it_page",
+      "or_google_gemma_3_12b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3_27b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "google_gemma3",
+      "hf_google_gemma_3_27b_it_page",
+      "or_google_gemma_3_27b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3n_e2b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma3n",
+      "hf_google_gemma_3n_e2b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_3n_e4b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma3n",
+      "hf_google_gemma_3n_e4b_it_page"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_4_31b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma4",
+      "hf_google_gemma_4_31b_it",
+      "or_google_gemma_4_31b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_google_gemma_4_26b_a4b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "gemma4",
+      "hf_google_gemma_4_26b_a4b_it",
+      "or_google_gemma_4_26b_a4b_it"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_1_0_pro",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "backfill_gemini1",
+      "five_google_archive_20231214013630",
+      "five_google_archive_20240409144008",
+      "google_changelog",
+      "review_archive_google_pricing_20240514232746"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_1_5_pro",
+    "launch_price_reason": "Later aliases resolve newer checkpoints. May30 stable001 billing is attached to exact001 inventory records, not duplicated onto earlier preview/alias release.",
+    "source_ids": [
+      "five_google_archive_20240801184228",
+      "five_google_archive_20250502025139",
+      "google_15",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_1_5_flash",
+    "launch_price_reason": "Later aliases resolve newer checkpoints. May30 stable001 billing is attached to exact001 inventory records, not duplicated onto earlier preview/alias release.",
+    "source_ids": [
+      "five_google_archive_20240801184228",
+      "five_google_archive_20250502025139",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_1_5_flash_8b",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20241004023715",
+      "five_google_archive_20250502025139",
+      "google_changelog",
+      "tokenomics_google_flash8b_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_2_0_flash",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "editorial_gemini2_launch",
+      "five_google_archive_20250207222159",
+      "goog_gemini_2_0_flash",
+      "google_changelog",
+      "audit20261112_google_20_pricing"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_2_0_flash_lite",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20250303104029",
+      "five_google_archive_20250502025139",
+      "goog_gemini_2_0_flash_lite",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_2_5_pro",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "editorial_gemini25pro_card",
+      "five_google_archive_20250701035635",
+      "goog_gemini_2_5_pro",
+      "google_changelog",
+      "google_pricing",
+      "review_google_25_ga_graphic",
+      "tokenomics_google_gemini_2_5_pro_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_2_5_flash",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20250701035635",
+      "goog_gemini_2_5_flash",
+      "google_changelog",
+      "google_pricing",
+      "review_google_25_ga_graphic",
+      "tokenomics_google_gemini_2_5_flash_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_2_5_flash_lite",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20251001133851",
+      "goog_gemini_2_5_flash_lite",
+      "google_changelog",
+      "google_pricing",
+      "tokenomics_google_flash25lite_ga",
+      "tokenomics_google_gemini_2_5_flash_lite_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_3_pro_preview",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20260101014851",
+      "goog_gemini_3_pro_preview",
+      "google_changelog",
+      "review_archive_gemini3_nov18_archive",
+      "review_archive_google_pricing_nov18",
+      "review_google_3_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_3_flash_preview",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20260101014851",
+      "goog_gemini_3_flash_preview",
+      "google_changelog",
+      "tokenomics_google_flash3_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_3_1_pro_preview",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "goog_gemini_3_1_pro_preview",
+      "google_changelog",
+      "history_google_pro31_archive_20260220111002",
+      "tokenomics_google_gemini_3_1_pro_preview_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_3_8_flash",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "goog_gemini_3_8_flash",
+      "google_changelog",
+      "history_google_flash38_archive_20260902150802",
+      "tokenomics_google_gemini_3_8_flash_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_4_argon",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "goog_gemini_4_argon",
+      "google_changelog",
+      "google_pricing",
+      "history_google_argon_archive_20261013161636",
+      "tokenomics_google_gemini_4_argon_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "google_gemini_4_carbon",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "goog_gemini_4_carbon",
+      "google_changelog",
+      "google_pricing",
+      "tokenomics_google_gemini_4_carbon_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_1_1_2b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_1_1_7b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_3_270m_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_4_e2b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_4_e4b_it",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemma_4_12b_unified",
+    "launch_price_reason": "Weights release has no universal Google token tariff. Existing host offers are later observations unless explicitly tied to the named hosted-service launch; no such launch tariff newly verified.",
+    "source_ids": [
+      "audit20261112_google_gemma_releases"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemini_3_1_flash_lite",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "google_changelog",
+      "history_google_lite31_archive_20260508075401",
+      "tokenomics_google_gemini_3_1_flash_lite_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemini_3_5_flash",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20260519175445",
+      "five_google_archive_20260519184642",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemini_3_6_flash",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20260813181124",
+      "google_changelog",
+      "history_google_flash36_lite35_archive_20260722024041",
+      "tokenomics_google_gemini_3_6_flash_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_google_gemini_3_5_flash_lite",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "google_changelog",
+      "history_google_flash36_lite35_archive_20260722024041",
+      "tokenomics_google_gemini_3_5_flash_lite_20261111",
+      "tokenomics_google_pricing_20261111"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_bard_lamda_product_preview",
+    "launch_price_reason": "Product/family announcement lacks an exact paid token API identity; no numeric zero inserted.",
+    "source_ids": [
+      "foundation_bard"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_palm_2_announcement",
+    "launch_price_reason": "Product/family announcement lacks an exact paid token API identity; no numeric zero inserted.",
+    "source_ids": [
+      "foundation_palm2"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_pro_002",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "google_changelog",
+      "review_archive_google_models_sept30",
+      "review_google_15_cut_graphic"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_flash_002",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20250501040823",
+      "five_google_archive_20250502025139",
+      "google_changelog",
+      "review_archive_google_models_sept30"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_exp",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "five_google_archive_20250102094919",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_pro_exp_02_05",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "foundation_gemini2_feb",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_lite_preview_02_05",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20250207222159",
+      "google_changelog",
+      "audit20261112_google_20_pricing"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_pro_exp_03_25",
+    "launch_price_reason": "May2 official pricing explicitly reserves exp-03-25 for the free tier; the paid preview-03-25 endpoint has its own inventory record. Do not copy paidpreview tariff tofreeexp.",
+    "source_ids": [
+      "five_google_archive_20250402160055",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_pro_preview_05_06",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20250603024848",
+      "google_changelog",
+      "review_archive_gemini25_may_archive",
+      "review_google_25_may_launch"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_flash_preview_04_17",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20250501040823",
+      "five_google_archive_20250502025139",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_text_bison_001",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_chat_bison_001",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_text_bison_002",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_chat_bison_002",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_code_bison_002",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_codechat_bison_002",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_text_unicorn_initial_ga",
+    "launch_price_reason": "Legacy Vertex APIs used character billing; no exact-model launch per-token tariff located. Do not convert characters to tokens. Current evaluation-dataset limits are not servingcaps and June29 Codey001 limits are not evidence for Dec6 Codey002.",
+    "source_ids": [
+      "foundation_vertex_history"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_pro_exp_0801",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "five_google_archive_20240905203320",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_pro_exp_0827",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "five_google_archive_20240905203320",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_flash_exp_0827",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "five_google_archive_20240905203320",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0827",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "five_google_archive_20240905203320",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0924",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "google_changelog",
+      "review_archive_google_models_sept30"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_1219",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_0_flash_thinking_exp_01_21",
+    "launch_price_reason": "Exact experimental identity preserved. No paid tariff evidenced in reviewed official documentation; free experimental access does not establish a zero paid launch tariff.",
+    "source_ids": [
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_flash_preview_05_20",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20250603024848",
+      "five_google_archive_20250607103454",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_pro_preview_06_05",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20250606075754",
+      "five_google_archive_20250607103454",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_flash_lite_preview_06_17",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20250701035635",
+      "google_changelog",
+      "review_google_25_ga_graphic"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_flash_preview_09_2025",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20251001133851",
+      "google_changelog",
+      "review_archive_google_pricing_nov18"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_flash_lite_preview_09_2025",
+    "launch_price_reason": "Numeric later quote preserved; no exact-endpoint explicit launch tariff or unambiguous launch-day official capture verified. Later snapshots are not backdated.",
+    "source_ids": [
+      "five_google_archive_20251001133851",
+      "google_changelog",
+      "review_archive_google_pricing_nov18"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_pro_001",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20240801184228",
+      "google_changelog",
+      "review_archive_google_models_sept30",
+      "review_archive_google_pricing_20240530044740"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_1_5_flash_001",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20240801184228",
+      "google_changelog",
+      "review_archive_google_models_sept30",
+      "review_archive_google_pricing_20240530044740",
+      "tokenomics_google_flash_aug12"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_google_gemini_2_5_pro_preview_03_25",
+    "launch_price_reason": "Existing verified offer retained; not re-audited or duplicated.",
+    "source_ids": [
+      "five_google_archive_20250501040823",
+      "google_changelog",
+      "review_google_25_paid_graphic"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "roles_google_gemini_3_7_flash",
+    "launch_price_reason": "Patch contains exact-model explicit paid launch or same-day official observed evidence.",
+    "source_ids": [
+      "five_google_archive_20260813172856",
+      "five_google_archive_20260813181124",
+      "google_changelog"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_xai_org_grok_1",
+    "launch_price_reason": "No paid API launch tariff is established for this exact identity. Later hosted or current prices do not establish a launch price.",
+    "source_ids": [
+      "backfill_grok1",
+      "hf_xai_org_grok_1"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "hf_xai_org_grok_2",
+    "launch_price_reason": "No paid API launch tariff is established for this exact identity. Later hosted or current prices do not establish a launch price.",
+    "source_ids": [
+      "hf_xai_org_grok_2"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_sonnet_4_5_20250929",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_haiku_4_5_20251001",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_5_20251101",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_6",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_sonnet_4_6",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_7",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_8",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_sonnet_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_fable_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_fable_5_1",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_fable_5_2",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_5_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_sonnet_5_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_haiku_5_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_2.1",
+    "launch_price_reason": "November21 announcement says pricing changes and links a PDF; 8/24 appears in undated PDF, not dated article body. No contemporaneous capture verifies the current linked PDF was the launch tariff. Existing date_basis=launch alone is insufficient.",
+    "source_ids": [
+      "anthropic_21",
+      "audit_anthropic_nov2023_pricing"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_opus_20240229",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_sonnet_20240229",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_haiku_20240307",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_5_sonnet_20240620",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_5_sonnet_20241022",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_5_haiku_20241022",
+    "launch_price_reason": "Official Nov4at18:54:21Z price capture gives1/5 after same-day18:00:07Z card update.",
+    "source_ids": [
+      "ax_20261112_haiku35_launch_pricing"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_3_7_sonnet_20250219",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_20250514",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_sonnet_4_20250514",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "anthropic_claude_opus_4_1_20250805",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_1_product",
+    "launch_price_reason": "Product-only launch has no verified token-priced API offer at the inventory release date; subscriptions cannot be treated as input/output token tariffs.",
+    "source_ids": [
+      "grok1"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_2_beta",
+    "launch_price_reason": "August13 beta product announcement does not establish a same-day API tariff for this exact identity. Later dated Grok2-1212 API tariff must not be transferred to beta model.",
+    "source_ids": [
+      "grok2"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_3",
+    "launch_price_reason": "Official archived April10 tariff3/15 is later than inventory release; does not prove tariff at either February consumer announcement or April3 API launch. Exact beta endpoint aliases documented, not a launch-date proof.",
+    "source_ids": [
+      "ax_20261112_xai_release_notes",
+      "amx_history_xai_models_apr10",
+      "amx_history_xai_api_units_current"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_3_mini",
+    "launch_price_reason": "Official archived April10 tariff.30/.50 is later than inventory release; exact beta endpoint aliases documented, but no same-day release tariff verified.",
+    "source_ids": [
+      "ax_20261112_xai_release_notes",
+      "amx_history_xai_models_apr10",
+      "amx_history_xai_api_units_current"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_4_0709",
+    "launch_price_reason": "July28 archive confirms3/15 but is later than July9 release. July10 model-page capture failed to populate authenticated catalog, and July11 catalog captured only loading state.",
+    "source_ids": [
+      "grok4",
+      "amx_history_xai_models_jul28",
+      "amx_history_xai_api_units_current"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_4_1_fast",
+    "launch_price_reason": "Aggregate excluded; two exact named API endpoints added with explicit Nov19 launch tariff and2Mcontext.",
+    "source_ids": [
+      "ax_20261112_xai_release_notes"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_4_5",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_4_6",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "xai_grok_4_7",
+    "launch_price_reason": "Previously verified tariff retained; not re-researched.",
+    "source_ids": [],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "audit_xai_grok_4_20",
+    "launch_price_reason": "April2 archive resolves grok-4.20 alias to grok-4.20-0309-reasoning and2/6 tariff. March11 beta catalog also contains2/6, but both are after March10 launch; no March10 numeric tariff verified.",
+    "source_ids": [
+      "ax_20261112_xai_release_notes",
+      "amx_history_xai_models_apr2026",
+      "amx_history_xai_api_units_current"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_anthropic_claude_march_2023_launch",
+    "launch_price_reason": "Retrospective PDF publishes 11.02/32.68 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+    "source_ids": [
+      "foundation_claude1",
+      "amx_anthropic_early_pricing_pdf"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_anthropic_claude_instant_march_2023_launch",
+    "launch_price_reason": "Retrospective PDF publishes 1.63/5.51 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+    "source_ids": [
+      "foundation_claude1",
+      "amx_anthropic_early_pricing_pdf"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_anthropic_claude_2_0",
+    "launch_price_reason": "July launch tariff not independently date-anchored. Later 8/24 table exists, but its November filename and present announcement link do not establish a launch-date July11 price.",
+    "source_ids": [
+      "foundation_claude2",
+      "audit_anthropic_nov2023_pricing"
+    ],
+    "observation_date": "2026-11-12"
+  },
+  {
+    "model_id": "foundation_anthropic_claude_instant_1_2",
+    "launch_price_reason": "July-named retrospective PDF publishes Instant 1.63/5.51 USD/M but no contemporaneous capture or explicit dated effective tariff establishes August9 version1.2 launch pricing.",
+    "source_ids": [
+      "foundation_claude_instant12",
+      "amx_anthropic_july_pricing_pdf"
+    ],
+    "observation_date": "2026-11-12"
+  }
+]

@@ -1,0 +1,350 @@
+---
+import Base from '../layouts/Base.astro';
+import { cap } from '../components/llm-evolution/chart-format.js';
+import coverage from '../../research/llm-inference-2023-2026/data/article_metric_coverage.json';
+import inventory from '../../research/llm-inference-2023-2026/data/research_inputs.json';
+import prices from '../../research/llm-inference-2023-2026/data/article_launch_price_audit.json';
+
+const localDraft = Astro.url.pathname.startsWith('/__drafts/');
+const metricsByModel = new Map(coverage.models.map((model) => [model.modelId, model]));
+const pricesByModel = new Map(prices.models.filter((model) => model.launchEligible).map((model) => [model.modelId, model.launch]));
+const sources = new Map(inventory.sources.map((source) => [source.id, source.url]));
+const formatTokens = new Intl.NumberFormat('en-US');
+const formatPrice = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 6,
+});
+const columns = ['Model', 'Lab', 'Tier', 'Release', 'Input cap', 'Output cap', 'Context window', 'Launch input', 'Launch output', 'Source'];
+const rows = inventory.models.map((model) => {
+  const articleModel = metricsByModel.get(model.model_id);
+  return {
+    id: model.model_id,
+    name: model.exact_version,
+    company: articleModel?.company ?? model.developer_at_release,
+    role: articleModel?.role ?? model.product_class,
+    date: model.release_date || model.release_interval_start_date || '',
+    metrics: articleModel?.metrics,
+    price: pricesByModel.get(model.model_id),
+    source: sources.get(model.release_source_id),
+  };
+}).sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
+---
+<Base title="Tokenomics: Data and methods" description="Search the model inventory and download the data behind the Tokenomics charts." noIndex={localDraft} wide>
+  <article class="tokenomics-data mx-auto w-full max-w-[1100px]" data-pagefind-ignore>
+    <a class="back-link" href={localDraft ? '/__drafts/tokenomics' : '/posts/tokenomics/'}>← Back to the article</a>
+    <h1>Tokenomics data and methods</h1>
+
+    <section id="inventory" aria-labelledby="inventory-heading">
+      <h2 id="inventory-heading">Model inventory</h2>
+      <div class="downloads" id="downloads">
+        <a class="download-primary" href="/__llm-research-download/master_view.csv" download="tokenomics-models.csv">Download full table (CSV)</a>
+        <a href="/__llm-research-download/article_metric_coverage.csv" download>Metric sources (CSV)</a>
+        <a href="/__llm-research-download/article_launch_price_audit.csv" download>Launch prices (CSV)</a>
+        <a href="/__llm-research-records.json" download="tokenomics-records.json">Full records (JSON)</a>
+      </div>
+
+      <div class="table-controls">
+        <label for="model-search">Search models
+          <input id="model-search" type="search" placeholder="Model, lab, tier, or date" />
+        </label>
+        <label for="model-scope">Scope
+          <select id="model-scope">
+            <option value="all">All models</option>
+            <option value="article">Article models</option>
+          </select>
+        </label>
+      </div>
+      <p id="model-count" aria-live="polite">{rows.length} models</p>
+      <div id="article-coverage" class="table-scroll" tabindex="0" role="region" aria-labelledby="inventory-heading">
+        <table>
+          <caption class="sr-only">Model inventory with audited API limits and launch prices</caption>
+          <thead>
+            <tr>{columns.map((column) => <th scope="col">{column}</th>)}</tr>
+          </thead>
+          <tbody id="model-rows">
+            {rows.map((row) => (
+              <tr data-model-row data-in-article={row.metrics ? 'yes' : 'no'}>
+                <th scope="row"><a href={`#model-${encodeURIComponent(row.id)}`}>{row.name}</a></th>
+                <td>{row.company}</td>
+                <td>{row.role ? cap(row.role) : '—'}</td>
+                <td class="release-date">{row.date || '—'}</td>
+                {['input', 'output', 'context'].map((key) => {
+                  const metric = row.metrics?.[key as 'input' | 'output' | 'context'];
+                  return <td class="numeric" title={metric?.reason}>
+                    {typeof metric?.value === 'number'
+                      ? formatTokens.format(metric.value)
+                      : metric?.status === 'shared_context_budget' ? 'Shared window' : '—'}
+                  </td>;
+                })}
+                <td class="numeric" title={row.price?.pricingCondition ?? undefined}>
+                  {typeof row.price?.input === 'number' ? formatPrice.format(row.price.input) : '—'}
+                </td>
+                <td class="numeric" title={row.price?.pricingCondition ?? undefined}>
+                  {typeof row.price?.output === 'number' ? formatPrice.format(row.price.output) : '—'}
+                </td>
+                <td>{row.source ? <a href={row.source}>Release</a> : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Audited limits and launch prices cover article models. Prices are USD per million tokens. Dashes mark values outside the article’s scope or without comparable evidence.</p>
+    </section>
+
+    <section id="record" hidden aria-labelledby="record-heading">
+      <h2 id="record-heading">Model record</h2>
+      <div id="record-panel" aria-live="polite"></div>
+    </section>
+
+    <section id="methods" aria-labelledby="methods-heading">
+      <h2 id="methods-heading">Methods</h2>
+      <dl>
+        <div id="cadence">
+          <dt>Release cadence</dt>
+          <dd>Days between recorded releases from the same lab and tier. Same-day releases count once. Dotted extensions project the fit to the cutoff.</dd>
+        </div>
+        <div id="context">
+          <dt><span id="input">Input</span>, <span id="output">output</span>, and context</dt>
+          <dd>Documented standard API limits plotted by model release date. Shared windows are tracked separately from standalone input caps.</dd>
+        </div>
+        <div id="pricing">
+          <dt>Launch prices</dt>
+          <dd>Verified uncached standard rates at paid API launch. Ratios divide the output and input prices from the same offer. The table shows the primary verified offer.</dd>
+        </div>
+        <div id="overview">
+          <dt>Trend lines</dt>
+          <dd>Robust log-linear fits use the median log value per lab and date. Each fit needs at least three dates spanning 90 days. The overview pools the selected tiers across labs and starts each trend at 1× its first fitted value.</dd>
+        </div>
+      </dl>
+      <p>The article covers {coverage.modelCount} proprietary model releases through {coverage.cutoff}. The full inventory includes models outside that scope.</p>
+      <p><a href="https://github.com/metemorris/metemorris.github.io/tree/main/research/llm-inference-2023-2026">Research source and analysis scripts</a></p>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .tokenomics-data {
+    color: var(--page-foreground);
+    line-height: 1.6;
+  }
+  .tokenomics-data a {
+    color: var(--prose-link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .tokenomics-data h1 {
+    margin: .35rem 0 1.4rem;
+    font-size: clamp(1.65rem, 4vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .tokenomics-data h2 {
+    margin-bottom: .55rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .tokenomics-data section, #methods [id] {
+    scroll-margin-top: 6rem;
+  }
+  .back-link, .downloads, .table-note, #model-count {
+    font-size: .875rem;
+  }
+  .downloads, .table-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .downloads .download-primary {
+    padding: .35rem .7rem;
+    border: 1px solid var(--page-border);
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .table-controls {
+    align-items: flex-end;
+    margin-bottom: .4rem;
+  }
+  .table-controls label {
+    display: grid;
+    gap: .2rem;
+    font-size: .875rem;
+  }
+  .table-controls input, .table-controls select {
+    min-width: 0;
+    padding: .4rem .55rem;
+    color: var(--page-foreground);
+    background: var(--page-bg);
+    border: 1px solid var(--page-border);
+    border-radius: 5px;
+    font: inherit;
+  }
+  .table-controls input {
+    width: min(18rem, 75vw);
+  }
+  .table-controls select { color-scheme: light; }
+  :global(.dark) .table-controls select { color-scheme: dark; }
+  .table-note, #model-count {
+    margin: .35rem 0;
+    color: var(--page-muted);
+  }
+  .table-scroll {
+    overflow: auto;
+    max-height: 60vh;
+    border: 1px solid var(--page-border);
+    border-radius: 6px;
+    scroll-margin-top: 6rem;
+  }
+  table {
+    width: 100%;
+    min-width: 55rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: .82rem;
+  }
+  th, td {
+    padding: .4rem .55rem;
+    text-align: left;
+    border-bottom: 1px solid var(--page-border);
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--page-bg);
+  }
+  tr > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 9rem;
+    background: var(--page-bg);
+    overflow-wrap: anywhere;
+    border-right: 1px solid var(--page-border);
+  }
+  thead tr > :first-child { z-index: 3; }
+  .release-date { white-space: nowrap; }
+  .numeric {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  #record, #methods {
+    margin-top: 1.6rem;
+  }
+  #methods dl {
+    display: grid;
+    gap: .5rem;
+    margin: 0 0 .65rem;
+  }
+  #methods dt { font-weight: 600; }
+  #methods p { margin-top: .4rem; }
+  #record-panel :global(p) { margin: .45rem 0; }
+  #record-panel :global(pre) {
+    max-height: 38vh;
+    overflow: auto;
+    padding: .65rem;
+    border: 1px solid var(--page-border);
+    font-size: .8rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+</style>
+
+<script>
+  import { esc } from '../components/llm-evolution/chart-format.js';
+
+  const search = document.querySelector<HTMLInputElement>('#model-search')!;
+  const scope = document.querySelector<HTMLSelectElement>('#model-scope')!;
+  const count = document.querySelector('#model-count')!;
+  const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>('[data-model-row]'), (row) => ({
+    row,
+    inArticle: row.dataset.inArticle === 'yes',
+    terms: Array.from(row.cells).slice(0, 4).map((cell) => cell.textContent).join(' ').toLowerCase(),
+  }));
+
+  function filterRows() {
+    const query = search.value.trim().toLowerCase();
+    let visible = 0;
+    for (const { row, inArticle, terms } of rows) {
+      row.hidden = (scope.value === 'article' && !inArticle) || !terms.includes(query);
+      if (!row.hidden) visible++;
+    }
+    count.textContent = visible === 0 ? 'No matching models' : `${visible} of ${rows.length} models`;
+  }
+  search.addEventListener('input', filterRows);
+  scope.addEventListener('change', filterRows);
+  addEventListener('pageshow', filterRows);
+
+  type Entry = Record<string, unknown>;
+  type Model = Entry & {
+    model_id: string;
+    exact_version: string;
+    release_source_id?: string;
+    classification_source_id?: string;
+    classification_rationale?: string;
+  };
+  type Source = { id: string; url: string };
+  type Records = { models: Model[]; specs: Entry[]; offers: Entry[]; sources: Source[] };
+
+  const record = document.querySelector<HTMLElement>('#record')!;
+  const panel = document.querySelector<HTMLElement>('#record-panel')!;
+  let recordsRequest: Promise<Records> | undefined;
+
+  function loadRecords() {
+    recordsRequest ??= fetch('/__llm-research-records.json')
+      .then((response) => {
+        if (!response.ok) throw new Error('Model records could not load.');
+        return response.json();
+      })
+      .catch((error) => {
+        recordsRequest = undefined;
+        throw error;
+      });
+    return recordsRequest;
+  }
+
+  async function showRecord() {
+    const hash = location.hash;
+    record.hidden = !hash.startsWith('#model-');
+    if (record.hidden) return;
+    panel.textContent = 'Loading model record…';
+    record.scrollIntoView();
+    try {
+      const id = decodeURIComponent(hash.slice(7));
+      const data = await loadRecords();
+      if (location.hash !== hash) return;
+
+      const model = data.models.find((entry) => entry.model_id === id);
+      if (!model) {
+        panel.textContent = 'Model record not found.';
+        return;
+      }
+      const specs = data.specs.filter((entry) => entry.model_id === id);
+      const offers = data.offers.filter((entry) => entry.model_id === id);
+      const sourceIds = new Set([model, ...specs, ...offers].flatMap((entry) =>
+        Object.entries(entry).filter(([key, value]) => key.endsWith('source_id') && value).map(([, value]) => value),
+      ));
+      const sources = data.sources.filter((source) => sourceIds.has(source.id));
+      const sourceLink = (id: string | undefined, label: string) => {
+        const source = sources.find((entry) => entry.id === id);
+        return source?.url ? `<a href="${esc(source.url)}">${esc(label)}</a>` : '';
+      };
+      const links = [
+        sourceLink(model.release_source_id, 'Release source'),
+        sourceLink(model.classification_source_id, 'Tier source'),
+      ].filter(Boolean).join(' · ');
+      panel.innerHTML = `<h3>${esc(model.exact_version)}</h3>
+        ${links ? `<p>${links}</p>` : ''}
+        ${model.classification_rationale ? `<p>${esc(model.classification_rationale)}</p>` : ''}
+        <details><summary>Full record and sources (JSON)</summary><pre>${esc(JSON.stringify({ model, specifications: specs, offers, sources }, null, 2))}</pre></details>`;
+    } catch {
+      if (location.hash === hash) panel.textContent = 'Could not open the model record. Try reloading the page.';
+    }
+  }
+
+  addEventListener('hashchange', showRecord);
+  showRecord();
+</script>

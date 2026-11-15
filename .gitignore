@@ -39,3 +39,6 @@ pnpm-debug.log*
 .vercel/
 .netlify/
 .cache/
+
+# Local illustration candidates
+/generated_images/

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import llmResearch from './integrations/llm-research.mjs';
 
 const site = 'https://www.metemorris.com';
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
@@ -88,6 +89,22 @@ const getHiddenPostSlugs = () => {
 const hiddenPostUrls = new Set(
   getHiddenPostSlugs().map((slug) => normalizeUrl(`${site}/posts/${slug}`))
 );
+const tokenomicsPath = path.join(postsRoot, 'tokenomics.mdx');
+const publishTokenomics = fs.existsSync(tokenomicsPath) &&
+  getFrontmatter(fs.readFileSync(tokenomicsPath, 'utf8')).status === 'published';
+
+const viteDevCache = () => ({
+  name: 'vite-dev-cache',
+  hooks: {
+    'astro:config:setup': ({ command, config, updateConfig }) => {
+      if (command !== 'dev') return;
+      // Keep builds and dev servers on other ports from invalidating this server's optimized imports.
+      updateConfig({
+        vite: { cacheDir: path.join(projectRoot, 'node_modules', '.vite-dev', String(config.server.port)) },
+      });
+    },
+  },
+});
 
 const pagefindDev = () => ({
   name: 'pagefind-dev',
@@ -128,6 +145,8 @@ export default defineConfig({
     sitemap({
       filter: (page) => !hiddenPostUrls.has(normalizeUrl(page)),
     }),
+    viteDevCache(),
     pagefindDev(),
+    llmResearch({ publish: publishTokenomics }),
   ],
 });

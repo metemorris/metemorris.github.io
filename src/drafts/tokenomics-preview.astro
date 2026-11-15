@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import Signature from '../components/Signature.astro';
+import { getEntry } from 'astro:content';
+const post=await getEntry('posts','tokenomics');
+if (!post) throw new Error('Tokenomics draft missing');
+const {Content}=await post.render();
+---
+<Base title={post.data.title} description={post.data.description} noIndex={true}>
+  <article class="mx-auto w-full max-w-[65ch] space-y-8" data-pagefind-ignore>
+    <p class="date-label">Local draft · not published · live research preview</p>
+    <h1 class="text-4xl font-semibold leading-snug">{post.data.title}</h1>
+    <div class="prose prose-lg prose-neutral dark:prose-invert w-full"><Content /></div>
+    <Signature />
+  </article>
+</Base>
