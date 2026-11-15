@@ -1,0 +1,1351 @@
+[
+  {
+    "model_id": "openai_gpt_3_5_turbo_0125",
+    "release_date": "2024-02-01",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "January 25 announcement explicitly quotes prices for the upcoming exact 0125 model; the API changelog confirms its February 1 release.",
+    "source_ids": [
+      "foundation_oai_0125",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/new-embedding-models-and-api-updates/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_3_5_turbo_0125_foundation_oai_0125_2024-02-01"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.5,
+    "output_usd_per_million": 1.5
+  },
+  {
+    "model_id": "openai_gpt_4_0613",
+    "release_date": "2023-06-13",
+    "status": "missing",
+    "launch_price_verified": false,
+    "reason": "Current model quote exists, but no exact-snapshot dated launch price evidence was recovered. June 13 launch identifies the model without giving its price; other GPT-4 snapshots are not substitutes.",
+    "source_ids": [
+      "oai_gpt_4",
+      "openai_0613_launch"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/models/gpt-4.md",
+      "https://openai.com/index/function-calling-and-other-api-updates/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_gpt_4_1_2025_04_14",
+    "release_date": "2025-04-14",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Apr14 officiallaunch explicitly gives32768 output androunded1Mcontext. Historical caps recoveredfromlaunchprose, notcurrentmodelpage. Sharedcontext interpretation retained.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-1/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4_1_2025_04_14_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2,
+    "output_usd_per_million": 8
+  },
+  {
+    "model_id": "openai_gpt_4_1_mini_2025_04_14",
+    "release_date": "2025-04-14",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Launch announcement says 1M context; precise 1047576 and output cap are current-doc observations, not backdated here.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-1/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4_1_mini_2025_04_14_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.4,
+    "output_usd_per_million": 1.6
+  },
+  {
+    "model_id": "openai_gpt_4_1_nano_2025_04_14",
+    "release_date": "2025-04-14",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Launch announcement says 1M context; precise 1047576 and output cap are current-doc observations, not backdated here.",
+    "source_ids": [
+      "openai_41",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-1/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4_1_nano_2025_04_14_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.1,
+    "output_usd_per_million": 0.4
+  },
+  {
+    "model_id": "openai_gpt_4_5_preview_2025_02_27",
+    "release_date": "2025-02-27",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202503",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20250303222338id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_gpt_4_5_preview_2025_02_27_price_history_20250303"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_gpt_4_turbo_2024_04_09",
+    "release_date": "2024-04-09",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_may2024",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20240514201030id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_gpt_4_turbo_2024_04_09_price_history_20240514"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_gpt_4o_2024_08_06",
+    "release_date": "2024-08-06",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_structured_outputs_in_the_api",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-structured-outputs-in-the-api/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4o_2024_08_06_price_history_20240806"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2.5,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "openai_gpt_4o_mini_2024_07_18",
+    "release_date": "2024-07-18",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Announcement explicitly states 128K context and 16K output; no cache terms inferred at launch.",
+    "source_ids": [
+      "openai_mini",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4o_mini_2024_07_18_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.15,
+    "output_usd_per_million": 0.6
+  },
+  {
+    "model_id": "openai_gpt_5_2025_08_07",
+    "release_date": "2025-08-07",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Dateddeveloperlaunch explicitly gives272000input+128000reasoning/output=400000context and1.25/10rates. No descendants inherit these constraints.",
+    "source_ids": [
+      "instant_gpt5_api",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "review_openai_gpt_5_2025_08_07_2025-08-07"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.25,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "openai_gpt_5_1_2025_11_13",
+    "release_date": "2025-11-13",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The November 13 API launch explicitly states GPT-5.1 uses GPT-5 pricing; the dated GPT-5 launch supplies the $1.25 input / $10 output pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_gpt_5_1_for_developers",
+      "ph_oai_introducing_gpt_5_for_developers",
+      "instant_gpt51_launch",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-1-for-developers/",
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://openai.com/index/gpt-5-1/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_1_2025_11_13_price_history_20251113"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.25,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "openai_gpt_5_2_2025_12_11",
+    "release_date": "2025-12-11",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Launch-day archived official model page and dated launch tariff. No separate input limit inferred from GPT-5.",
+    "source_ids": [
+      "review_gpt52_launch",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-2/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "review_openai_gpt_5_2_2025_12_11_2025-12-11"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.75,
+    "output_usd_per_million": 14
+  },
+  {
+    "model_id": "openai_gpt_5_4_2026_03_05",
+    "release_date": "2026-03-05",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-4/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_4_2026_03_05_price_history_20260305"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2.5,
+    "output_usd_per_million": 15
+  },
+  {
+    "model_id": "openai_gpt_5_4_mini_2026_03_17",
+    "release_date": "2026-03-17",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4_mini_and_nano",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_4_mini_2026_03_17_price_history_20260317"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.75,
+    "output_usd_per_million": 4.5
+  },
+  {
+    "model_id": "openai_gpt_5_4_nano_2026_03_17",
+    "release_date": "2026-03-17",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4_mini_and_nano",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_4_nano_2026_03_17_price_history_20260317"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.2,
+    "output_usd_per_million": 1.25
+  },
+  {
+    "model_id": "openai_gpt_5_5_2026_04_23",
+    "release_date": "2026-04-24",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The April 23 post announces $5 input / $30 output. Its explicit April 24 update confirms API availability, so April 24 is the effective date. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_5",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-5/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_5_2026_04_23_price_history_20260424"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 5,
+    "output_usd_per_million": 30
+  },
+  {
+    "model_id": "openai_gpt_5_6_sol",
+    "release_date": "2026-07-09",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The July 9 launch announcement explicitly supplies the original Sol, Terra and Luna prices. July 30 and August 21 reductions are separately labeled updates.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-6/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_6_sol_verified_launch_20260709"
+    ],
+    "historical_nonlaunch_offer_ids": [
+      "openai_gpt_5_6_sol_offer_2"
+    ],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 5,
+    "output_usd_per_million": 30
+  },
+  {
+    "model_id": "openai_gpt_5_6_luna",
+    "release_date": "2026-07-09",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The July 9 launch announcement explicitly supplies the original Sol, Terra and Luna prices. July 30 and August 21 reductions are separately labeled updates.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-6/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_6_luna_price_history_20260709"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1,
+    "output_usd_per_million": 6
+  },
+  {
+    "model_id": "openai_gpt_5_6_terra",
+    "release_date": "2026-07-09",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The July 9 launch announcement explicitly supplies the original Sol, Terra and Luna prices. July 30 and August 21 reductions are separately labeled updates.",
+    "source_ids": [
+      "ph_oai_gpt_5_6",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-6/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_6_terra_price_history_20260709"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2.5,
+    "output_usd_per_million": 15
+  },
+  {
+    "model_id": "openai_gpt_5_mini_2025_08_07",
+    "release_date": "2025-08-07",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_mini_2025_08_07_price_history_20250807"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.25,
+    "output_usd_per_million": 2
+  },
+  {
+    "model_id": "openai_gpt_5_nano_2025_08_07",
+    "release_date": "2025-08-07",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_5_nano_2025_08_07_price_history_20250807"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.05,
+    "output_usd_per_million": 0.4
+  },
+  {
+    "model_id": "openai_gpt_6_1_sol",
+    "release_date": "2026-09-29",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated release changelog explicitly supplies the Standard input/output tariff for prompts up to 272K input tokens. No higher prompt band is inferred.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_6_1_sol_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "openai_gpt_6_1_terra",
+    "release_date": "2026-10-26",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The release post explicitly quotes Standard API pricing at $1 input / $5 output, with $0.05 cached input. The official release index and API changelog independently date the release to October 26. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_6_1_terra",
+      "ph_oai_release_index",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "https://openai.com/research/index/release/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_6_1_terra_price_history_20261026"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1,
+    "output_usd_per_million": 5
+  },
+  {
+    "model_id": "openai_gpt_6_astra",
+    "release_date": "2026-09-03",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The release post explicitly quotes Standard API pricing at $10 input / $50 output. The official release index and API changelog independently date the release to September 3. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_gpt_6_astra",
+      "ph_oai_release_index",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-6-astra/",
+      "https://openai.com/research/index/release/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_6_astra_price_history_20260903"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 10,
+    "output_usd_per_million": 50
+  },
+  {
+    "model_id": "openai_gpt_6_luna",
+    "release_date": "2026-09-22",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated release changelog explicitly supplies the Standard input/output tariff for prompts up to 272K input tokens. No higher prompt band is inferred.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_6_luna_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 0.1,
+    "output_usd_per_million": 0.5
+  },
+  {
+    "model_id": "openai_gpt_6_sol",
+    "release_date": "2026-09-22",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated release changelog explicitly supplies the Standard input/output tariff for prompts up to 272K input tokens. No higher prompt band is inferred.",
+    "source_ids": [
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_6_sol_offer_2"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "openai_o1_2024_12_17",
+    "release_date": "2024-12-17",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202503",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20250303222338id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o1_2024_12_17_price_history_20250303"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o1_mini_2024_09_12",
+    "release_date": "2024-09-12",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20241129212029id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o1_mini_2024_09_12_price_history_20241129"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o1_preview_2024_09_12",
+    "release_date": "2024-09-12",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20241129212029id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o1_preview_2024_09_12_price_history_20241129"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o3_2025_04_16",
+    "release_date": "2025-04-16",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202506",
+      "ph_oai_pricing_202504",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20250611095744id_/https://openai.com/api/pricing/",
+      "https://web.archive.org/web/20250417003454id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o3_2025_04_16_price_history_20250611",
+      "openai_o3_2025_04_16_price_history_20250417"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o3_mini_2025_01_31",
+    "release_date": "2025-01-31",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202503",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20250303222338id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o3_mini_2025_01_31_price_history_20250303"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o3_pro_2025_06_10",
+    "release_date": "2025-06-10",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20251216075829id_/https://platform.openai.com/docs/pricing",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o3_pro_2025_06_10_price_history_20251216"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_o4_mini_2025_04_16",
+    "release_date": "2025-04-16",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202506",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20250611095744id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "openai_o4_mini_2025_04_16_price_history_20250611"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "openai_gpt_4_1106_preview",
+    "release_date": "2023-11-06",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "November 6 announcement explicitly maps the new endpoints to the launch models and gives their input/output prices in the Lower prices section.",
+    "source_ids": [
+      "openai_devday"
+    ],
+    "source_urls": [
+      "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_4_1106_preview_offer_1",
+      "openai_gpt_4_1106_preview_openai_devday_2023-11-06"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 10,
+    "output_usd_per_million": 30
+  },
+  {
+    "model_id": "openai_gpt_3.5_turbo_1106",
+    "release_date": "2023-11-06",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "November 6 announcement explicitly maps the new endpoints to the launch models and gives their input/output prices in the Lower prices section.",
+    "source_ids": [
+      "openai_devday"
+    ],
+    "source_urls": [
+      "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
+    ],
+    "verified_launch_offer_ids": [
+      "openai_gpt_3.5_turbo_1106_offer_1",
+      "openai_gpt_3.5_turbo_1106_openai_devday_2023-11-06"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1,
+    "output_usd_per_million": 2
+  },
+  {
+    "model_id": "audit_openai_gpt_4o_2024_05_13",
+    "release_date": "2024-05-13",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_may2024",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20240514201030id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_4o_2024_05_13_five_audit_20240514"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_3_codex",
+    "release_date": "2026-02-24",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "The archive date equals the API release date, but the model page only states a quote observed then. It does not explicitly identify the quote as a launch tariff.",
+    "source_ids": [
+      "ph_oai_codex53_launch",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20260224200937id_/https://developers.openai.com/api/docs/models/gpt-5.3-codex",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_5_3_codex_price_history_20260224"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_3_chat_latest_initial_snapshot",
+    "release_date": "2026-03-03",
+    "status": "missing",
+    "launch_price_verified": false,
+    "reason": "Initial GPT-5.3 Instant API alias is mapped by its March 3 launch post, but no launch tariff or launch-day archive was recovered. Current mutable-alias prices cannot establish the initial snapshot price.",
+    "source_ids": [
+      "instant_gpt53_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-3-instant/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_5_pro",
+    "release_date": "2026-04-24",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The April 23 post announces $30 input / $180 output. Its explicit April 24 update confirms API availability, so April 24 is the effective date. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_5",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-5/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "audit_openai_gpt_5_5_pro_price_history_20260424"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 30,
+    "output_usd_per_million": 180
+  },
+  {
+    "model_id": "audit_openai_gpt_4o_2024_11_20",
+    "release_date": "2024-11-20",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_nov2024",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20241129212029id_/https://openai.com/api/pricing/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_4o_2024_11_20_five_audit_20241129"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_codex",
+    "release_date": "2025-09-23",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The September 23 update explicitly announces API access at GPT-5 pricing. The dated GPT-5 announcement establishes $1.25 input / $10 output. This records the initial API offering, not subsequent mutable snapshot updates. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_upgrades_to_codex",
+      "ph_oai_introducing_gpt_5_for_developers",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-upgrades-to-codex/",
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "audit_openai_gpt_5_codex_price_history_20250923"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.25,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex",
+    "release_date": "2025-11-13",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20251216075829id_/https://platform.openai.com/docs/pricing",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_5_1_codex_price_history_20251216"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex_mini",
+    "release_date": "2025-11-13",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20251216075829id_/https://platform.openai.com/docs/pricing",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_5_1_codex_mini_price_history_20251216"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_1_codex_max",
+    "release_date": "2025-12-04",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20251216075829id_/https://platform.openai.com/docs/pricing",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_5_1_codex_max_price_history_20251216"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "audit_openai_gpt_5_2_codex",
+    "release_date": "2026-01-14",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_codex52_launch",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20260116112452id_/https://platform.openai.com/docs/models/gpt-5.2-codex",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "audit_openai_gpt_5_2_codex_price_history_20260116"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_0301",
+    "release_date": "2023-03-01",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Original launch text identifies the initial 0301 snapshot and quotes $0.002 per 1K tokens for the newly released model; the April 2024 update only explains the API naming change.",
+    "source_ids": [
+      "foundation_oai_api"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-chatgpt-and-whisper-apis/"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_3_5_turbo_0301_foundation_oai_api_2023-03-01"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 2,
+    "output_usd_per_million": 2
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_0314",
+    "release_date": "2023-03-14",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "March 14 announcement explicitly names the initial 0314 endpoints and gives separate input/output prices for 8K and 32K versions.",
+    "source_ids": [
+      "foundation_gpt4"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-research/"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_4_0314_foundation_gpt4_2023-03-14"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 30,
+    "output_usd_per_million": 60
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_32k_0314",
+    "release_date": "2023-03-14",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "March 14 announcement explicitly names the initial 0314 endpoints and gives separate input/output prices for 8K and 32K versions.",
+    "source_ids": [
+      "foundation_gpt4"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-research/"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_4_32k_0314_foundation_gpt4_2023-03-14"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 60,
+    "output_usd_per_million": 120
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_0613",
+    "release_date": "2023-06-13",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "June 13 announcement identifies the newly released 0613 models and states the standard and 16K prices effective that day.",
+    "source_ids": [
+      "foundation_oai_0613"
+    ],
+    "source_urls": [
+      "https://openai.com/index/function-calling-and-other-api-updates/"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_3_5_turbo_0613_foundation_oai_0613_2023-06-13"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.5,
+    "output_usd_per_million": 2
+  },
+  {
+    "model_id": "foundation_openai_gpt_3_5_turbo_16k_0613",
+    "release_date": "2023-06-13",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "June 13 announcement identifies the newly released 0613 models and states the standard and 16K prices effective that day.",
+    "source_ids": [
+      "foundation_oai_0613"
+    ],
+    "source_urls": [
+      "https://openai.com/index/function-calling-and-other-api-updates/"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_3_5_turbo_16k_0613_foundation_oai_0613_2023-06-13"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 3,
+    "output_usd_per_million": 4
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_32k_0613",
+    "release_date": "2023-06-13",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_deprecations",
+      "foundation_oai_0613"
+    ],
+    "source_urls": [
+      "https://developers.openai.com/api/docs/deprecations.md",
+      "https://openai.com/index/function-calling-and-other-api-updates/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "foundation_openai_gpt_4_32k_0613_five_audit_20240606"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "foundation_openai_gpt_4_0125_preview",
+    "release_date": "2024-01-25",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "five_oai_archive_pricing_may2024",
+      "foundation_oai_0125"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20240514201030id_/https://openai.com/api/pricing/",
+      "https://openai.com/index/new-embedding-models-and-api-updates/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "foundation_openai_gpt_4_0125_preview_price_history_20240514"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "foundation_openai_gpt_5_pro",
+    "release_date": "2025-10-06",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-2/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "foundation_openai_gpt_5_pro_price_history_20251211"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "foundation_openai_gpt_5_4_pro",
+    "release_date": "2026-03-05",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The dated publisher announcement explicitly supplies this Standard input/output price pair. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_4",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-4/",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [
+      "foundation_openai_gpt_5_4_pro_price_history_20260305"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 30,
+    "output_usd_per_million": 180
+  },
+  {
+    "model_id": "foundation_openai_o1_pro",
+    "release_date": "2025-03-19",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Dated historical quotes exist, but none explicitly verifies this exact model tariff effective at its inventory release date. Later archive prices are not backdated.",
+    "source_ids": [
+      "ph_oai_pricing_202512",
+      "openai_changelog"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20251216075829id_/https://platform.openai.com/docs/pricing",
+      "https://developers.openai.com/api/docs/changelog.md"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "foundation_openai_o1_pro_price_history_20251216"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "roles_openai_codex_1",
+    "release_date": "2025-05-16",
+    "status": "product_only_no_api",
+    "launch_price_verified": false,
+    "reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "roles_codex_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-codex/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "roles_openai_codex_mini_latest_initial",
+    "release_date": "2025-05-16",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Dated launch quote; no current context/output caps borrowed. Missing historical constraints leave workload eligibility unknown.",
+    "source_ids": [
+      "roles_codex_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-codex/"
+    ],
+    "verified_launch_offer_ids": [
+      "roles_openai_codex_mini_latest_initial_launch_quote"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.5,
+    "output_usd_per_million": 6
+  },
+  {
+    "model_id": "roles_openai_gpt_5_2_pro",
+    "release_date": "2025-12-11",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "Dated launch quote; no current context/output caps borrowed. Missing historical constraints leave workload eligibility unknown.",
+    "source_ids": [
+      "roles_gpt52_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-2/"
+    ],
+    "verified_launch_offer_ids": [
+      "roles_openai_gpt_5_2_pro_launch_quote"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 21,
+    "output_usd_per_million": 168
+  },
+  {
+    "model_id": "instant_openai_gpt_5",
+    "release_date": "2025-08-07",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The August 7 launch post explicitly identifies the separate non-reasoning gpt-5-chat-latest endpoint and quotes $1.25 input / $10 output. This applies only to the initial Instant snapshot; later alias refreshes are excluded. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_for_developers",
+      "instant_gpt5_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://openai.com/index/introducing-gpt-5/"
+    ],
+    "verified_launch_offer_ids": [
+      "instant_openai_gpt_5_price_history_20250807"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.25,
+    "output_usd_per_million": 10
+  },
+  {
+    "model_id": "instant_openai_gpt_5_1",
+    "release_date": "2025-11-12",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Explicit initial API quote is dated November 13; inventory release is the November 12 ChatGPT launch. Do not move the API price backward one day.",
+    "source_ids": [
+      "ph_oai_gpt_5_1_for_developers",
+      "ph_oai_introducing_gpt_5_for_developers",
+      "instant_gpt51_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-1-for-developers/",
+      "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "https://openai.com/index/gpt-5-1/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "instant_openai_gpt_5_1_price_history_20251113"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_2",
+    "release_date": "2025-12-11",
+    "status": "verified",
+    "launch_price_verified": true,
+    "reason": "The December 11 launch table explicitly maps GPT-5.2 Instant to gpt-5.2-chat-latest and quotes $1.75 input / $14 output, with $0.175 cached input. This applies to the initial snapshot only. Historical availability refers to the evidence date, not current access. Caps remain unknown unless stated in contemporaneous evidence.",
+    "source_ids": [
+      "ph_oai_introducing_gpt_5_2",
+      "roles_gpt52_launch"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-2/",
+      "https://openai.com/index/introducing-gpt-5-2/"
+    ],
+    "verified_launch_offer_ids": [
+      "instant_openai_gpt_5_2_price_history_20251211"
+    ],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11",
+    "input_usd_per_million": 1.75,
+    "output_usd_per_million": 14
+  },
+  {
+    "model_id": "instant_openai_gpt_5_5",
+    "release_date": "2026-05-05",
+    "status": "later_only",
+    "launch_price_verified": false,
+    "reason": "Launch post establishes the initial chat-latest identity; same-day archived docs establish an observed price only. No explicit source ties this price to the launch moment.",
+    "source_ids": [
+      "ph_oai_instant55_launch",
+      "ph_oai_instant55_blog",
+      "instant_gpt55_launch"
+    ],
+    "source_urls": [
+      "https://web.archive.org/web/20260505233202id_/https://developers.openai.com/api/docs/models/chat-latest",
+      "https://openai.com/index/gpt-5-5-instant/",
+      "https://openai.com/index/gpt-5-5-instant/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [
+      "instant_openai_gpt_5_5_price_history_20260505"
+    ],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_mini",
+    "release_date": "2025-08-07",
+    "status": "product_only_no_api",
+    "launch_price_verified": false,
+    "reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_gpt5_card"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-5-system-card/"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_3_mini",
+    "release_date": "2026-04-09",
+    "status": "product_only_no_api",
+    "launch_price_verified": false,
+    "reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_chat_notes"
+    ],
+    "source_urls": [
+      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  },
+  {
+    "model_id": "instant_openai_gpt_5_5_mini",
+    "release_date": "2026-07-06",
+    "status": "product_only_no_api",
+    "launch_price_verified": false,
+    "reason": "Classified product identity has no separately published API endpoint or token tariff. Subscription access is not an API token price.",
+    "source_ids": [
+      "instant_chat_notes"
+    ],
+    "source_urls": [
+      "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    ],
+    "verified_launch_offer_ids": [],
+    "historical_nonlaunch_offer_ids": [],
+    "observation_date": "2026-11-11"
+  }
+]

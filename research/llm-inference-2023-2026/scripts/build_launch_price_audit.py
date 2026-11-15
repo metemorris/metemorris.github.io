@@ -1,0 +1,46 @@
+"""Exact-release launch tariffs, with later/current prices in separate columns."""
+import csv,json,collections,runpy
+from pathlib import Path
+R=Path(__file__).resolve().parents[1];D=R/'data'
+launch_evidence=runpy.run_path(str(R/'scripts/launch_policy.py'))['launch_evidence']
+def build(a,coverage,review_dir=D):
+ src={s['id']:s for s in a['sources']};models={m['model_id']:m for m in a['models']};reviews={}
+ for p in sorted(review_dir.glob('article_launch_*_review.json')):
+  x=json.loads(p.read_text());rr=x if isinstance(x,list) else x.get('models',[])
+  for r in rr:reviews[r['model_id']]=r
+ rows=[]
+ def quote(o):
+  eligibility=launch_evidence(o,models[o['model_id']]);ids=o.get('launch_price_source_ids') if eligibility else [o['pricing_source_id']]
+  return dict(**(eligibility or {}),offerId=o['offer_id'],input=o['input_usd_per_million'],output=o['output_usd_per_million'],date=o.get('effective_date'),observed=o.get('observation_date'),basis=o['date_basis'],provider=o['provider'],endpoint=o.get('endpoint_model_id'),serviceTier=o.get('service_tier'),pricingCondition=o.get('pricing_condition'),reasoningMode=o.get('reasoning_mode'),threshold=o.get('long_context_threshold_tokens'),longInput=o.get('long_input_usd_per_million'),longOutput=o.get('long_output_usd_per_million'),servedRelation=o.get('served_model_relation'),quantization=o.get('quantization'),availability=o.get('availability'),sourceIds=ids,sourceUrls=[src[s]['url'] for s in ids],reason=o.get('launch_price_reason') if eligibility else o.get('notes'))
+ for r in coverage['models']:
+  m=models[r['modelId']];offers=[o for o in a['offers'] if o['model_id']==r['modelId']];launch=[o for o in offers if o.get('service_tier')=='standard' and launch_evidence(o,m)];launch.sort(key=lambda o:o['offer_id']);review=reviews.get(r['modelId'],{})
+  other=[o for o in offers if o not in launch];other.sort(key=lambda o:(o.get('effective_date') or '',o.get('service_tier')=='standard'),reverse=True)
+  latest=quote(other[0]) if other else None
+  if not latest and not launch and all(r['metrics'][k]['value'] is not None for k in ['input_price','output_price']):
+   c=r['metrics']['input_price'];latest=dict(input=c['value'],output=r['metrics']['output_price']['value'],date=c['date'],observed=c['observed'],basis=c['basis'],provider=c['provider'],serviceTier=c['serviceTier'],sourceIds=c['sourceIds'],sourceUrls=c['sourceUrls'],reason=c['reason'])
+  eligible=bool(launch);verified=any(launch_evidence(o,m)['evidenceClass']=='explicit_launch' for o in launch);observed=any(launch_evidence(o,m)['evidenceClass']=='launch_day_observed' for o in launch);reason=' '.join(dict.fromkeys(o['launch_price_reason'] for o in launch)) if eligible else review.get('launch_price_reason') or review.get('reason') or (r['metrics']['input_price']['reason'] if not latest else 'A later numeric quote is documented, but no exact-model paid API launch tariff is established; later observations are not backdated.')
+  status='verified_launch_price' if verified else 'launch_day_observed_price' if observed else 'launch_price_unverified_later_quote_available' if latest else 'launch_price_unverified_no_numeric_quote'
+  ids=list(dict.fromkeys([m.get('release_source_id') or m.get('identity_source_id')]+review.get('source_ids',review.get('launch_price_source_ids',[]))+[s for k in ['input_price','output_price'] for s in r['metrics'][k]['sourceIds']]+[s for o in launch for s in o['launch_price_source_ids']]))
+  rows.append(dict(modelId=r['modelId'],model=r['model'],company=r['company'],role=r['role'],releaseDate=r['releaseDate'],weightAccess=r['weightAccess'],status=status,launchEligible=eligible,launchVerified=verified,launchDayObserved=observed,launch=quote(launch[0]) if launch else None,launchOffers=[quote(o) for o in launch],later=latest,laterOffers=[quote(o) for o in other],reason=reason,sourceIds=ids,sourceUrls=[src[s]['url'] for s in ids if s in src],review=review))
+ companies=[]
+ for c in coverage['companies']:
+  rr=[r for r in rows if r['company']==c];companies.append(dict(company=c,models=len(rr),eligibleLaunch=sum(r['launchEligible'] for r in rr),launchDayObserved=sum(r['launchDayObserved'] and not r['launchVerified'] for r in rr),verifiedLaunch=sum(r['launchVerified'] for r in rr),onlyOtherPrice=sum(not r['launchEligible'] and bool(r['later']) for r in rr),noNumericPrice=sum(not r['launchEligible'] and not r['later'] for r in rr)))
+ return dict(cutoff=a.get('analysis_cutoff',a['collection_date']),modelCount=len(rows),eligibleLaunch=sum(r['launchEligible'] for r in rows),launchDayObserved=sum(r['launchDayObserved'] and not r['launchVerified'] for r in rows),verifiedLaunch=sum(r['launchVerified'] for r in rows),onlyOtherPrice=sum(not r['launchEligible'] and bool(r['later']) for r in rows),noNumericPrice=sum(not r['launchEligible'] and not r['later'] for r in rows),companies=companies,models=rows)
+if __name__=='__main__':
+ a=json.loads((D/'research_inputs.json').read_text());coverage=json.loads((D/'article_metric_coverage.json').read_text());out=build(a,coverage);(D/'article_launch_price_audit.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n');missing=[r for r in out['models'] if not r['launchEligible']];(D/'article_launch_price_exceptions.json').write_text(json.dumps(missing,indent=2,ensure_ascii=False)+'\n')
+ flat=[]
+ for r in out['models']:
+  q=r['launch'] or {};l=r['later'] or {};flat.append(dict(model_id=r['modelId'],model=r['model'],company=r['company'],role=r['role'],release_date=r['releaseDate'],api_launch_date=q.get('apiLaunchDate'),launch_eligible=r['launchEligible'],launch_evidence_class=q.get('evidenceClass'),launch_capture_timestamp=q.get('captureTimestamp'),launch_verified=r['launchVerified'],launch_input_usd_per_million=q.get('input'),launch_output_usd_per_million=q.get('output'),launch_price_date=q.get('date'),launch_provider=q.get('provider'),launch_service_tier=q.get('serviceTier'),launch_source_urls=q.get('sourceUrls',[]),later_input_usd_per_million=l.get('input'),later_output_usd_per_million=l.get('output'),later_evidence_date=l.get('date'),later_observed_date=l.get('observed'),later_date_basis=l.get('basis'),later_provider=l.get('provider'),later_service_tier=l.get('serviceTier'),later_source_urls=l.get('sourceUrls',[]),status=r['status'],reason=r['reason'],all_sources=r['sourceUrls']))
+ with (D/'article_launch_price_audit.csv').open('w',newline='') as f:
+  w=csv.DictWriter(f,fieldnames=list(flat[0]));w.writeheader();w.writerows({k:json.dumps(v,ensure_ascii=False) if isinstance(v,list) else v for k,v in r.items()} for r in flat)
+ lines=['# Verified launch-price coverage','',f"Reviewed all {out['modelCount']} existing classified release identities through {out['cutoff']}. The paired price graphs contain standard paid API launch tariffs supported by explicit launch evidence or an official exact-model launch-day capture; model release and paid API launch dates are separate. Later/current/undated quotes remain separate fields; they never fill a missing launch dot.",'','| Company | Releases | Explicit launch | Launch-day observed | All eligible launches | Only another price | No numeric tariff |','|---|---:|---:|---:|---:|---:|---:|']
+ for r in out['companies']:lines.append('| '+' | '.join(str(r[k]) for k in ['company','models','verifiedLaunch','launchDayObserved','eligibleLaunch','onlyOtherPrice','noNumericPrice'])+' |')
+ lines+=['','The [CSV](data/article_launch_price_audit.csv) has separate launch input/output and later/current input/output columns, with their own dates, provider, tier and official sources. The [JSON](data/article_launch_price_audit.json) retains every matching offer and source qualification. [Exact launch exceptions](data/article_launch_price_exceptions.json) are also downloadable.','', 'An official exact-model price card captured on the paid API launch day qualifies as launch_day_observed, separately from explicit_launch evidence. Its exact capture timestamp and tariff conditions are retained. A later capture never qualifies retroactively. Explicit dated launch prices and source-backed unchanged-price chains also qualify. Consumer, API and weight release dates are not interchangeable. Meta hosted-derivative prices remain provider-specific later observations when they do not establish a tariff unless they establish the named host’s paid API launch tariff.','', 'The launch workload-cost timeline additionally requires launch-contemporaneous constraints and a fitting request. A verified launch tariff alone does not establish eligible launch workload cost.','', '## Exact unverified launch prices','']
+ for company in coverage['companies']:
+  lines+=['### '+company,'']
+  for r in missing:
+   if r['company']!=company:continue
+   l=r['later'];later=f" Another price is documented: input {l['input']}, output {l['output']} USD per million; {l.get('provider')}; evidence date {l.get('date') or 'unknown'}, observed {l.get('observed') or 'unknown'}." if l else ' No verified numeric token tariff was recovered.'
+   lines+=['- **'+r['model']+'** (`'+r['modelId']+'`) — '+r['reason']+later+' '+' · '.join(f'[Source {i+1}]({u})' for i,u in enumerate(r['sourceUrls']))]
+  lines+=['']
+ (R/'LAUNCH_PRICE_AUDIT.md').write_text('\n'.join(lines)+'\n');print(json.dumps({k:v for k,v in out.items() if k!='models'}))

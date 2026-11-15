@@ -1,0 +1,798 @@
+{
+  "scope": "Anthropic30 and xAI9 classified records; launch-price input/output audit only, not blanket launch verification for caps/cache or long-tier semantics. No date or identity edits.",
+  "observation_date": "2026-11-11",
+  "models": [
+    {
+      "model_id": "anthropic_claude_sonnet_4_5_20250929",
+      "release_date": "2025-09-29",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_sonnet45_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-09-29. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_sonnet_4_5_20250929_2025-09-29"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_sonnet_4_5_20250929_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_haiku_4_5_20251001",
+      "release_date": "2025-10-15",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_haiku45_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-10-15. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_haiku_4_5_20251001_2025-10-15"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_haiku_4_5_20251001_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_5_20251101",
+      "release_date": "2025-11-24",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_opus45_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-11-24. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_opus_4_5_20251101_2025-11-24"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_4_5_20251101_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_6",
+      "release_date": "2026-02-05",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_opus46_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-02-05. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_opus_4_6_2026-02-05"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_4_6_offer_1",
+        "review_anthropic_claude_opus_4_6_2026-03-13"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_sonnet_4_6",
+      "release_date": "2026-02-17",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_sonnet46_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-02-17. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_sonnet_4_6_2026-02-17"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_sonnet_4_6_offer_1",
+        "audit_anthropic_claude_sonnet_4_6_2026-03-13"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_7",
+      "release_date": "2026-04-16",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_opus47_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-04-16. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_opus_4_7_2026-04-16"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_4_7_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_8",
+      "release_date": "2026-05-28",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_opus48_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-05-28. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_opus_4_8_2026-05-28"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_4_8_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_5",
+      "release_date": "2026-07-24",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_release"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-07-24. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_opus_5_offer_2"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_5_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_sonnet_5",
+      "release_date": "2026-06-30",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_release_20261111"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-06-30. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_sonnet_5_2026-06-30"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_sonnet_5_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_fable_5",
+      "release_date": "2026-06-09",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_fable5_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-06-09. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_fable_5_2026-06-09"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_fable_5_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_fable_5_1",
+      "release_date": "2026-09-01",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_release"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-09-01. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_fable_5_1_offer_2"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_fable_5_1_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_fable_5_2",
+      "release_date": "2026-11-09",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_release"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-11-09. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_fable_5_2_offer_2"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_fable_5_2_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_5_5",
+      "release_date": "2026-09-22",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_release"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-09-22. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_opus_5_5_offer_2"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_opus_5_5_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_sonnet_5_5",
+      "release_date": "2026-09-28",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_sonnet55_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-09-28. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_sonnet_5_5_2026-09-28"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_sonnet_5_5_offer_1",
+        "audit_anthropic_claude_sonnet_5_5_2026-10-07"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_haiku_5_5",
+      "release_date": "2026-10-07",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_haiku55_launch"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-10-07. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_haiku_5_5_2026-10-07"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "anthropic_claude_haiku_5_5_offer_1"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_2.1",
+      "release_date": "2023-11-21",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "November21 announcement says pricing changes and links a PDF; 8/24 appears in undated PDF, not dated article body. No contemporaneous capture verifies the current linked PDF was the launch tariff. Existing date_basis=launch alone is insufficient.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_opus_20240229",
+      "release_date": "2024-03-04",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_3"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2024-03-04. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_3_opus_20240229_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_sonnet_20240229",
+      "release_date": "2024-03-04",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_3"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2024-03-04. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_3_sonnet_20240229_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_haiku_20240307",
+      "release_date": "2024-03-13",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_3",
+        "audit_anthropic_haiku3_launch"
+      ],
+      "launch_price_reason": "March4 primary family announcement explicitly publishes the Haiku .25/1.25 tariff ahead of availability; March13 launch post confirms availability and the same1:5 input/output ratio, with $1/4M input-token usage examples. Sources jointly establish the preannounced launch tariff.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_3_haiku_20240307_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_5_sonnet_20240620",
+      "release_date": "2024-06-20",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_35"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2024-06-20. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_3_5_sonnet_20240620_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_5_sonnet_20241022",
+      "release_date": "2024-10-22",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_sonnet35_oct_launch",
+        "anthropic_35"
+      ],
+      "launch_price_reason": "October22 release explicitly says same price as its predecessor; June20 primary announcement explicitly supplies3/15. This is explicit publisher pricing equivalence, not assumed inheritance.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_3_5_sonnet_20241022_2024-10-22"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_5_haiku_20241022",
+      "release_date": "2024-11-04",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "November4 launch differs from October22 announcement and December3 explicit price revision to .80/4. No inspected primary launch-day numeric tariff. Secondary references point to Nov5/7 captures showing1/5, still later observations under strict exact-date rule.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "audit_anthropic_claude_3_5_haiku_20241022_2024-12-03"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_7_sonnet_20250219",
+      "release_date": "2025-02-24",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_37"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-02-24. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_3_7_sonnet_20250219_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_20250514",
+      "release_date": "2025-05-22",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_4"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-05-22. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_opus_4_20250514_offer_1"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "amx_anthropic_claude_opus_4_20250514_amx_anthropic_models_current"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_sonnet_4_20250514",
+      "release_date": "2025-05-22",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "anthropic_4"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2025-05-22. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "anthropic_claude_sonnet_4_20250514_offer_1"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "amx_anthropic_claude_sonnet_4_20250514_amx_anthropic_models_current"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_opus_4_1_20250805",
+      "release_date": "2025-08-05",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "audit_anthropic_opus41_launch",
+        "anthropic_4"
+      ],
+      "launch_price_reason": "August5 launch announcement explicitly says same pricing as Opus4; May22 Claude4 announcement supplies15/75. This is explicit publisher cross-version pricing equivalence, not assumed inheritance.",
+      "verified_launch_offer_ids": [
+        "audit_anthropic_claude_opus_4_1_20250805_2025-08-05"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "amx_anthropic_claude_opus_4_1_20250805_amx_anthropic_models_current"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_1_product",
+      "release_date": "2023-11-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Product-only launch has no verified token-priced API offer at the inventory release date; subscriptions cannot be treated as input/output token tariffs.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_2_beta",
+      "release_date": "2024-08-13",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "August13 beta product announcement does not establish a same-day API tariff for this exact identity. Later dated Grok2-1212 API tariff must not be transferred to beta model.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_3",
+      "release_date": "2025-04-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Official archived April10 tariff3/15 is later than inventory release; does not prove tariff at either February consumer announcement or April3 API launch. Exact beta endpoint aliases documented, not a launch-date proof.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_3_archived_20250410"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_3_mini",
+      "release_date": "2025-04-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Official archived April10 tariff.30/.50 is later than inventory release; exact beta endpoint aliases documented, but no same-day release tariff verified.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_3_mini_archived_20250410"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_4_0709",
+      "release_date": "2025-07-09",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July28 archive confirms3/15 but is later than July9 release. July10 model-page capture failed to populate authenticated catalog, and July11 catalog captured only loading state.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_4_0709_archived_20250728"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_4_5",
+      "release_date": "2026-07-08",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "amx_xai_release_notes"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-07-08. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "amx_xai_grok_4_5_amx_xai_release_notes"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_4_6",
+      "release_date": "2026-08-12",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "xai_releases"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-08-12. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "xai_grok_4_6_offer_1"
+      ],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_4_7",
+      "release_date": "2026-09-21",
+      "launch_price_verified": true,
+      "launch_price_source_ids": [
+        "xai_releases"
+      ],
+      "launch_price_reason": "Dated primary launch announcement or dated release-note entry explicitly states this exact model is available at the quoted input/output price on 2026-09-21. Current-only observations are excluded.",
+      "verified_launch_offer_ids": [
+        "xai_grok_4_7_offer_1"
+      ],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_4_7_offer_2"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "audit_xai_grok_4_20",
+      "release_date": "2026-03-10",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "April2 archive resolves grok-4.20 alias to grok-4.20-0309-reasoning and2/6 tariff. March11 beta catalog also contains2/6, but both are after March10 launch; no March10 numeric tariff verified.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "audit_xai_grok_4_20_archived_20260402"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_march_2023_launch",
+      "release_date": "2023-03-14",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Retrospective PDF publishes 11.02/32.68 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_instant_march_2023_launch",
+      "release_date": "2023-03-14",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Retrospective PDF publishes 1.63/5.51 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_2_0",
+      "release_date": "2023-07-11",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July launch tariff not independently date-anchored. Later 8/24 table exists, but its November filename and present announcement link do not establish a launch-date July11 price.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_instant_1_2",
+      "release_date": "2023-08-09",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July-named retrospective PDF publishes Instant 1.63/5.51 USD/M but no contemporaneous capture or explicit dated effective tariff establishes August9 version1.2 launch pricing.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    }
+  ],
+  "exceptions": [
+    {
+      "model_id": "anthropic_claude_2.1",
+      "release_date": "2023-11-21",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "November21 announcement says pricing changes and links a PDF; 8/24 appears in undated PDF, not dated article body. No contemporaneous capture verifies the current linked PDF was the launch tariff. Existing date_basis=launch alone is insufficient.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "anthropic_claude_3_5_haiku_20241022",
+      "release_date": "2024-11-04",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "November4 launch differs from October22 announcement and December3 explicit price revision to .80/4. No inspected primary launch-day numeric tariff. Secondary references point to Nov5/7 captures showing1/5, still later observations under strict exact-date rule.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "audit_anthropic_claude_3_5_haiku_20241022_2024-12-03"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_1_product",
+      "release_date": "2023-11-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Product-only launch has no verified token-priced API offer at the inventory release date; subscriptions cannot be treated as input/output token tariffs.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_2_beta",
+      "release_date": "2024-08-13",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "August13 beta product announcement does not establish a same-day API tariff for this exact identity. Later dated Grok2-1212 API tariff must not be transferred to beta model.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_3",
+      "release_date": "2025-04-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Official archived April10 tariff3/15 is later than inventory release; does not prove tariff at either February consumer announcement or April3 API launch. Exact beta endpoint aliases documented, not a launch-date proof.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_3_archived_20250410"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_3_mini",
+      "release_date": "2025-04-03",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Official archived April10 tariff.30/.50 is later than inventory release; exact beta endpoint aliases documented, but no same-day release tariff verified.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_3_mini_archived_20250410"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "xai_grok_4_0709",
+      "release_date": "2025-07-09",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July28 archive confirms3/15 but is later than July9 release. July10 model-page capture failed to populate authenticated catalog, and July11 catalog captured only loading state.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "xai_grok_4_0709_archived_20250728"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "audit_xai_grok_4_20",
+      "release_date": "2026-03-10",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "April2 archive resolves grok-4.20 alias to grok-4.20-0309-reasoning and2/6 tariff. March11 beta catalog also contains2/6, but both are after March10 launch; no March10 numeric tariff verified.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": true,
+      "later_offer_ids": [
+        "audit_xai_grok_4_20_archived_20260402"
+      ],
+      "undated_price_available": false,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_march_2023_launch",
+      "release_date": "2023-03-14",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Retrospective PDF publishes 11.02/32.68 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_instant_march_2023_launch",
+      "release_date": "2023-03-14",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "Retrospective PDF publishes 1.63/5.51 USD/M but has no verified effective date. Neither filename timestamp nor current article link proves March14 tariff.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_2_0",
+      "release_date": "2023-07-11",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July launch tariff not independently date-anchored. Later 8/24 table exists, but its November filename and present announcement link do not establish a launch-date July11 price.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    },
+    {
+      "model_id": "foundation_anthropic_claude_instant_1_2",
+      "release_date": "2023-08-09",
+      "launch_price_verified": false,
+      "launch_price_source_ids": [],
+      "launch_price_reason": "July-named retrospective PDF publishes Instant 1.63/5.51 USD/M but no contemporaneous capture or explicit dated effective tariff establishes August9 version1.2 launch pricing.",
+      "verified_launch_offer_ids": [],
+      "later_price_available": false,
+      "later_offer_ids": [],
+      "undated_price_available": true,
+      "observation_date": "2026-11-11"
+    }
+  ],
+  "counts": {
+    "models": 39,
+    "launch_verified": 27,
+    "unverified": 12
+  },
+  "known_release_date_issue": "Canonical Grok3/mini currently carry April3 API release. Parent mentions February product release. We do not alter identities/dates; April10 archive is later under both interpretations."
+}

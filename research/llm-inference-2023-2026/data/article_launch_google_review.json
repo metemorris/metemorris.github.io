@@ -1,0 +1,2263 @@
+{
+  "observation_date": "2026-11-11",
+  "scope_models": 41,
+  "rule": "Verified numeric tariff explicitly tied by publisher to exact model release. Same-day archives alone do not qualify; hosted-service launch is not underlying weights release.",
+  "verified_models": [
+    {
+      "model_id": "google_gemini_2_0_flash",
+      "endpoint": "gemini-2.0-flash",
+      "release_date": "2025-02-05",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_0_flash_2025-02-05"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_2_0_flash_2025-02-05",
+          "effective_date": "2025-02-05",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash",
+          "source_ids": [
+            "review_google_20_launch_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_pro",
+      "endpoint": "gemini-2.5-pro",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_5_pro_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_pro_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_google_gemini_2_5_pro_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_pro_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_flash",
+      "endpoint": "gemini-2.5-flash",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_5_flash_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_flash_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_google_gemini_2_5_flash_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_flash_lite",
+      "endpoint": "gemini-2.5-flash-lite",
+      "release_date": "2025-07-22",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "tokenomics_google_gemini_2_5_flash_lite_2025-07-22"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_flash_lite_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_lite_2025-07-22",
+          "effective_date": "2025-07-22",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_flash25lite_ga"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_pro_preview",
+      "endpoint": "gemini-3-pro-preview",
+      "release_date": "2025-11-18",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_3_pro_preview_2025-11-18"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_3_pro_preview_2025-11-18",
+          "effective_date": "2025-11-18",
+          "date_basis": "launch",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3-pro-preview",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_flash_preview",
+      "endpoint": "gemini-3-flash-preview",
+      "release_date": "2025-12-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "tokenomics_google_gemini_3_flash_preview_2025-12-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_flash_preview_2025-12-17",
+          "effective_date": "2025-12-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.5,
+          "output_usd_per_million": 3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3-flash-preview",
+          "source_ids": [
+            "tokenomics_google_flash3_launch"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_4_carbon",
+      "endpoint": "gemini-4-carbon",
+      "release_date": "2026-11-10",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "history_google_gemini_4_carbon_2026-11-10"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_4_carbon_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_4_carbon_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_4_carbon_2026-11-10",
+          "effective_date": "2026-11-10",
+          "date_basis": "launch",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "google_changelog"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_flash_lite_preview_02_05",
+      "endpoint": "gemini-2.0-flash-lite-preview-02-05",
+      "release_date": "2025-02-05",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_0_flash_lite_preview_02_05_2025-02-05"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_0_flash_lite_preview_02_05_2025-02-05",
+          "effective_date": "2025-02-05",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash-lite-preview-02-05",
+          "source_ids": [
+            "review_google_20_launch_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_05_06",
+      "endpoint": "gemini-2.5-pro-preview-05-06",
+      "release_date": "2025-05-06",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_pro_preview_05_06_2025-05-06"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_pro_preview_05_06_2025-05-06",
+          "effective_date": "2025-05-06",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-05-06",
+          "source_ids": [
+            "review_google_25_may_launch"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_lite_preview_06_17",
+      "endpoint": "gemini-2.5-flash-lite-preview-06-17",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_flash_lite_preview_06_17_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_flash_lite_preview_06_17_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite-preview-06-17",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_03_25",
+      "endpoint": "gemini-2.5-pro-preview-03-25",
+      "release_date": "2025-04-04",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_pro_preview_03_25_2025-04-04"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_pro_preview_03_25_2025-04-04",
+          "effective_date": "2025-04-04",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-03-25",
+          "source_ids": [
+            "review_google_25_paid_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    }
+  ],
+  "launch_unverified_models": [
+    {
+      "model_id": "google_gemini_1_0_pro",
+      "endpoint": "gemini-1.0-pro",
+      "release_date": "2023-12-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_1_0_pro_2024-05-14",
+          "effective_date": "2024-05-14",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.5,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.0-pro",
+          "source_ids": [
+            "review_archive_google_pricing_20240514232746"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_pro",
+      "endpoint": "gemini-1.5-pro",
+      "release_date": "2024-02-15",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_1_5_pro_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_flash",
+      "endpoint": "gemini-1.5-flash",
+      "release_date": "2024-05-10",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_1_5_flash_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_flash_8b",
+      "endpoint": "gemini-1.5-flash-8b",
+      "release_date": "2024-10-03",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_1_5_flash_8b_2024-10-14",
+          "effective_date": "2024-10-14",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.0375,
+          "output_usd_per_million": 0.15,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-8b",
+          "source_ids": [
+            "tokenomics_google_flash8b_launch"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_google_gemini_1_5_flash_8b_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.0375,
+          "output_usd_per_million": 0.15,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-8b",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_0_flash_lite",
+      "endpoint": "gemini-2.0-flash-lite",
+      "release_date": "2025-02-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_2_0_flash_lite_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash-lite",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_1_pro_preview",
+      "endpoint": "gemini-3.1-pro-preview",
+      "release_date": "2026-02-19",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_1_pro_preview_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-pro-preview",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_3_1_pro_preview_2026-02-20",
+          "effective_date": "2026-02-20",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-pro-preview",
+          "source_ids": [
+            "history_google_pro31_archive_20260220111002"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_8_flash",
+      "endpoint": "gemini-3.8-flash",
+      "release_date": "2026-09-02",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_8_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.8-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_3_8_flash_2026-09-02",
+          "effective_date": "2026-09-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.8-flash",
+          "source_ids": [
+            "history_google_flash38_archive_20260902150802"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_4_argon",
+      "endpoint": "gemini-4-argon",
+      "release_date": "2026-10-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_4_argon_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_4_argon_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_4_argon_2026-10-13",
+          "effective_date": "2026-10-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "history_google_argon_archive_20261013161636"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_1_flash_lite",
+      "endpoint": "gemini-3.1-flash-lite",
+      "release_date": "2026-05-07",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_1_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.25,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_1_flash_lite_2026-05-08",
+          "effective_date": "2026-05-08",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.25,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-flash-lite",
+          "source_ids": [
+            "history_google_lite31_archive_20260508075401"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_5_flash",
+      "endpoint": "gemini-3.5-flash",
+      "release_date": "2026-05-19",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_audit_google_gemini_3_5_flash_20260519_standard",
+          "effective_date": "2026-05-19",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.5,
+          "output_usd_per_million": 9,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash",
+          "source_ids": [
+            "five_google_archive_20260519184642"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_6_flash",
+      "endpoint": "gemini-3.6-flash",
+      "release_date": "2026-07-21",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_6_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_6_flash_2026-07-22",
+          "effective_date": "2026-07-22",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.5,
+          "output_usd_per_million": 7.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "history_google_flash36_lite35_archive_20260722024041"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_6_flash_2026-08-13",
+          "effective_date": "2026-08-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "five_google_archive_20260813181124"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_5_flash_lite",
+      "endpoint": "gemini-3.5-flash-lite",
+      "release_date": "2026-07-21",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_5_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_5_flash_lite_2026-07-22",
+          "effective_date": "2026-07-22",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash-lite",
+          "source_ids": [
+            "history_google_flash36_lite35_archive_20260722024041"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_002",
+      "endpoint": "gemini-1.5-pro-002",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_002_2024-09-24",
+          "effective_date": "2024-09-24",
+          "date_basis": "launch",
+          "input_usd_per_million": 3.5,
+          "output_usd_per_million": 10.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-002",
+          "source_ids": [
+            "review_google_15_cut_graphic"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_002_2024-10-01",
+          "effective_date": "2024-10-01",
+          "date_basis": "price_change",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-002",
+          "source_ids": [
+            "review_google_15_cut_graphic"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_002",
+      "endpoint": "gemini-1.5-flash-002",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_flash002_via_stable_alias_20250502",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_flash_exp",
+      "endpoint": "gemini-2.0-flash-exp",
+      "release_date": "2024-12-11",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_pro_exp_02_05",
+      "endpoint": "gemini-2.0-pro-exp-02-05",
+      "release_date": "2025-02-05",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_exp_03_25",
+      "endpoint": "gemini-2.5-pro-exp-03-25",
+      "release_date": "2025-03-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_04_17",
+      "endpoint": "gemini-2.5-flash-preview-04-17",
+      "release_date": "2025-04-17",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_04_17_20250502_standard_non_thinking",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 0.6,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-04-17",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_04_17_20250502_standard_thinking",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 3.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-04-17",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_exp_0801",
+      "endpoint": "gemini-1.5-pro-exp-0801",
+      "release_date": "2024-08-01",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_exp_0827",
+      "endpoint": "gemini-1.5-pro-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_exp_0827",
+      "endpoint": "gemini-1.5-flash-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0827",
+      "endpoint": "gemini-1.5-flash-8b-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0924",
+      "endpoint": "gemini-1.5-flash-8b-exp-0924",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_05_20",
+      "endpoint": "gemini-2.5-flash-preview-05-20",
+      "release_date": "2025-05-20",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_05_20_20250607_standard_non_thinking",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 0.6,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-05-20",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_05_20_20250607_standard_thinking",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 3.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-05-20",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_06_05",
+      "endpoint": "gemini-2.5-pro-preview-06-05",
+      "release_date": "2025-06-05",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_pro_preview_06_05_20250607_standard",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-06-05",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_09_2025",
+      "endpoint": "gemini-2.5-flash-preview-09-2025",
+      "release_date": "2025-09-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_09_2025_20251118_standard",
+          "effective_date": "2025-11-18",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-09-2025",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_lite_preview_09_2025",
+      "endpoint": "gemini-2.5-flash-lite-preview-09-2025",
+      "release_date": "2025-09-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_lite_preview_09_2025_20251118_standard",
+          "effective_date": "2025-11-18",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite-preview-09-2025",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_001",
+      "endpoint": "gemini-1.5-pro-001",
+      "release_date": "2024-05-23",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_001_2024-05-30",
+          "effective_date": "2024-05-30",
+          "date_basis": "launch",
+          "input_usd_per_million": 3.5,
+          "output_usd_per_million": 10.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-001",
+          "source_ids": [
+            "review_archive_google_pricing_20240530044740"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_001",
+      "endpoint": "gemini-1.5-flash-001",
+      "release_date": "2024-05-23",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_foundation_google_gemini_1_5_flash_001_2024-05-30",
+          "effective_date": "2024-05-30",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.35,
+          "output_usd_per_million": 1.05,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-001",
+          "source_ids": [
+            "review_archive_google_pricing_20240530044740"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_foundation_google_gemini_1_5_flash_001_2024-08-12",
+          "effective_date": "2024-08-12",
+          "date_basis": "price_change",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-001",
+          "source_ids": [
+            "tokenomics_google_flash_aug12"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "roles_google_gemini_3_7_flash",
+      "endpoint": "gemini-3.7-flash",
+      "release_date": "2026-08-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_roles_google_gemini_3_7_flash_20260813_standard",
+          "effective_date": "2026-08-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.7-flash",
+          "source_ids": [
+            "five_google_archive_20260813181124"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model_id": "google_gemini_1_0_pro",
+      "endpoint": "gemini-1.0-pro",
+      "release_date": "2023-12-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_1_0_pro_2024-05-14",
+          "effective_date": "2024-05-14",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.5,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.0-pro",
+          "source_ids": [
+            "review_archive_google_pricing_20240514232746"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_pro",
+      "endpoint": "gemini-1.5-pro",
+      "release_date": "2024-02-15",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_1_5_pro_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_flash",
+      "endpoint": "gemini-1.5-flash",
+      "release_date": "2024-05-10",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_1_5_flash_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_1_5_flash_8b",
+      "endpoint": "gemini-1.5-flash-8b",
+      "release_date": "2024-10-03",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_1_5_flash_8b_2024-10-14",
+          "effective_date": "2024-10-14",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.0375,
+          "output_usd_per_million": 0.15,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-8b",
+          "source_ids": [
+            "tokenomics_google_flash8b_launch"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_google_gemini_1_5_flash_8b_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.0375,
+          "output_usd_per_million": 0.15,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-8b",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_0_flash",
+      "endpoint": "gemini-2.0-flash",
+      "release_date": "2025-02-05",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_0_flash_2025-02-05"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_2_0_flash_2025-02-05",
+          "effective_date": "2025-02-05",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash",
+          "source_ids": [
+            "review_google_20_launch_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_0_flash_lite",
+      "endpoint": "gemini-2.0-flash-lite",
+      "release_date": "2025-02-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_gemini_2_0_flash_lite_20250502_standard",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash-lite",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_pro",
+      "endpoint": "gemini-2.5-pro",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_5_pro_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_pro_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_google_gemini_2_5_pro_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_pro_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_flash",
+      "endpoint": "gemini-2.5-flash",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_2_5_flash_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_flash_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_google_gemini_2_5_flash_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_2_5_flash_lite",
+      "endpoint": "gemini-2.5-flash-lite",
+      "release_date": "2025-07-22",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "tokenomics_google_gemini_2_5_flash_lite_2025-07-22"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_2_5_flash_lite_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_2_5_flash_lite_2025-07-22",
+          "effective_date": "2025-07-22",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_flash25lite_ga"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_pro_preview",
+      "endpoint": "gemini-3-pro-preview",
+      "release_date": "2025-11-18",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_google_gemini_3_pro_preview_2025-11-18"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_google_gemini_3_pro_preview_2025-11-18",
+          "effective_date": "2025-11-18",
+          "date_basis": "launch",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3-pro-preview",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_flash_preview",
+      "endpoint": "gemini-3-flash-preview",
+      "release_date": "2025-12-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "tokenomics_google_gemini_3_flash_preview_2025-12-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_flash_preview_2025-12-17",
+          "effective_date": "2025-12-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.5,
+          "output_usd_per_million": 3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3-flash-preview",
+          "source_ids": [
+            "tokenomics_google_flash3_launch"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_1_pro_preview",
+      "endpoint": "gemini-3.1-pro-preview",
+      "release_date": "2026-02-19",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_1_pro_preview_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-pro-preview",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_3_1_pro_preview_2026-02-20",
+          "effective_date": "2026-02-20",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 12,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-pro-preview",
+          "source_ids": [
+            "history_google_pro31_archive_20260220111002"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_3_8_flash",
+      "endpoint": "gemini-3.8-flash",
+      "release_date": "2026-09-02",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_google_gemini_3_8_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.8-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_3_8_flash_2026-09-02",
+          "effective_date": "2026-09-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.8-flash",
+          "source_ids": [
+            "history_google_flash38_archive_20260902150802"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_4_argon",
+      "endpoint": "gemini-4-argon",
+      "release_date": "2026-10-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_4_argon_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_4_argon_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_4_argon_2026-10-13",
+          "effective_date": "2026-10-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-argon",
+          "source_ids": [
+            "history_google_argon_archive_20261013161636"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "google_gemini_4_carbon",
+      "endpoint": "gemini-4-carbon",
+      "release_date": "2026-11-10",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "history_google_gemini_4_carbon_2026-11-10"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "google_gemini_4_carbon_offer_1",
+          "effective_date": "2026-11-10",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "google_pricing"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_google_gemini_4_carbon_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_google_gemini_4_carbon_2026-11-10",
+          "effective_date": "2026-11-10",
+          "date_basis": "launch",
+          "input_usd_per_million": 2,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-4-carbon",
+          "source_ids": [
+            "google_changelog"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_1_flash_lite",
+      "endpoint": "gemini-3.1-flash-lite",
+      "release_date": "2026-05-07",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_1_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.25,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_1_flash_lite_2026-05-08",
+          "effective_date": "2026-05-08",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.25,
+          "output_usd_per_million": 1.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.1-flash-lite",
+          "source_ids": [
+            "history_google_lite31_archive_20260508075401"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_5_flash",
+      "endpoint": "gemini-3.5-flash",
+      "release_date": "2026-05-19",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_audit_google_gemini_3_5_flash_20260519_standard",
+          "effective_date": "2026-05-19",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.5,
+          "output_usd_per_million": 9,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash",
+          "source_ids": [
+            "five_google_archive_20260519184642"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_6_flash",
+      "endpoint": "gemini-3.6-flash",
+      "release_date": "2026-07-21",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_6_flash_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_6_flash_2026-07-22",
+          "effective_date": "2026-07-22",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.5,
+          "output_usd_per_million": 7.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "history_google_flash36_lite35_archive_20260722024041"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_6_flash_2026-08-13",
+          "effective_date": "2026-08-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.6-flash",
+          "source_ids": [
+            "five_google_archive_20260813181124"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "audit_google_gemini_3_5_flash_lite",
+      "endpoint": "gemini-3.5-flash-lite",
+      "release_date": "2026-07-21",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_audit_google_gemini_3_5_flash_lite_2026-11-11",
+          "effective_date": "2026-11-11",
+          "date_basis": "current_only",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash-lite",
+          "source_ids": [
+            "tokenomics_google_pricing_20261111"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "history_audit_google_gemini_3_5_flash_lite_2026-07-22",
+          "effective_date": "2026-07-22",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.5-flash-lite",
+          "source_ids": [
+            "history_google_flash36_lite35_archive_20260722024041"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_002",
+      "endpoint": "gemini-1.5-pro-002",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_002_2024-09-24",
+          "effective_date": "2024-09-24",
+          "date_basis": "launch",
+          "input_usd_per_million": 3.5,
+          "output_usd_per_million": 10.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-002",
+          "source_ids": [
+            "review_google_15_cut_graphic"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_002_2024-10-01",
+          "effective_date": "2024-10-01",
+          "date_basis": "price_change",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-002",
+          "source_ids": [
+            "review_google_15_cut_graphic"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_002",
+      "endpoint": "gemini-1.5-flash-002",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_google_flash002_via_stable_alias_20250502",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_flash_exp",
+      "endpoint": "gemini-2.0-flash-exp",
+      "release_date": "2024-12-11",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_pro_exp_02_05",
+      "endpoint": "gemini-2.0-pro-exp-02-05",
+      "release_date": "2025-02-05",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_0_flash_lite_preview_02_05",
+      "endpoint": "gemini-2.0-flash-lite-preview-02-05",
+      "release_date": "2025-02-05",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_0_flash_lite_preview_02_05_2025-02-05"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_0_flash_lite_preview_02_05_2025-02-05",
+          "effective_date": "2025-02-05",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.0-flash-lite-preview-02-05",
+          "source_ids": [
+            "review_google_20_launch_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_exp_03_25",
+      "endpoint": "gemini-2.5-pro-exp-03-25",
+      "release_date": "2025-03-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_05_06",
+      "endpoint": "gemini-2.5-pro-preview-05-06",
+      "release_date": "2025-05-06",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_pro_preview_05_06_2025-05-06"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_pro_preview_05_06_2025-05-06",
+          "effective_date": "2025-05-06",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-05-06",
+          "source_ids": [
+            "review_google_25_may_launch"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_04_17",
+      "endpoint": "gemini-2.5-flash-preview-04-17",
+      "release_date": "2025-04-17",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_04_17_20250502_standard_non_thinking",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 0.6,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-04-17",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_04_17_20250502_standard_thinking",
+          "effective_date": "2025-05-02",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 3.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-04-17",
+          "source_ids": [
+            "five_google_archive_20250502025139"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_exp_0801",
+      "endpoint": "gemini-1.5-pro-exp-0801",
+      "release_date": "2024-08-01",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_exp_0827",
+      "endpoint": "gemini-1.5-pro-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_exp_0827",
+      "endpoint": "gemini-1.5-flash-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0827",
+      "endpoint": "gemini-1.5-flash-8b-exp-0827",
+      "release_date": "2024-08-27",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_8b_exp_0924",
+      "endpoint": "gemini-1.5-flash-8b-exp-0924",
+      "release_date": "2024-09-24",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Experimental evaluation endpoint: no commercial paid launch tariff verified; free quota is not a universal paid$0 offer.",
+      "price_evidence": []
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_05_20",
+      "endpoint": "gemini-2.5-flash-preview-05-20",
+      "release_date": "2025-05-20",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_05_20_20250607_standard_non_thinking",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 0.6,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-05-20",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_05_20_20250607_standard_thinking",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.15,
+          "output_usd_per_million": 3.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-05-20",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_06_05",
+      "endpoint": "gemini-2.5-pro-preview-06-05",
+      "release_date": "2025-06-05",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_pro_preview_06_05_20250607_standard",
+          "effective_date": "2025-06-07",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-06-05",
+          "source_ids": [
+            "five_google_archive_20250607103454"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_lite_preview_06_17",
+      "endpoint": "gemini-2.5-flash-lite-preview-06-17",
+      "release_date": "2025-06-17",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_flash_lite_preview_06_17_2025-06-17"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_flash_lite_preview_06_17_2025-06-17",
+          "effective_date": "2025-06-17",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite-preview-06-17",
+          "source_ids": [
+            "review_google_25_ga_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_preview_09_2025",
+      "endpoint": "gemini-2.5-flash-preview-09-2025",
+      "release_date": "2025-09-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_preview_09_2025_20251118_standard",
+          "effective_date": "2025-11-18",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.3,
+          "output_usd_per_million": 2.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-preview-09-2025",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_flash_lite_preview_09_2025",
+      "endpoint": "gemini-2.5-flash-lite-preview-09-2025",
+      "release_date": "2025-09-25",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_foundation_google_gemini_2_5_flash_lite_preview_09_2025_20251118_standard",
+          "effective_date": "2025-11-18",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.1,
+          "output_usd_per_million": 0.4,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-flash-lite-preview-09-2025",
+          "source_ids": [
+            "review_archive_google_pricing_nov18"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_pro_001",
+      "endpoint": "gemini-1.5-pro-001",
+      "release_date": "2024-05-23",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_1_5_pro_001_2024-05-30",
+          "effective_date": "2024-05-30",
+          "date_basis": "launch",
+          "input_usd_per_million": 3.5,
+          "output_usd_per_million": 10.5,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-pro-001",
+          "source_ids": [
+            "review_archive_google_pricing_20240530044740"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_1_5_flash_001",
+      "endpoint": "gemini-1.5-flash-001",
+      "release_date": "2024-05-23",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "tokenomics_foundation_google_gemini_1_5_flash_001_2024-05-30",
+          "effective_date": "2024-05-30",
+          "date_basis": "launch",
+          "input_usd_per_million": 0.35,
+          "output_usd_per_million": 1.05,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-001",
+          "source_ids": [
+            "review_archive_google_pricing_20240530044740"
+          ],
+          "launch_price_verified": false
+        },
+        {
+          "offer_id": "tokenomics_foundation_google_gemini_1_5_flash_001_2024-08-12",
+          "effective_date": "2024-08-12",
+          "date_basis": "price_change",
+          "input_usd_per_million": 0.075,
+          "output_usd_per_million": 0.3,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-1.5-flash-001",
+          "source_ids": [
+            "tokenomics_google_flash_aug12"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    },
+    {
+      "model_id": "foundation_google_gemini_2_5_pro_preview_03_25",
+      "endpoint": "gemini-2.5-pro-preview-03-25",
+      "release_date": "2025-04-04",
+      "launch_price_verified": true,
+      "verified_offer_ids": [
+        "review_foundation_google_gemini_2_5_pro_preview_03_25_2025-04-04"
+      ],
+      "reason": "Verified dated launch-price evidence exists.",
+      "price_evidence": [
+        {
+          "offer_id": "review_foundation_google_gemini_2_5_pro_preview_03_25_2025-04-04",
+          "effective_date": "2025-04-04",
+          "date_basis": "launch",
+          "input_usd_per_million": 1.25,
+          "output_usd_per_million": 10,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-2.5-pro-preview-03-25",
+          "source_ids": [
+            "review_google_25_paid_graphic"
+          ],
+          "launch_price_verified": true
+        }
+      ]
+    },
+    {
+      "model_id": "roles_google_gemini_3_7_flash",
+      "endpoint": "gemini-3.7-flash",
+      "release_date": "2026-08-13",
+      "launch_price_verified": false,
+      "verified_offer_ids": [],
+      "reason": "Only current/later or same-day archive tariff evidence exists; no explicit dated release-price tie verified.",
+      "price_evidence": [
+        {
+          "offer_id": "five_roles_google_gemini_3_7_flash_20260813_standard",
+          "effective_date": "2026-08-13",
+          "date_basis": "archived_observation",
+          "input_usd_per_million": 0.75,
+          "output_usd_per_million": 3.75,
+          "provider": "Google Gemini API",
+          "endpoint": "gemini-3.7-flash",
+          "source_ids": [
+            "five_google_archive_20260813181124"
+          ],
+          "launch_price_verified": false
+        }
+      ]
+    }
+  ]
+}

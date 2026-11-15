@@ -1,0 +1,50 @@
+---
+import coverage from '../../../research/llm-inference-2023-2026/data/article_metric_coverage.json';
+import { renderModelGroups } from './model-groups.js';
+---
+
+<ul class="model-role-groups" data-model-groups set:html={renderModelGroups(coverage)} />
+
+<script>
+  import { loadChartData } from './chart-data.js';
+  import { renderModelGroups } from './model-groups.js';
+
+  async function refreshModelGroups() {
+    const list = document.querySelector<HTMLElement>('[data-model-groups]');
+    if (!list || list.dataset.loaded || !location.pathname.startsWith('/__drafts/')) return;
+    list.dataset.loaded = 'true';
+    try {
+      // Use the same live classified catalog as the article figures.
+      const data = await loadChartData();
+      if (!data.articleCoverage?.models) throw new Error('Model catalog missing');
+      const html = renderModelGroups(data.articleCoverage);
+      const template = document.createElement('template');
+      template.innerHTML = html;
+      if (list.innerHTML !== template.innerHTML) {
+        const openRoles = [...list.querySelectorAll('details[open]')].map(detail => detail.closest('[data-model-role]')?.getAttribute('data-model-role'));
+        list.replaceChildren(template.content);
+        openRoles.forEach(role => list.querySelector(`[data-model-role="${role}"] details`)?.setAttribute('open', ''));
+      }
+    } catch (error) {
+      // The server-rendered audited catalog remains usable without JavaScript/network.
+      delete list.dataset.loaded;
+      console.error('Could not refresh model groups', error);
+    }
+  }
+  refreshModelGroups();
+  document.addEventListener('astro:page-load', refreshModelGroups);
+</script>
+
+<style is:global>
+  .model-role-groups > li { margin-block: 1.25rem; }
+  .model-role-groups > li > p { margin-block: .3rem; }
+  .model-role-groups .model-role-example { font-size: .9em; overflow-wrap: anywhere; }
+  .model-role-groups details { margin-top: .35rem; font-size: .85em; }
+  .model-role-groups summary { cursor: pointer; color: var(--prose-link); }
+  .model-role-groups .model-role-scroll { max-height: 16rem; overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--page-border); border-radius: 6px; padding: .6rem .8rem; margin-top: .5rem; line-height: 1.5; }
+  .model-role-groups .model-role-scroll h3 { font-size: 1em; margin: .7rem 0 .25rem; }
+  .model-role-groups .model-role-scroll section:first-child h3 { margin-top: 0; }
+  .model-role-groups .model-role-scroll ul { margin: 0; padding-left: 1.25rem; }
+  .model-role-groups .model-role-scroll li { margin: .2rem 0; padding: 0; overflow-wrap: anywhere; }
+  .model-role-groups summary:focus-visible, .model-role-groups .model-role-scroll:focus-visible { outline: 2px solid var(--prose-link); outline-offset: 3px; }
+</style>

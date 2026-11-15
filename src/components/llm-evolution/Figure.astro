@@ -1,0 +1,12 @@
+---
+import './charts.css';
+const {figure}=Astro.props;
+---
+<figure id={'llm-figure-'+figure} class="llm-figure not-prose" data-llm-figure={figure}>
+  <p>Loading sourced observations…</p>
+  <noscript>Enable JavaScript to view the interactive figures and their sources.</noscript>
+</figure>
+
+<script>
+  import './charts.js';
+</script>

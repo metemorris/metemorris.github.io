@@ -1,0 +1,13 @@
+---
+import { getEntry } from 'astro:content';
+import TokenomicsData from '../../../../drafts/tokenomics-data.astro';
+
+export async function getStaticPaths() {
+  const post = await getEntry('posts', 'tokenomics');
+  return import.meta.env.DEV || post?.data.status === 'published'
+    ? [{ params: { page: undefined } }]
+    : [];
+}
+---
+
+<TokenomicsData />

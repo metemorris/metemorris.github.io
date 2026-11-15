@@ -1,0 +1,181 @@
+{
+  "definition": "Coarse developer organization origin or documented principal headquarters, keyed to the developer lineage in the release inventory. Not ethnicity, language, server location, subsidiary incorporation, research-team location or acquirer geography. Geography is a company preset, not a time-varying historical headquarters series. Multinational/ambiguous cases are explicit; unreviewed companies default to Unknown.",
+  "reviewed_on": "2026-11-10",
+  "companies": [
+    {
+      "company": "AI21",
+      "region": "Other",
+      "country": "Israel",
+      "rationale": "Tel Aviv principal place of business",
+      "source": "https://www.ai21.com/terms-policies/privacy-policy/"
+    },
+    {
+      "company": "Ai2",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Seattle research institute",
+      "source": "https://allenai.org/about"
+    },
+    {
+      "company": "Alibaba",
+      "region": "China",
+      "country": "China",
+      "rationale": "Founded in Hangzhou; organization origin, not Cayman incorporation",
+      "source": "https://www.alibabagroup.com/en-US/about-alibaba"
+    },
+    {
+      "company": "Amazon",
+      "region": "US",
+      "country": "United States",
+      "rationale": "US headquarters in Puget Sound and Arlington",
+      "source": "https://www.aboutamazon.com/workplace/corporate-offices"
+    },
+    {
+      "company": "Anthropic",
+      "region": "US",
+      "country": "United States",
+      "rationale": "San Francisco headquarters",
+      "source": "https://www.anthropic.com/transparency/voluntary-commitments"
+    },
+    {
+      "company": "Baidu",
+      "region": "China",
+      "country": "China",
+      "rationale": "Beijing headquarters",
+      "source": "https://baidu.gcs-web.com/shareholder-services/investor-faqs"
+    },
+    {
+      "company": "ByteDance",
+      "region": "China",
+      "country": "China",
+      "rationale": "Beijing founding origin; global operations and offices do not alter this origin preset",
+      "source": "https://www.bytedance.com/about"
+    },
+    {
+      "company": "Cohere",
+      "region": "Other",
+      "country": "Canada / United States",
+      "rationale": "Multi-headquarters: Toronto and San Francisco; grouped as Other / mixed rather than assigned exclusively to US",
+      "source": "https://go.cohere.com/rs/003-EZL-678/images/Cohere-AI-security-eBook.pdf?version=0"
+    },
+    {
+      "company": "DeepSeek",
+      "region": "China",
+      "country": "China",
+      "rationale": "Hangzhou developer; registered address in China",
+      "source": "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html?locale=zh_CN"
+    },
+    {
+      "company": "Google",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Google company headquarters in Mountain View; this is not a claim that all Gemini research was done in the US (DeepMind has UK roots)",
+      "source": "https://about.google/company-info/our-story/"
+    },
+    {
+      "company": "IBM",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Armonk corporate headquarters",
+      "source": "https://www.ibm.com/investor/att/pdf/2022_annual_10k.pdf"
+    },
+    {
+      "company": "Meta",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Menlo Park corporate headquarters",
+      "source": "https://investor.atmeta.com/files/doc_downloads/2024/05/2024-anti-slavery-and-human-trafficking-statement.pdf"
+    },
+    {
+      "company": "Microsoft",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Redmond global headquarters",
+      "source": "https://www.microsoft.com/en-us/about/office-locations"
+    },
+    {
+      "company": "MiniMax",
+      "region": "China",
+      "country": "China",
+      "rationale": "Shanghai developer organization address; not offshore holding-company registration",
+      "source": "https://ir.minimax.io/investor-resources/ir-contacts"
+    },
+    {
+      "company": "Mistral",
+      "region": "Europe",
+      "country": "France",
+      "rationale": "Paris registered office",
+      "source": "https://mistral.ai/fr/legal/"
+    },
+    {
+      "company": "Moonshot AI",
+      "region": "China",
+      "country": "China",
+      "rationale": "Beijing organization address",
+      "source": "https://www.moonshot.ai/about/"
+    },
+    {
+      "company": "NVIDIA",
+      "region": "US",
+      "country": "United States",
+      "rationale": "Santa Clara corporate address",
+      "source": "https://www.nvidia.com/en-us/contact/"
+    },
+    {
+      "company": "OpenAI",
+      "region": "US",
+      "country": "United States",
+      "rationale": "San Francisco headquarters",
+      "source": "https://openai.com/careers/head-of-employee-tech-and-experience-%28etx%29-san-francisco/"
+    },
+    {
+      "company": "SpaceX / xAI",
+      "region": "US",
+      "country": "United States",
+      "rationale": "xAI developer US address; preset based on developer geography, not later SpaceX acquisition",
+      "source": "https://data.x.ai/ccpa_personnel_privacy_notice.pdf"
+    },
+    {
+      "company": "Tencent",
+      "region": "China",
+      "country": "China",
+      "rationale": "Founded in Shenzhen; Shenzhen headquarters",
+      "source": "https://www.tencent.com/en-us/about.html.html"
+    },
+    {
+      "company": "Z.ai / Zhipu AI",
+      "region": "China",
+      "country": "China",
+      "rationale": "Beijing developer organization address",
+      "source": "https://www.zhipuai.cn/en"
+    },
+    {
+      "company": "EleutherAI",
+      "region": "Unknown",
+      "country": "Not established in this bounded primary-source review",
+      "rationale": "Distributed research collaboration; primary repository establishes developer identity but does not justify assigning a single headquarters region.",
+      "source": "https://github.com/EleutherAI/pythia"
+    },
+    {
+      "company": "MosaicML",
+      "region": "US",
+      "country": "United States",
+      "rationale": "San Francisco organization at release; retain MosaicML developer rather than reattribute to its later acquirer.",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2023-10-06/pdf/2023-22247.pdf"
+    },
+    {
+      "company": "Stability AI",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "rationale": "Company submission to UK Parliament identifies its London headquarters.",
+      "source": "https://committees.parliament.uk/writtenevidence/124356/pdf/"
+    },
+    {
+      "company": "Technology Innovation Institute",
+      "region": "Other",
+      "country": "United Arab Emirates",
+      "rationale": "Abu Dhabi research institute; UAE remains Other, not US, Europe or China.",
+      "source": "https://atrc.gov.ae/news/uaes-technology-innovation-institute-launches-open-source-falcon-40b-large-language-model"
+    }
+  ]
+}
