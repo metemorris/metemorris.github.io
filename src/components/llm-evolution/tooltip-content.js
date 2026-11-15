@@ -23,7 +23,9 @@ export function tooltipContent(p, methodsHref) {
         ? 'Extrapolated trend'
         : metric === 'input' && p.kind === 'shared'
           ? 'Shared-window trend'
-          : 'Trend';
+          : p.step
+            ? 'Highest so far'
+            : 'Trend';
     const unit = (units[metric] || '').replace(/^USD /, '');
     const date = new Date(p.date + 'T00:00:00Z').toLocaleDateString('en-GB', {
       day: 'numeric',
@@ -31,6 +33,11 @@ export function tooltipContent(p, methodsHref) {
       year: 'numeric',
       timeZone: 'UTC',
     });
+    if (p.yearly) {
+      const y = p.yearAt(p.date),
+        ratio = metric === 'price_ratio' ? fmt(y.median, metric) : `${fmt(y.median, metric)}${unit ? ' ' + esc(unit) : ''}`;
+      return `<strong>${esc(p.label)} · ${esc(y.year)} median</strong><span><b>${ratio}</b></span><span>${y.year === p.baseYear ? 'First year with data' : `${fmt(value, 'price_ratio')} its ${esc(p.baseYear)} median`} · ${y.n} release dates</span>`;
+    }
     if (p.baseline)
       return `<strong>${esc(p.label)}</strong><span><b>${fmt(value, 'price_ratio')}</b> its starting value</span><span>${esc(date)} · fitted ${fmt(value * p.baseline, metric)}${unit ? ' ' + esc(unit) : ''}</span>`;
     const group = p.overall ? 'Overall' : label(p.company);
@@ -51,5 +58,5 @@ export function tooltipContent(p, methodsHref) {
       : p.metric === 'release_gap'
         ? `${fmt(p.value, p.metric)} days since prior company/class release`
         : `${p.sharedBudget ? 'Shared token-window ceiling' : names[p.metric]}: ${p.status === 'estimated' ? '≈ ' : ''}${fmt(p.value, p.metric)} ${units[p.metric]}`;
-  return `<strong>${esc(p.model)}</strong><span>${p.mode === 'generation' ? 'Model release: ' : p.mode === 'launch' ? 'API launch: ' : ''}${esc(p.date)}${['releases', 'release_gap'].includes(p.metric) ? ' · ' + esc(cap(p.productClass)) : ''}</span>${p.mode === 'generation' ? `<span>Specification: ${esc(p.evidenceDate || 'undated')} · observed ${esc(p.evidenceObserved || 'unknown')}</span><span>${esc(p.sharedBudget ? 'Shared ceiling; output uses this budget · ' + p.provider : p.provider)}${p.servedRelation ? ' · ' + esc(p.quantization || 'hosted') + ' derivative' : ''}</span>${p.sharedRuleObserved ? `<span>Budget rule observed: ${esc(p.sharedRuleObserved)}</span>` : ''}` : ''}${p.mode === 'launch' && p.releaseDate !== p.date ? `<span>Model release: ${esc(p.releaseDate)}</span>` : ''}${value ? `<span>${esc(value)}${p.metric === 'output' && p.reasoningSharesOutput === 'yes' ? ' (reasoning + answer)' : ''}</span>` : ''}${p.reasoningMode ? `<span>${esc(p.pricingCondition)}</span>` : ''}${p.pricingBand ? `<span>${esc(p.pricingBand)} · ${esc(p.provider)}</span>` : ''}${p.metric === 'release_gap' && !p.ongoing ? `<span>Previous: ${esc(p.previousDate)} · ${esc(p.previousModel)}</span>` : ''}${p.status === 'estimated' ? `<span>Reported estimate · ${esc(p.estimateAttribution || 'third-party analysis')}</span>` : ''}<span>${p.source ? `<a href="${esc(p.source)}" target="_blank" rel="noreferrer">Source ↗</a> · ` : ''}${link}</span>`;
+  return `<strong>${esc(p.model)}</strong><span>${p.mode === 'generation' ? 'Model release: ' : p.mode === 'launch' ? 'API launch: ' : ''}${esc(p.date)}${['releases', 'release_gap'].includes(p.metric) ? ' · ' + esc(cap(p.productClass)) : ''}</span>${p.mode === 'generation' ? `<span>Specification: ${esc(p.evidenceDate || 'undated')} · observed ${esc(p.evidenceObserved || 'unknown')}</span><span>${esc(p.sharedBudget ? 'Shared ceiling; output uses this budget · ' + p.provider : p.provider)}${p.servedRelation ? ' · ' + esc(p.quantization || 'hosted') + ' derivative' : ''}</span>${p.sharedRuleObserved ? `<span>Budget rule observed: ${esc(p.sharedRuleObserved)}</span>` : ''}${p.documentedLater ? '<span>Documented after launch; the launch-day limit may have differed.</span>' : ''}` : ''}${p.mode === 'launch' && p.releaseDate !== p.date ? `<span>Model release: ${esc(p.releaseDate)}</span>` : ''}${value ? `<span>${esc(value)}${p.metric === 'output' && p.reasoningSharesOutput === 'yes' ? ' (reasoning + answer)' : ''}</span>` : ''}${p.reasoningMode ? `<span>${esc(p.pricingCondition)}</span>` : ''}${p.pricingBand ? `<span>${esc(p.pricingBand)} · ${esc(p.provider)}</span>` : ''}${p.metric === 'release_gap' && !p.ongoing ? `<span>Previous: ${esc(p.previousDate)} · ${esc(p.previousModel)}</span>` : ''}${p.status === 'estimated' ? `<span>Reported estimate · ${esc(p.estimateAttribution || 'third-party analysis')}</span>` : ''}<span>${p.source ? `<a href="${esc(p.source)}" target="_blank" rel="noreferrer">Source ↗</a> · ` : ''}${link}</span>`;
 }

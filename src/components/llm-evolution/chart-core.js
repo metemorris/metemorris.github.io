@@ -20,7 +20,8 @@ const defaults = (key) =>
   key === 'size' ? ['Meta', 'DeepSeek'] : ['OpenAI', 'Anthropic', 'Google'];
 const defaultRole = () => 'flagship';
 const START = '2022-11-30',
-  DAY = 86400000;
+  DAY = 86400000,
+  LAUNCH_WINDOW_DAYS = 30;
 const day = (s) => Date.parse(s + 'T00:00:00Z');
 const median = (values) => {
   const v = [...values].sort((a, b) => a - b),
@@ -489,6 +490,11 @@ function capacityObservations(data, state, metric) {
         }
       }
       if (!(cell.value > 0) || !r.releaseDate) return [];
+      // A limit dated more than LAUNCH_WINDOW_DAYS after release (usually the
+      // current docs) may differ from the launch-day limit; mark it, keep it.
+      const documentedLater =
+        !cell.date ||
+        (day(cell.date) - day(r.releaseDate)) / DAY > LAUNCH_WINDOW_DAYS;
       const sources = [
         ...new Set([
           ...(cell.sourceUrls || []),
@@ -510,6 +516,7 @@ function capacityObservations(data, state, metric) {
           evidenceDate: cell.date,
           evidenceObserved: cell.observed,
           evidenceBasis: cell.basis,
+          documentedLater,
           mode: 'generation',
           status: 'disclosed',
           kind: shared
@@ -804,33 +811,144 @@ function metricFits(points, mode = 'overall') {
     .filter(Boolean);
 }
 
-function overviewFits(data, state) {
-  const { events, gaps } = cadenceData(data, state);
-  const capacities = ['input', 'output', 'context'].flatMap((metric) =>
-    capacityObservations(data, state, metric),
-  );
-  const prices = ['input_price', 'output_price', 'price_ratio'].flatMap((metric) =>
-    observations(data, state, metric, 'launch'),
-  );
-  const publisherPoints = [...capacities, ...prices].filter(
-    (p) => servingGroup(p) === 'Publisher API' && !p.reasoningMode,
-  );
-  const fits = [
-    ...cadenceTypical(events, gaps, data.cutoff, 'overall', state.role),
-    ...metricFits(publisherPoints),
-  ];
-  return fits.map((fit) => {
-    const end = fit.observedEnd || fit.end;
-    const baseline = fit.valueAt(fit.start);
-    const valueAt = (date) => fit.valueAt(date) / baseline;
-    const samples = [
-      ...fit.samples
-        .filter(({ date }) => date < end)
-        .map(({ date }) => ({ date, value: valueAt(date) })),
-      { date: end, value: valueAt(end) },
+// Highest limit released so far: a step series over the plotted points, not
+// a fit. A plateau stays flat instead of being averaged into a slope.
+function runningMax(points, mode = 'overall') {
+  const groups = new Map();
+  points
+    .filter((p) => Number.isFinite(p.value) && p.value > 0)
+    .forEach((p) => {
+      const key = mode === 'company' ? p.company : 'overall';
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(p);
+    });
+  return [...groups]
+    .map(([key, pp]) => {
+      pp.sort((a, b) => a.date.localeCompare(b.date));
+      const start = pp[0].date,
+        end = pp.at(-1).date;
+      if (start === end) return null;
+      const steps = [];
+      let high = 0;
+      pp.forEach((p) => {
+        if (p.value > high) {
+          high = p.value;
+          if (steps.at(-1)?.date === p.date) steps.at(-1).value = high;
+          else steps.push({ date: p.date, value: high, model: p.model });
+        }
+      });
+      const valueAt = (date) =>
+        (steps.filter((s) => s.date <= date).at(-1) || steps[0]).value;
+      const samples = steps.flatMap((s, i) => [
+        ...(i ? [{ date: s.date, value: steps[i - 1].value }] : []),
+        { date: s.date, value: s.value },
+      ]);
+      if (samples.at(-1).date < end)
+        samples.push({ date: end, value: steps.at(-1).value });
+      return {
+        series: [key, pp[0].metric, 'running_max'].join('|'),
+        company: mode === 'company' ? key : 'Selected companies',
+        overall: mode !== 'company',
+        metric: pp[0].metric,
+        step: true,
+        descriptive: true,
+        method: 'Highest value released so far',
+        start,
+        end,
+        reference: end,
+        n: pp.length,
+        steps,
+        valueAt,
+        samples,
+      };
+    })
+    .filter(Boolean);
+}
+
+// Closing chart: yearly medians, each shown relative to its first year.
+// Repeated same-company/date observations count once (their median), as in
+// descriptiveFit. A year needs two such rows to count.
+const overviewMetrics = [
+  'release_gap',
+  'input',
+  'output',
+  'input_price',
+  'output_price',
+  'price_ratio',
+];
+function yearlyMedians(points, cutoff, meta = {}) {
+  const bins = new Map();
+  points
+    .filter((p) => Number.isFinite(p.value) && p.value > 0)
+    .forEach((p) => {
+      const key = p.company + '|' + p.date;
+      if (!bins.has(key)) bins.set(key, []);
+      bins.get(key).push(p.value);
+    });
+  const byYear = new Map();
+  for (const [key, values] of bins) {
+    const year = key.split('|')[1].slice(0, 4);
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year).push(median(values));
+  }
+  const years = [...byYear]
+    .filter(([, rows]) => rows.length >= 2)
+    .map(([year, rows]) => ({ year, median: median(rows), n: rows.length }))
+    .sort((a, b) => a.year.localeCompare(b.year));
+  if (years.length < 2) return null;
+  const baseline = years[0].median,
+    start = years[0].year + '-01-01',
+    end = cutoff,
+    yearAt = (date) =>
+      years.filter((y) => y.year <= date.slice(0, 4)).at(-1) || years[0],
+    valueAt = (date) => yearAt(date).median / baseline;
+  const samples = years.flatMap((y, i) => {
+    const from = y.year + '-01-01',
+      to = years[i + 1] ? years[i + 1].year + '-01-01' : end;
+    return [
+      { date: from, value: y.median / baseline },
+      { date: to, value: y.median / baseline },
     ];
-    return { ...fit, end, baseline, valueAt, samples };
   });
+  return {
+    ...meta,
+    yearly: true,
+    step: true,
+    descriptive: true,
+    method: 'Yearly median relative to its first year',
+    start,
+    end,
+    reference: years.at(-1).year + '-01-01',
+    n: points.length,
+    years,
+    baseYear: years[0].year,
+    baseline,
+    yearAt,
+    valueAt,
+    samples,
+  };
+}
+function overviewFits(data, state) {
+  const { gaps } = cadenceData(data, state);
+  const publisher = (p) => servingGroup(p) === 'Publisher API' && !p.reasoningMode;
+  const series = {
+    release_gap: gaps,
+    input: capacityObservations(data, state, 'input').filter(publisher),
+    output: capacityObservations(data, state, 'output').filter(publisher),
+  };
+  for (const metric of ['input_price', 'output_price', 'price_ratio'])
+    series[metric] = observations(data, state, metric, 'launch').filter(publisher);
+  return overviewMetrics
+    .map((metric) =>
+      yearlyMedians(series[metric], data.cutoff, {
+        series: 'overview|' + metric,
+        company: 'Selected companies',
+        overall: true,
+        metric,
+        role: state.role,
+      }),
+    )
+    .filter(Boolean);
 }
 
 function initialState(key, data, old) {
@@ -838,7 +956,7 @@ function initialState(key, data, old) {
     const role = old?.overview?.role;
     return {
       companies: chosen.filter((company) => data.companies.includes(company)),
-      role: roleOptions.includes(role) ? role : 'all',
+      role: roleOptions.includes(role) ? role : 'flagship',
       access: 'all',
       cadenceMode: 'overall',
     };
@@ -912,6 +1030,9 @@ export {
   sizeFits,
   servingGroup,
   metricFits,
+  runningMax,
+  yearlyMedians,
   overviewFits,
+  LAUNCH_WINDOW_DAYS,
   initialState,
 };

@@ -47,3 +47,19 @@ const sizeState={companies:['OpenAI','Anthropic','Google'],role:'flagship',acces
 assert.equal(core.observations(live,sizeState,'total','release').length,1);
 assert.equal(core.observations(live,{...sizeState,estimates:false},'total','release').length,0);
 console.log('Passed: reported estimates excluded from fits; compatible dated tariff events retained; service/long tiers isolated; supported company spans retained without forcing sparse or disjoint histories.');
+// Running maxima never fall, hold through a plateau, and need two dates.
+const rm=core.runningMax([point('a','2023-01-01',{metric:'output',value:10}),point('b','2023-06-01',{metric:'output',value:5}),point('c','2024-01-01',{metric:'output',value:40}),point('d','2024-06-01',{metric:'output',value:40})])[0];
+assert.deepEqual(rm.steps.map(s=>[s.date,s.value]),[['2023-01-01',10],['2024-01-01',40]]);assert.equal(rm.valueAt('2023-09-01'),10);assert.equal(rm.valueAt('2024-06-01'),40);assert.equal(rm.end,'2024-06-01');
+assert.equal(core.runningMax([point('a','2023-01-01',{metric:'output',value:10})]).length,0);
+assert.deepEqual(core.runningMax([point('a','2023-01-01',{metric:'output',value:10}),point('b','2023-02-01',{metric:'output',value:20,company:'B'}),point('c','2023-03-01',{metric:'output',value:5,company:'B'})],'company').map(f=>f.company),['B']);
+// Yearly medians: same-company/date values count once, a year needs two rows,
+// and every series is 1× in its first counted year.
+const ym=core.yearlyMedians([point('a','2023-02-01',{value:10}),point('b','2023-02-01',{value:30}),point('c','2023-08-01',{value:40}),point('d','2024-03-01',{value:90}),point('e','2025-01-01',{value:60}),point('f','2025-05-01',{value:120,company:'B'})],'2025-06-30');
+assert.deepEqual(ym.years.map(y=>[y.year,y.median,y.n]),[['2023',30,2],['2025',90,2]]);assert.equal(ym.baseYear,'2023');assert.equal(ym.valueAt('2023-07-01'),1);assert.equal(ym.valueAt('2024-07-01'),1);assert.equal(ym.valueAt('2025-03-01'),3);assert.equal(ym.end,'2025-06-30');
+assert.equal(core.yearlyMedians([point('a','2023-02-01',{value:10}),point('b','2023-08-01',{value:30})],'2023-12-31'),null);
+const overview=core.initialState('overview',live);assert.equal(overview.role,'flagship');
+for(const role of core.roleOptions)for(const f of core.overviewFits(live,{...overview,role})){assert.equal(f.valueAt(f.start),1);assert.ok(f.years.every(y=>y.n>=2&&y.median>0));assert.ok(f.end===live.cutoff);}
+// Capacity points say whether their limit was documented near launch.
+const caps=core.capacityObservations(live,{companies:['OpenAI','Anthropic','Google'],role:'flagship',access:'all'},'output');
+assert.ok(caps.length&&caps.every(p=>p.documentedLater===((Date.parse(p.evidenceDate)-Date.parse(p.releaseDate))/86400000>core.LAUNCH_WINDOW_DAYS)));
+console.log('Passed: running maxima hold plateaus; yearly medians index to the first counted year; overview defaults to Flagship; launch-window flag matches evidence dates.');

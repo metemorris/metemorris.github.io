@@ -102,11 +102,11 @@ const rows = inventory.models.map((model) => {
       <dl>
         <div id="cadence">
           <dt>Release cadence</dt>
-          <dd>Days between recorded releases from the same lab and tier. Same-day releases count once. Dotted extensions project the fit to the cutoff.</dd>
+          <dd>Days between recorded releases from the same lab and tier. Same-day releases count once. Dotted extensions project the fit to the cutoff. A gap far above the rest (beyond the upper quartile plus three times the interquartile range) is drawn at the top of the chart with its value beside it.</dd>
         </div>
         <div id="context">
           <dt><span id="input">Input</span>, <span id="output">output</span>, and context</dt>
-          <dd>Documented standard API limits plotted by model release date. Shared windows are tracked separately from standalone input caps.</dd>
+          <dd>Documented standard API limits plotted by model release date. Standalone input caps (circles) and shared input and output windows (diamonds) share one chart. The dashed line is the highest limit released so far. Filled points were documented within 30 days of release. Hollow points come from later documentation, so the launch-day limit may have differed.</dd>
         </div>
         <div id="pricing">
           <dt>Launch prices</dt>
@@ -114,7 +114,7 @@ const rows = inventory.models.map((model) => {
         </div>
         <div id="overview">
           <dt>Trend lines</dt>
-          <dd>Robust log-linear fits use the median log value per lab and date. Each fit needs at least three dates spanning 90 days. The overview pools the selected tiers across labs and starts each trend at 1× its first fitted value.</dd>
+          <dd>Cadence and price trends are robust log-linear fits that use the median log value per lab and date. Each fit needs at least three dates spanning 90 days. The overview shows yearly medians across the five labs for the selected tier, each relative to its first year with at least two release dates. Same-day values from one lab count once.</dd>
         </div>
       </dl>
       <p>The article covers {coverage.modelCount} proprietary model releases through {coverage.cutoff}. The full inventory includes models outside that scope.</p>

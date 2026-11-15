@@ -37,8 +37,9 @@ export function renderTimeline(
       host.clientWidth || host.closest('.llm-figure').clientWidth,
     ),
     mobile = width < 500,
+    endLabels = indexed && !mobile,
     L = indexed ? 44 : mobile ? 72 : 84,
-    R = 14,
+    R = endLabels ? 142 : 14,
     T = 28,
     H = compact ? 110 : Math.max(190, Math.min(280, (width - L - R) * 0.55));
   const companies = [...new Set(events.map((p) => p.company))].sort(),
@@ -63,6 +64,19 @@ export function renderTimeline(
     low = Math.min(...positive),
     high = Math.max(...positive);
   const ratio = metric === 'price_ratio';
+  // Cadence only: a gap beyond Q3 + 3 × IQR is drawn at the top edge with its
+  // value written beside it, so one long wait cannot flatten every other gap.
+  let clipAt = Infinity;
+  if (cadence && points.length >= 8) {
+    const sorted = points.map((p) => p.value).sort((a, b) => a - b),
+      q = (f) => sorted[Math.floor((sorted.length - 1) * f)],
+      fence = q(0.75) + 3 * (q(0.75) - q(0.25)),
+      inside = Math.max(
+        ...sorted.filter((v) => v <= fence),
+        ...fits.flatMap((f) => f.samples.map((p) => p.value)),
+      );
+    if (sorted.at(-1) > fence && sorted.at(-1) > inside * 1.5) clipAt = inside;
+  }
   const y = indexed
     ? scaleLog()
         .base(2)
@@ -71,7 +85,11 @@ export function renderTimeline(
         .range([T + H, T])
     : cadence
     ? scaleLinear()
-        .domain([0, Math.max(30, ...values) * 1.06])
+        .domain([
+          0,
+          Math.max(30, ...values.filter((v) => v <= clipAt)) *
+            (clipAt < Infinity ? 1.15 : 1.06),
+        ])
         .nice(5)
         .range([T + H, T])
     : ratio
@@ -104,7 +122,8 @@ export function renderTimeline(
       indexed
         ? unit
         : cadence
-        ? 'Days between releases'
+        ? 'Days between releases' +
+          (clipAt < Infinity ? ' · longer gaps marked at the top' : '')
         : unit + (ratio ? ' · linear scale' : ' · log scale'),
     );
   svg
@@ -341,9 +360,52 @@ export function renderTimeline(
   const coords = points.map((p) => ({
     ...p,
     cx: x(new Date(p.date)),
-    cy: y(p.value),
+    cy: p.value > clipAt ? y.range()[1] : y(p.value),
+    clipped: p.value > clipAt,
   }));
   coords.forEach((p) => svg.node().insertAdjacentHTML('beforeend', shape(p)));
+  // Off-scale gaps: value under the marker, on a second row when two are close.
+  let lastX = -Infinity,
+    lastRow = 0;
+  coords
+    .filter((p) => p.clipped)
+    .sort((a, b) => a.cx - b.cx)
+    .forEach((p) => {
+      const row = p.cx - lastX < 64 ? 1 - lastRow : 0;
+      lastX = p.cx;
+      lastRow = row;
+      svg
+        .append('text')
+        .attr('x', Math.max(L + 30, Math.min(width - R - 30, p.cx)))
+        .attr('y', p.cy + 17 + row * 12)
+        .attr('text-anchor', 'middle')
+        .attr('class', 'llm-axis-label llm-clipped-label')
+        .text(`${format(p.value)} days`);
+    });
+  if (endLabels) {
+    // Label each line at its right end; nudge apart labels that would collide.
+    const gap = 13,
+      labels = fits
+        .map((f) => ({ f, value: f.valueAt(f.end), y: y(f.valueAt(f.end)) }))
+        .sort((a, b) => a.y - b.y);
+    for (let i = 1; i < labels.length; i++)
+      labels[i].y = Math.max(labels[i].y, labels[i - 1].y + gap);
+    const overflow = labels.length ? labels.at(-1).y - (T + H) : 0;
+    if (overflow > 0) {
+      labels.at(-1).y -= overflow;
+      for (let i = labels.length - 2; i >= 0; i--)
+        labels[i].y = Math.min(labels[i].y, labels[i + 1].y - gap);
+    }
+    labels.forEach(({ f, value, y: ly }) => {
+      svg
+        .append('text')
+        .attr('x', width - R + 8)
+        .attr('y', ly + 3.5)
+        .attr('class', 'llm-end-label')
+        .attr('fill', f.color || 'var(--page-foreground)')
+        .text(`${f.short || f.label} ${format(value)}`);
+    });
+  }
   if (cadence) {
     // Separate rows prevent first releases from being mistaken for zero-day gaps.
     svg
