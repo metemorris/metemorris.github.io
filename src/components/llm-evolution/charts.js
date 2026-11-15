@@ -625,7 +625,7 @@ const overviewSeries = {
         )
         .join('');
       fig.classList.add('llm-timeline', 'llm-overview');
-      fig.innerHTML = `<h3>Trends at a glance</h3><p>Each line starts at 1× and shows how far that metric moved across the labs.</p><div class="llm-cadence-primary">${roleControls(state, 'overview')}</div><div class="llm-legend">${legend}</div><div class="llm-panel"></div>`;
+      fig.innerHTML = `<h3>Trends at a glance</h3><p>Each line is a fitted trend that starts at 1× and shows how far that metric moved across the labs.</p><div class="llm-cadence-primary">${roleControls(state, 'overview')}</div><div class="llm-legend">${legend}</div><div class="llm-panel"></div>`;
       const host = fig.querySelector('.llm-panel');
       const range = { start: data.windowStart, end: data.cutoff };
       renderTimeline(host, {
