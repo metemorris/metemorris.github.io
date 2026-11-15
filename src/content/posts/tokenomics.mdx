@@ -47,25 +47,23 @@ My guess is that better open-weight models are putting pressure on the economy t
 
 ## How Much Can Models Handle?
 
-The capacity charts show each model's documented standard API limits, plotted by model release date.
+The capacity charts show each model's documented standard API limits, plotted by model release date. The dashed line is the highest limit released so far. Filled points were documented within 30 days of release. Hollow points come from later documentation, mostly the current docs, so the launch-day limit may have been different.
 
-**Input token limits** cap what you send, including instructions, chat history, and documents. Some Gemini models publish separate input and output caps so you can check each budget up front. Claude also documents a shared window. In a 100K shared window, an 80K prompt leaves at most 20K for generation. The chart shows standalone input caps and shared windows separately.
+**Input token limits** cap what you send, including instructions, chat history, and documents. Some Gemini models publish separate input and output caps so you can check each budget up front. Claude also documents a shared window. In a 100K shared window, an 80K prompt leaves at most 20K for generation. The chart shows standalone input caps as circles and shared windows as diamonds.
 
 <LlmFigure figure="input" />
+
+The **context window** is how much information the API lets the model work with at once. In a shared window, that includes the prompt, its history, and the tokens generated on that turn.
+
+Google offered a [2M-token context window](https://developers.googleblog.com/en/new-features-for-the-gemini-api-and-google-ai-studio/) with Gemini 1.5 Pro but no release has approached that since 2025. For flagship models, 10 of the 12 context windows for 2026 releases were about 1M tokens, up from 4 of 16 in 2025.
+
+It seems like 1M is enough for most tasks today if the agent runs in a good harness. [Compaction](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) summarizes older turns to make room for the session to continue. [Agent memory](https://www.anthropic.com/research/components-of-agent-memory) saves things like decisions and progress outside the window so the next session can pick up where the last one left off. If the harness keeps the original transcript, it can pull details back in as needed. A bigger window still helps when a task needs a lot of raw material in view at once.
 
 **Output token limits** cap what the model generates in one request. On some APIs, internal reasoning and the visible answer draw from that same budget. Providers have to leave room for long answers and reasoning while keeping response times, serving capacity, and per-request costs manageable.
 
 <LlmFigure figure="output" />
 
 In the 2026 data, the documented standard output limits for the three labs fall into two bands. Anthropic and OpenAI are at 128k tokens, and Google is at 65k. Gemini 4 can generate beyond that default using [long decode](https://aistudio.google.com/docs/long-decode).
-
-The **context window** is how much information the API lets the model work with at once. In a shared window, that includes the prompt, its history, and the tokens generated on that turn.
-
-<LlmFigure figure="context" />
-
-Google offered a [2M-token context window](https://developers.googleblog.com/en/new-features-for-the-gemini-api-and-google-ai-studio/) with Gemini 1.5 Pro but no release has approached that since 2025. For flagship models, 10 of the 12 context windows for 2026 releases were about 1M tokens, up from 4 of 16 in 2025.
-
-It seems like 1M is enough for most tasks today if the agent runs in a good harness. [Compaction](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) summarizes older turns to make room for the session to continue. [Agent memory](https://www.anthropic.com/research/components-of-agent-memory) saves things like decisions and progress outside the window so the next session can pick up where the last one left off. If the harness keeps the original transcript, it can pull details back in as needed. A bigger window still helps when a task needs a lot of raw material in view at once.
 
 ## How Is Token Pricing Changing?
 
@@ -96,10 +94,10 @@ On the prefill side, [LMCache](https://arxiv.org/abs/2510.09665) lets inference 
 
 Release gaps are generally getting much shorter. That is expected given more resources go into AI, though the pace varies across labs and model groups. Anthropic picked up the pace on both flagship and premium releases, and OpenAI's flagship releases got faster in 2026. Google had the fastest release cadence for Balanced models in 2026, where Flash models sit.
 
-The biggest change is how much room models have to work. In aggregate, output limits rose to about 25× their starting point, and context window size rose to about 17×. I fondly remember the release of Gemini 2.5 Pro, when the output limit jumped from 8K to about 65K and made a bunch of my early [Detectr](https://sre.google/resources/practices-and-processes/ai-engineering-reliable-operations/#:~:text=Case%20Study%3A%20Detectr) hacks obsolete overnight.
+The biggest change is how much room models have to work. For flagship models, the median output limit went from about 4K tokens in 2023 to 128K in 2026, about 31×, and the median prompt capacity went from 100K to 1M, 10×. I fondly remember the release of Gemini 2.5 Pro, when the output limit jumped from 8K to about 65K and made a bunch of my early [Detectr](https://sre.google/resources/practices-and-processes/ai-engineering-reliable-operations/#:~:text=Case%20Study%3A%20Detectr) hacks obsolete overnight.
 
 While these limits rose rapidly during 2024 and 2025, in 2026 the focus shifted toward getting more out of those limits. Frameworks, harnesses, and memory ease some of the practical bottlenecks those limits created.
 
-It is harder to identify a uniform trend for pricing, as it varies by model tier. In Economy, input launch prices fell much faster than output prices. In Balanced, both pooled price trends were roughly flat. With all four tiers selected, the pooled price trends rise, but no single tier does. That comes from the mix of tiers changing over time.
+It is harder to identify a uniform trend for pricing, as it varies by model tier. In Flagship, the median launch price fell sharply after 2023, then rose again in 2026. In Economy, input launch prices fell much faster than output prices. In Balanced, both medians ended about a third below their 2024 level.
 
 I might go deeper into some of these areas in future posts. I made all of these graphs interactive so you can group, filter, and draw your own conclusions. I’ve shared the [data and methodology](/posts/tokenomics/data/) so you can do your own analysis.
