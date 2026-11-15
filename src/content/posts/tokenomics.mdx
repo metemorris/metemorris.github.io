@@ -20,26 +20,18 @@ As the first part of this series, this post is focused on model release frequenc
 
 I wanted this initial analysis to focus on market leaders, so I looked at major proprietary model releases from five US labs through November 11, 2026. Most charts start with OpenAI, Anthropic, and Google. You can also select Meta and SpaceX/xAI.
 
-The short version:
-
-- Flagship releases are coming faster. The median gap between them went from 119 days in 2023 to 57 days in 2026.
-- Models have far more room to work. Most 2026 flagship releases have a context window of about 1M tokens, and output limits are 65K to 128K.
-- Pricing depends on the tier. Flagship prices are well below their early levels at OpenAI and Anthropic, and both now have an Economy model at $0.10 input and $0.50 output per million tokens.
-
 ## Grouping Models
 
 In order to avoid comparing apples to oranges, I grouped models by how the labs positioned them.
 
 <ModelGroups />
 
-A release here is any dated API model, including previews and snapshots. Same-day releases from the same lab and tier count once.
-
 ## How Fast Are the Models Being Released?
 
 <LlmFigure figure="cadence" />
 
 
-- Flagship gaps are getting shorter. For OpenAI, Anthropic, and Google, the median fell from 119 days in 2023 to 47.5 days in 2025. It rose to 57 days in 2026, but that is mostly Google. OpenAI's median went from 46 to 41 days and Anthropic's from 111 to 60, while Google had one flagship release this year, with Gemini 4 in Premium.
+- Flagship gaps are getting shorter. For OpenAI, Anthropic, and Google, the median fell from 119 days in 2023 to 47.5 days in 2025. It rose to 57 days in 2026. OpenAI's median went from 46 to 41 days and Anthropic's from 111 to 60, while Google had one flagship release this year, with Gemini 4 Argon/Carbon in Premium.
 - Economy releases are getting sparser at Anthropic and Google. Anthropic's last two gaps were 345 and 357 days, up from 217 and 236 days in 2024. Google went from five releases in 2025 to two so far in 2026. OpenAI went from six to five.
 - Google had the shortest gaps in Balanced. In 2026, its median gap was 43 days, compared with about 74 at OpenAI and 133 at Anthropic.
 
@@ -75,7 +67,7 @@ The prices below are list prices at API launch. They don't include later price c
 
 <LlmFigure figure="pricing" />
 
-Input and output prices have moved differently across the four tiers. In Economy, OpenAI’s prices are lower overall but moved around a lot between releases. Anthropic’s rose from Claude 3 Haiku to Haiku 4.5, then dropped 10× with Haiku 5.5. GPT-6 Luna and Haiku 5.5 both launched at $0.10 input and $0.50 output per million tokens, which fits the open-weight pressure I guessed at above. Google’s prices rose.
+Input and output prices have moved differently across the four tiers. In Economy, OpenAI’s prices are lower overall but moved around a lot between releases. Anthropic’s rose from Claude 3 Haiku to Haiku 4.5, then dropped 10× with Haiku 5.5. GPT-6 Luna and Haiku 5.5 both launched at $0.10 input and $0.50 output per million tokens, which fits the open-weight pressure I mentioned above.
 
 In Balanced, Google’s Flash prices rose from their early lows, while Anthropic held Sonnet prices steady for several generations before cutting both rates.
 
@@ -83,7 +75,7 @@ Flagship input and output prices are well below their early levels at OpenAI and
 
 **How much more does a generated token cost?** The median flagship output/input cost ratio in the data is 5×. The ratio can rise even as both prices fall. GPT-4 launched at $30 input and $60 output per million tokens (2×). GPT-5 launched at $1.25 and $10 (8×). GPT-6.1 Sol was back at 5×.
 
-Both serving efficiency and pricing decisions can move the ratio. At launch, Gemini 2.5 Flash Preview cost $0.15 per million input tokens either way, but turning thinking on took the output rate from $0.60 to $3.50. The same model went from 4× to about 23× depending on the setting.
+Both serving efficiency and pricing decisions can move the ratio. At launch, Gemini 2.5 Flash Preview cost $0.15 per million input tokens, but turning thinking on took the output rate from $0.60 to $3.50. The same model went from 4× to about 23× depending on the thinking level.
 
 There is a lot of ongoing research around making inference cheaper, both in prefill and decode phases.
 On the prefill side, [LMCache](https://arxiv.org/abs/2510.09665) lets inference workers share the KV cache for repeated prompt prefixes, so a request can skip prefill work even when it lands on a different worker. On the decode side, [DFlash](https://arxiv.org/abs/2602.06036) speeds up speculative decoding by drafting a block of tokens in one pass for the main model to verify. The authors reported more than 6× faster generation than regular decoding in their benchmarks.
@@ -92,7 +84,7 @@ On the prefill side, [LMCache](https://arxiv.org/abs/2510.09665) lets inference 
 
 <LlmFigure figure="overview" />
 
-Release gaps are generally getting much shorter. That is expected given more resources go into AI, though the pace varies across labs and model groups. Anthropic picked up the pace on both flagship and premium releases, and OpenAI's flagship releases got faster in 2026. Google had the fastest release cadence for Balanced models in 2026, where Flash models sit.
+Release gaps are generally getting much shorter. That is expected given more resources go into LLMs, though the pace varies across labs and model groups. Anthropic picked up the pace on both flagship and premium releases, and OpenAI's flagship releases got faster in 2026. Google had the fastest release cadence for Balanced models in 2026, where Flash models sit.
 
 The biggest change is how much room models have to work. For flagship models, the median output limit went from about 4K tokens in 2023 to 128K in 2026, about 31×, and the median prompt capacity went from 100K to 1M, 10×. I fondly remember the release of Gemini 2.5 Pro, when the output limit jumped from 8K to about 65K and made a bunch of my early [Detectr](https://sre.google/resources/practices-and-processes/ai-engineering-reliable-operations/#:~:text=Case%20Study%3A%20Detectr) hacks obsolete overnight.
 
